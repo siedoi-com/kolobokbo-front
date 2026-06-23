@@ -1,0 +1,357 @@
+@use "mixins";
+@use "media";
+@use "fonts";
+
+@use "vars";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-secondary);
+    font-variant-numeric: lining-nums;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: var(--font-secondary);
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+a {
+    text-underline-position: under;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+    color: inherit;
+
+    &::before,
+    &::after {
+        transition: var(--transition);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+button {
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.hidden-title {
+    @include mixins.el-hide;
+    display: none;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: var(--color__accent-main);
+    color: #fff;
+    padding: var(--size_8);
+    z-index: 100;
+
+    &:focus {
+        left: 1rem;
+        /* Position it on the top-left */
+        top: 1rem;
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+address {
+    font-style: normal;
+    font-size: inherit;
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+.anim {
+    transition: var(--transition);
+}
+
+.rel {
+    position: relative;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.wh-full {
+    width: 100%;
+    height: 100%;
+}
+
+.inset {
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.z2 {
+    z-index: 2;
+}
+
+.z5 {
+    z-index: 5;
+}
+
+.abs {
+    position: absolute;
+}
+
+.mx {
+    margin-inline: auto;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.o-hid {
+    overflow: hidden;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.grow1 {
+    flex-grow: 1;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contain-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
+}
+
+.op-0 {
+    opacity: 0;
+}
+
+.hide {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.xy-center {
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// main {
+//     margin-block-start: var(--header-height);
+// }
+
+
+
+// .img {
+//     // .img--cover
+//     &--cover {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         object-position: center;
+//     }
+
+//     // .img--contain
+//     &--contain {
+//         object-fit: contain;
+//         object-position: center;
+//     }
+// }
+
+
+
+// ul,
+// ol {
+//     list-style: none;
+// }
+
+// picture,
+// img,
+// iframe {
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+
+// .h1,
+// .h2,
+// .h3,
+// .h4,
+// .h5,
+// .h6,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-weight: 950;
+//     line-height: 135%;
+// }
+
+// h1,
+// .h1 {
+
+// }
+
+// h2,
+// .h2 {
+//     font-size: clamp(3.6rem, 9.6vw, 9rem);
+// }
+
+// h3,
+// .h3 {
+
+// }
+
+// h4,
+// .h4 {
+
+// }
+
+// h5,
+// .h5 {
+
+// }
+
+// h6,
+// .h6 {
+
+// }
+
+// .text-uppercase {
+//     text-transform: uppercase;
+// }
+
+// .content {
+//     font-size: clamp(1.6rem, 4.27vw, 2rem);
+//     line-height: 135%;
+
+//     *:not(:last-child) {
+//         margin-bottom: 1.5rem;
+//     }
+
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//         &:not(:last-child) {
+//             margin-bottom: 3rem;
+//         }
+//     }
+
+//     ul,
+//     ol {
+//         list-style: revert;
+//     }
+// }
+
+// .w-full {
+//     width: 100%;
+// }
+
+// .h-full {
+//     height: 100%;
+// }
+
+// .no-scroll {
+//     overflow: hidden;
+// }
+
+// .added_to_cart.wc-forward {
+//     display: none !important;
+// }
+
+// .input {
+//     width: 100%;
+//     height: 6rem;
+//     border-radius: 0;
+//     outline: none;
+//     padding: 0 1.5rem;
+//     font-family: inherit;
+//     font-weight: 600;
+//     border: .1rem solid $color_black;
+// }

@@ -1,0 +1,11 @@
+@use "../global/media";
+
+.container {
+    margin-inline: auto;
+    width: 92.4vw;
+
+    @include media.L {
+        width: 88.9vw;
+    }
+}
+// End inner

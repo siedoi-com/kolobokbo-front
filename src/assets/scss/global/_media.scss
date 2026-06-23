@@ -1,0 +1,30 @@
+// Breakpoints
+@mixin S() {
+    @media screen and (min-width: 420px) {
+        @content;
+    }
+}
+@mixin M() {
+    @media screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+@mixin L() {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin XL() {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin XXL() {
+    @media screen and (min-width: 1920px) {
+        @content;
+    }
+}
+// End Breakpoints

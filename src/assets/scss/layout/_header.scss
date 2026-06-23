@@ -1,0 +1,126 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.header {
+    padding: var(--size_8);
+    transform: translateY(0);
+    // opacity: 1;
+    transition: transform .35s ease-in-out, opacity .35s ease-in-out;
+
+    // .header.is-fixed — активується після 90vh скролу
+    &.is-fixed {
+        position: fixed;
+        left: 0;
+    }
+
+    &--hidden {
+        transform: translateY(calc(-100% - var(--before-h, 0px)));
+        opacity: 0;
+    }
+
+
+    &__burger {
+        padding: var(--size_10) calc(var(--size_10) / 2);
+    }
+
+    // .header__icon
+    &__cart-icon {
+        margin-inline-end: var(--size_12);
+        svg {
+            width: var(--size_28);
+            height: var(--size_34);
+        }
+    }
+
+    &__left-part, &__right-part {
+        flex-basis: 20%;
+    }
+}
+// End inner
+
+@include media.L {
+    .header {
+        border-block-end: .1rem solid var(--color-black);
+        padding: 0;
+
+        &__wrapper {
+            align-items: unset;
+        }
+
+        &__right-part {
+            flex-basis: auto;
+            padding: var(--size_24) var(--size_12);
+            border-inline-start: .1rem solid var(--color-black);
+            gap: var(--size_24);
+        }
+
+        &__burger, &__left-part {
+            display: none;
+        }
+
+        &__logo-wrapper {
+            padding: var(--size_16) var(--size_36);
+            border-inline-end: .1rem solid var(--color-black);
+
+            @include mixins.hover {
+                img {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        &__menu {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                // padding: 1.51vw 3.23vw;
+                padding: var(--size_16);
+                
+                @include mixins.hover {
+                    color: var(--color-secondary-accent);
+                }
+            }
+
+            li {
+                flex-grow: 1;
+                height: 100%;
+
+                &.current-menu-item a {
+                    color: var(--color-secondary-accent);
+                }
+            }
+        }
+
+        &__account-icon {
+            display: flex;
+            @include mixins.square(var(--size_34));
+        }
+
+        &__account-icon, &__cart-icon {
+            @include mixins.hover {
+                color: var(--color-secondary-accent);
+            }
+        }
+
+    }
+}
+// End L
+
+@include media.XL {
+    .header {
+        &__logo-wrapper {
+            padding-inline: var(--size_64);
+        }
+
+        &__right-part {
+            padding-inline: var(--size_38);
+        }
+    }
+}
+// End XL

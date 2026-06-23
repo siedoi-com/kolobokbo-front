@@ -1,0 +1,22 @@
+.before-header {
+    transition: transform .35s ease-in-out, opacity .35s ease-in-out;
+
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &--hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    // // .before-header--compact (коли is-fixed)
+    // &--compact {
+    //     .promo-line {
+    //         font-size: 1.2rem;
+    //         min-height: 2.5rem;
+    //     }
+    // }
+}

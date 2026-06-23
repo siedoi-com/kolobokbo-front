@@ -1,0 +1,51 @@
+@use "./media";
+
+.t {
+    &--24 {
+        font-size: var(--size_14);
+    }
+    &--16 {
+        font-size: var(--size_16);
+    }
+}
+
+.c {
+    &--white {
+        color: var(--color-white);
+    }
+}
+
+.t {
+    &--center {
+        text-align: center;
+    }
+
+    &--upp {
+        text-transform: uppercase;
+    }
+
+    &--end {
+        text-align: end;
+    }
+}
+
+.fw {
+    &--400 {
+        font-weight: 400;
+    }
+    &--500 {
+        font-weight: 500;
+    }
+    &--600 {
+        font-weight: 600;
+    }
+
+    &--800 {
+        font-weight: 800;
+    }
+
+    &--300 {
+        font-weight: 300;
+    }
+}
+// End by WEIGHT

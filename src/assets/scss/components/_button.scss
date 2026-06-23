@@ -1,0 +1,18 @@
+.button {
+    background-color: transparent;
+    outline: none;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-secondary);
+
+    &:not([disabled]) {
+        cursor: pointer;
+    }
+
+    svg {
+        transition: var(--transition);
+    }
+}

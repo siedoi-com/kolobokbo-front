@@ -1,0 +1,9 @@
+.bg {
+    &--black {
+        background-color: var(--color-black);
+    }
+
+    &--base-red {
+        background-color: var(--color-base-red);
+    }
+}

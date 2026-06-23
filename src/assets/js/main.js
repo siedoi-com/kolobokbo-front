@@ -1,0 +1,9 @@
+import "../scss/style.scss";
+
+// import './blocks/header';
+// import './blocks/button';
+// import './blocks/sliders';
+// import './blocks/marquee';
+// import './blocks/tabs';
+// import './blocks/accordion';
+// import './blocks/quantity';

@@ -1,0 +1,15 @@
+.embla {
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+    }
+
+    &__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+        min-width: 0;
+        transform: translate3d(0, 0, 0);
+    }
+}

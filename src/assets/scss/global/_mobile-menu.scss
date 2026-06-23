@@ -1,0 +1,81 @@
+.mobile-menu {
+    background: $color_accent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100%;
+    z-index: 100;
+    padding: 3.4rem 1.5rem;
+
+    // Flex layout: logo → nav (centre) → social (bottom)
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Blob reveal from burger position (top-left, ~3.5rem × 3rem centre)
+    clip-path: circle(0% at 3.55rem 3rem);
+    transition: clip-path .6s cubic-bezier(.76, 0, .24, 1);
+    pointer-events: none;
+
+    &.active {
+        clip-path: circle(150% at 3.55rem 3rem);
+        pointer-events: all;
+    }
+
+    // .mobile-menu__close
+    &__close {
+        position: absolute;
+        top: 1.9rem;
+        right: 1.7rem;
+    }
+
+    // .mobile-menu__logo
+    &__logo {
+        margin: 0 auto;
+        display: block;
+        aspect-ratio: 64 / 67;
+        width: 17vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // .mobile-menu__list
+    &__list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        gap: 3.5rem;
+        color: $color_heading;
+
+        .current-menu-item {
+            font-weight: 800;
+        }
+    }
+
+    // .mobile-menu__social
+    &__social {
+        margin-top: 3rem;
+        padding-bottom: 1rem;
+
+        .social-list__item {
+            display: flex;
+            width: 4rem;
+            height: 4rem;
+            filter: brightness(0.1);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

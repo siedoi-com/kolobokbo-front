@@ -1,0 +1,11 @@
+.cart-badge {
+    border-radius: 50%;
+    width: var(--size_22);
+    height: var(--size_24);
+    inset-block-start: -.6rem;
+    inset-inline-end: calc(-1 * var(--size_12));
+
+    &:not(.active) {
+        display: none;
+    }
+}

@@ -1,0 +1,70 @@
+:root {
+  // Fonts
+  --font-secondary: 'Inter', sans-serif;
+
+  // Colors
+  --color-black: #222;
+  --color-white: #fff;
+  --color-accent: #FFD039;
+  --color-secondary-accent: #FF88B9;
+  --color-active: #C60A0A;
+  --color-heading: #222;
+  --color-secondary-body: #F4F4F8;
+  --color-base-red: #F14321;
+
+  // Transitions
+  --transition: all 0.3s ease-in-out;
+
+   --size_8: 0.8rem;
+    --size_10: 1rem;
+    --size_12: 1.2rem;
+    --size_14: 1.4rem;
+    --size_15: 1.5rem;
+    --size_16: 1.6rem;
+    --size_18: 1.8rem;
+    --size_20: 2rem;
+    --size_22: 2.2rem;
+    --size_24: 2.4rem;
+    --size_26: 2.6rem;
+    --size_28: 2.8rem;
+    --size_30: 3rem;
+    --size_32: 3.2rem;
+    --size_34: 3.4rem;
+    --size_36: 3.6rem;
+    --size_38: 3.8rem;
+    --size_40: 4rem;
+    --size_41: 4.1rem;
+    --size_42: 4.2rem;
+    --size_44: 4.4rem;
+    --size_45: 4.5rem;
+    --size_48: 4.8rem;
+    --size_50: 5rem;
+    --size_52: 5.2rem;
+    --size_55: 5.5rem;
+    --size_56: 5.6rem;
+    --size_60: 6rem;
+    --size_64: 6.4rem;
+    --size_68: 6.8rem;
+    --size_70: 7rem;
+    --size_72: 7.2rem;
+    --size_75: 7.5rem;
+    --size_80: 8rem;
+    --size_82: 8.2rem;
+    --size_86: 8.6rem;
+    --size_88: 8.8rem;
+    --size_90: 9rem;
+    --size_94: 9.4rem;
+    --size_96: 9.6rem;
+    --size_100: 10rem;
+    --size_106: 10.6rem;
+    --size_110: 11rem;
+    --size_112: 11.2rem;
+    --size_120: 12rem;
+    --size_126: 12.6rem;
+    --size_128: 12.8rem;
+    --size_130: 13rem;
+    --size_132: 13.2rem;
+    --size_144: 14.4rem;
+    --size_150: 15rem;
+    --size_200: 20rem;
+}

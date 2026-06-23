@@ -1,0 +1,11 @@
+.burger {
+    &__inner {
+        width: var(--size_30);
+        height: var(--size_20);
+    }
+
+    &__line {
+        height: .2rem;
+    }
+}
+// End inner
