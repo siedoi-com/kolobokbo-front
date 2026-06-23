@@ -1,0 +1,182 @@
+@use "../global/media";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--size_12);
+    align-self: stretch;
+    background: var(--color-white);
+    border-bottom: 0.1rem solid var(--color-black);
+    position: relative;
+    overflow: hidden;
+
+    &__left {
+        display: flex;
+        padding: var(--size_64) var(--size_16) var(--size_48);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_24);
+        align-self: stretch;
+        background-image: url('/assets/img/hero-decor-1.svg');
+        background-repeat: no-repeat;
+        background-position: calc(-1 * var(--size_24)) calc(-1 * var(--size_10));
+        background-size: var(--size_120) auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_48);
+        align-self: stretch;
+    }
+
+    &__title {
+        display: flex;
+        padding-top: var(--size_24);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_32);
+        align-self: stretch;
+
+        h1 {
+            color: var(--color-black);
+            font-size: var(--size_40);
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+
+            span {
+                color: var(--color-secondary-accent);
+            }
+        }
+
+        p {
+            color: var(--color-black);
+            font-size: var(--size_16);
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        height: var(--size_48);
+        padding: var(--size_10) var(--size_16);
+        justify-content: center;
+        align-items: center;
+        gap: var(--size_10);
+        align-self: stretch;
+        background: var(--color-accent);
+        box-shadow: 0.4rem 0.4rem 0 0 var(--color-secondary-accent);
+        text-decoration: none;
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    &__image {
+        height: var(--size_600, 60rem);
+        width: 100%;
+        position: relative;
+        align-self: stretch;
+        background-image: url('/assets/img/hero-image-mobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__blob {
+        position: absolute;
+        bottom: -2.4rem;
+        left: -13rem;
+    }
+}
+
+@include media.L {
+    .hero {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: var(--size_16);
+    }
+
+    .hero__left {
+        padding: var(--size_64) 0 var(--size_64) var(--size_48);
+        gap: 0;
+        flex: 0.5;
+        background-image: url('/assets/img/hero-decor-1.svg');
+        background-repeat: no-repeat;
+        background-position: calc(-1 * var(--size_24)) calc(-1 * var(--size_10));
+        background-size: var(--size_150) auto;
+    }
+
+    .hero__title {
+        h1 {
+            font-size: var(--size_56);
+        }
+    }
+
+    .hero__btn {
+        width: 26rem;
+        height: var(--size_52);
+    }
+
+    .hero__image {
+        flex: 1;
+        width: 60rem;
+        align-self: stretch;
+        min-height: var(--size_550, 55rem);
+        background-image: url('/assets/img/hero-image.png');
+        background-size: cover;
+    }
+
+    .hero__blob {
+        bottom: -8rem;
+        left: 0;
+    }
+}
+
+@include media.XL {
+    .hero {
+        gap: var(--size_24);
+        flex-wrap: wrap;
+        align-content: flex-end;
+    }
+
+    .hero__left {
+        padding: var(--size_96) 0 var(--size_64) var(--size_80);
+        gap: var(--size_48);
+        flex: 1 0 0;
+    }
+
+    .hero__title {
+        h1 {
+            font-size: var(--size_72);
+        }
+
+        p {
+            font-size: var(--size_18);
+        }
+    }
+
+    .hero__btn {
+        width: 26rem;
+        height: var(--size_56);
+    }
+
+    .hero__image {
+        height: var(--size_600, 60rem);
+        min-width: 60rem;
+        flex: 1 0 0;
+        background-image: url('/assets/img/hero-image.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero__blob {
+        bottom: -2.4rem;
+        left: -7rem;
+    }
+}
