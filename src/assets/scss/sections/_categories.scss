@@ -1,0 +1,199 @@
+@use "../global/media";
+
+.categories {
+    padding: var(--size_48) var(--size_16);
+    background: var(--color-white);
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_24);
+    }
+
+    &__title {
+        color: var(--color-black);
+        text-align: center;
+        font-size: var(--size_18);
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        align-self: stretch;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        list-style: none;
+        overflow-x: auto;
+        scrollbar-width: none;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__item {
+        flex-shrink: 0;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_8);
+        padding: var(--size_12);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        transition: var(--transition);
+        position: relative;
+
+        &--active,
+        &:hover {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 7.3rem;
+                height: 7.2rem;
+                background-image: url('/assets/icons/blob-yellow.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 0;
+            }
+        }
+
+        &--all {
+            &:hover::before,
+            &.categories__btn--active::before {
+                background-image: url('/assets/icons/blob-pink.svg');
+            }
+        }
+
+        &--spicy {
+            &:hover::before,
+            &.categories__btn--active::before {
+                background-image: url('/assets/icons/blob-red.svg');
+            }
+        }
+
+        &--chicken {
+            &:hover::before,
+            &.categories__btn--active::before {
+                background-image: url('/assets/icons/blob-yellow.svg');
+            }
+        }
+
+        &--fish {
+            &:hover::before,
+            &.categories__btn--active::before {
+                background-image: url('/assets/icons/blob-blue.svg');
+            }
+        }
+
+        &--vegan {
+            &:hover::before,
+            &.categories__btn--active::before {
+                background-image: url('/assets/icons/blob-green.svg');
+            }
+        }
+    }
+
+    &__icon {
+        position: relative;
+        z-index: 1;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__label {
+        position: relative;
+        z-index: 1;
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 800;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}
+
+@include media.L {
+    .categories {
+        padding: var(--size_64) var(--size_48);
+
+        &__container {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: var(--size_20);
+        }
+
+        &__list {
+            justify-content: space-between;
+            overflow-x: visible;
+        }
+
+        &__item {
+            flex: 1;
+        }
+
+        &__btn {
+            width: 100%;
+
+            &--active,
+            &:hover {
+                &::before {
+                    top: 50%;
+                    left: 65%;
+                    transform: translate(-50%, -60%);
+                }
+            }
+        }
+
+        &__icon {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        &__label {
+            font-size: var(--size_14);
+        }
+    }
+}
+
+@include media.XL {
+    .categories {
+        padding: var(--size_64) var(--size_80);
+
+        &__title {
+            font-size: var(--size_24);
+        }
+
+        &__btn {
+            &--active,
+            &:hover {
+                &::before {
+                    top: 50%;
+                    left: 55%;
+                    transform: translate(-50%, -60%);
+                }
+            }
+        }
+
+        &__icon {
+            width: 10rem;
+            height: 10rem;
+        }
+
+        &__label {
+            font-size: var(--size_20);
+        }
+    }
+}

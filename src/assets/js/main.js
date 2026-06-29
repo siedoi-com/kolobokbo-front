@@ -7,3 +7,4 @@ import "../scss/style.scss";
 // import './blocks/tabs';
 // import './blocks/accordion';
 // import './blocks/quantity';
+import './blocks/categories';
