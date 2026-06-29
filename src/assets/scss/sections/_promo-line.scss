@@ -1,7 +1,41 @@
 .promo-line {
-    padding-block: var(--size_10);
-    // white-space: nowrap;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
+    overflow: hidden;
 }
-// End inner
+
+.running-line {
+    background: rgba(200, 239, 37, 0.80);
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        animation: marquee 10s linear infinite;
+    }
+
+    span {
+    display: flex;
+    align-items: center;
+    gap: var(--size_16);
+    padding: var(--size_16) var(--size_24) var(--size_16) 0;
+    font-size: var(--size_16);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-black);
+
+    img {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+}
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

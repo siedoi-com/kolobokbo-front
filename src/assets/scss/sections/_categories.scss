@@ -197,3 +197,33 @@
         }
     }
 }
+// @include media.M {
+//     .categories {
+//         padding: var(--size_48) var(--size_32);
+
+//         &__container {
+//             width: 100%;
+//         }
+
+//         &__list {
+//             justify-content: space-between;
+//         }
+
+//         &__item {
+//             flex: 1;
+//         }
+
+//         &__btn {
+//             width: 100%;
+//         }
+
+//         &__icon {
+//             width: 8rem;
+//             height: 8rem;
+//         }
+
+//         &__label {
+//             font-size: var(--size_14);
+//         }
+//     }
+// }
