@@ -15,4 +15,25 @@
     svg {
         transition: var(--transition);
     }
+
+    &--primary {
+        display: inline-flex;
+        height: var(--size_48);
+        padding: var(--size_10) var(--size_16);
+        justify-content: center;
+        align-items: center;
+        gap: var(--size_10);
+        background: var(--color-accent);
+        box-shadow: 0.4rem 0.4rem 0 0 var(--color-secondary-accent);
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 800;
+        line-height: normal;
+        white-space: nowrap;
+
+        &:hover {
+            background: var(--color-secondary-accent);
+            box-shadow: 0.4rem 0.4rem 0 0 var(--color-accent);
+        }
+    }
 }

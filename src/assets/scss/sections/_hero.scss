@@ -62,20 +62,7 @@
     }
 
     &__btn {
-        display: flex;
-        height: var(--size_48);
-        padding: var(--size_10) var(--size_16);
-        justify-content: center;
-        align-items: center;
-        gap: var(--size_10);
         align-self: stretch;
-        background: var(--color-accent);
-        box-shadow: 0.4rem 0.4rem 0 0 var(--color-secondary-accent);
-        text-decoration: none;
-        color: var(--color-black);
-        font-size: var(--size_16);
-        font-weight: 800;
-        line-height: normal;
     }
 
     &__image {
@@ -99,7 +86,7 @@
     .hero {
         flex-direction: row;
         align-items: flex-end;
-        gap: var(--size_16);
+        gap: var(--size_64);
     }
 
     .hero__left {

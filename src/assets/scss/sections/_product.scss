@@ -234,22 +234,8 @@
     }
 
     &__btn {
-        display: flex;
-        height: var(--size_48);
-        padding: var(--size_10) var(--size_16);
-        justify-content: center;
-        align-items: center;
-        gap: var(--size_10);
-        flex: 1 0 0;
-        background: var(--color-accent);
-        box-shadow: 0.4rem 0.4rem 0 0 var(--color-secondary-accent);
-        border: none;
-        cursor: pointer;
-        font-size: var(--size_16);
-        font-weight: 800;
-        color: var(--color-black);
-        white-space: nowrap;
-    }
+    flex: 1 0 0;
+}
 }
 
 @include media.L {
@@ -286,6 +272,9 @@
             gap: var(--size_48);
             height: auto;
         }
+         &__price {
+            font-size: var(--size_32);
+        }
     }
 }
 
@@ -307,6 +296,10 @@
             align-items: center;
             flex-wrap: wrap;
             gap: var(--size_32);
+        }
+
+         &__price {
+            font-size: var(--size_40);
         }
 
         &__quantity {
