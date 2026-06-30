@@ -1,0 +1,220 @@
+@use "../global/media";
+
+.ingredients {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 136, 185, 0.10);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_48);
+        padding: var(--size_64) var(--size_16);
+        align-self: stretch;
+        width: 100%;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: var(--size_24);
+        align-self: stretch;
+    }
+
+    &__heading {
+        align-self: stretch;
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 950;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        align-self: stretch;
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    &__cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size_24);
+    align-self: stretch;
+    max-width: 100%;
+    
+}
+
+&__slider {
+    display: flex;
+    gap: var(--size_16);
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    align-self: stretch;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+    &__card {
+    display: flex;
+    min-width: 40%;
+    width: 40%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: var(--size_48) var(--size_8);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size_24);
+    border: 1px solid #D1D5DB;
+    background: #FFF;
+    scroll-snap-align: start;
+}
+
+    &__card-img {
+        width: 11.3rem;
+        height: 10rem;
+        object-fit: contain;
+    }
+
+    &__card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_16);
+    }
+
+    &__card-name {
+        color: var(--color-black);
+        text-align: center;
+        font-size: var(--size_14);
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    &__card-desc {
+        color: var(--color-black);
+        text-align: center;
+        font-size: var(--size_12);
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: var(--size_24);
+    }
+
+    &__button {
+        display: flex;
+        width: var(--size_32);
+        height: var(--size_32);
+        padding: var(--size_8);
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &--next img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        gap: var(--size_12);
+    }
+
+    &__pagination-item {
+        width: var(--size_8);
+        height: var(--size_8);
+        aspect-ratio: 1/1;
+        border: 1px solid var(--color-black);
+        cursor: pointer;
+
+        &.active {
+            background: var(--color-black);
+        }
+    }
+}
+
+@include media.L {
+    .ingredients {
+        &__container {
+            flex-direction: row;
+            align-items: center;
+            gap: var(--size_24);
+            padding: var(--size_64) var(--size_48);
+        }
+
+        &__title {
+            width: 39.3rem;
+            flex-shrink: 0;
+        }
+
+        &__cards-container {
+            flex: 1 0 0;
+            min-width: 0; 
+        }
+
+        &__slider {
+            overflow-x: auto;
+            gap: var(--size_16);
+        }
+
+        &__card {
+            min-width: calc((100% - 3 * var(--size_16)) / 3.5);
+            flex-shrink: 0;
+            padding: var(--size_48) var(--size_12);
+        }
+    }
+}
+
+@include media.XL {
+    .ingredients {
+        &__container {
+            padding: var(--size_96) var(--size_80);
+            gap: var(--size_48);
+        }
+
+        &__heading {
+            font-size: var(--size_40);
+        }
+
+        &__text {
+            font-size: var(--size_18);
+        }
+
+        &__slider {
+            overflow-x: visible;
+            gap: var(--size_24);
+            flex-wrap: nowrap;
+        }
+
+        &__card {
+            flex: 1 1 0;
+            min-width: 0; 
+            width: auto;
+            padding: var(--size_48) var(--size_16);
+        }
+    }
+}
