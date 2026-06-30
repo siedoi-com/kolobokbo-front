@@ -3,43 +3,37 @@
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: var(--size_12);
     align-self: stretch;
     background: var(--color-white);
     border-bottom: 0.1rem solid var(--color-black);
     position: relative;
     overflow: hidden;
+    gap: 1.2rem;
 
     &__left {
-        display: flex;
         padding: var(--size_64) var(--size_16) var(--size_48);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--size_24);
         align-self: stretch;
-        background-image: url('/assets/img/hero-decor-1.svg');
-        background-repeat: no-repeat;
-        background-position: calc(-1 * var(--size_24)) calc(-1 * var(--size_10));
-        background-size: var(--size_120) auto;
+        position: relative;
+        margin-top: auto;
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--size_75);
+        height: auto;
+        pointer-events: none;
+        z-index: 0;
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--size_48);
-        align-self: stretch;
+        position: relative;
+        z-index: 1;
     }
 
     &__title {
-        display: flex;
         padding-top: var(--size_24);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--size_32);
-        align-self: stretch;
 
         h1 {
             color: var(--color-black);
@@ -54,6 +48,7 @@
         }
 
         p {
+            margin-top: var(--size_20);
             color: var(--color-black);
             font-size: var(--size_16);
             font-weight: 400;
@@ -62,41 +57,51 @@
     }
 
     &__btn {
-        align-self: stretch;
+        margin-top: var(--size_48);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     &__image {
-        height: var(--size_600, 60rem);
         width: 100%;
         position: relative;
-        align-self: stretch;
-        background-image: url('/assets/img/hero-image-mobile.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+
+    &__image-inner {
+        height: 40rem;
+        overflow: hidden;
+    }
+
+    &__image-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+        display: block;
     }
 
     &__blob {
         position: absolute;
-        bottom: -2.4rem;
-        left: -13rem;
+        bottom: 0;
+        left: calc(0rem - var(--size_130));
+        z-index: 1;
     }
 }
 
 @include media.L {
     .hero {
         flex-direction: row;
-        align-items: flex-end;
-        gap: var(--size_64);
     }
 
     .hero__left {
         padding: var(--size_64) 0 var(--size_64) var(--size_48);
-        gap: 0;
-        flex: 0.5;
-        background-image: url('/assets/img/hero-decor-1.svg');
-        background-repeat: no-repeat;
-        background-position: calc(-1 * var(--size_24)) calc(-1 * var(--size_10));
-        background-size: var(--size_150) auto;
+        margin-top: 0;
+    }
+
+    .hero__decor {
+        width: var(--size_140);
     }
 
     .hero__title {
@@ -113,29 +118,28 @@
     .hero__image {
         flex: 1;
         width: 60rem;
-        align-self: stretch;
-        min-height: var(--size_550, 55rem);
-        background-image: url('/assets/img/hero-image.png');
-        background-size: cover;
+        margin-left: var(--size_64);
+    }
+
+    .hero__image-inner {
+        height: 100%;
+        overflow: hidden;
     }
 
     .hero__blob {
-        bottom: -8rem;
+        bottom: calc(0rem - var(--size_80));
         left: 0;
     }
 }
 
 @include media.XL {
     .hero {
-        gap: var(--size_24);
         flex-wrap: wrap;
         align-content: flex-end;
     }
 
     .hero__left {
         padding: var(--size_96) 0 var(--size_64) var(--size_80);
-        gap: var(--size_48);
-        flex: 1 0 0;
     }
 
     .hero__title {
@@ -156,14 +160,13 @@
     .hero__image {
         height: var(--size_600, 60rem);
         min-width: 60rem;
-        flex: 1 0 0;
-        background-image: url('/assets/img/hero-image.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+        flex: 1;
+        margin-top: 0;
+        margin-left: var(--size_24);
     }
 
     .hero__blob {
-        bottom: -2.4rem;
-        left: -7rem;
+        bottom: 0;
+        left: calc(0rem - var(--size_70));
     }
 }

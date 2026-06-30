@@ -49,60 +49,25 @@
         border: none;
         background: transparent;
         cursor: pointer;
-        transition: var(--transition);
         position: relative;
+    }
 
-        &--active,
-        &:hover {
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 7.3rem;
-                height: 7.2rem;
-                background-image: url('/assets/icons/blob-yellow.svg');
-                background-repeat: no-repeat;
-                background-size: contain;
-                z-index: 0;
-            }
-        }
+    &__blob {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 7.3rem;
+        height: 7.2rem;
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition);
+    }
 
-        &--all {
-            &:hover::before,
-            &.categories__btn--active::before {
-                background-image: url('/assets/icons/blob-pink.svg');
-            }
-        }
-
-        &--spicy {
-            &:hover::before,
-            &.categories__btn--active::before {
-                background-image: url('/assets/icons/blob-red.svg');
-            }
-        }
-
-        &--chicken {
-            &:hover::before,
-            &.categories__btn--active::before {
-                background-image: url('/assets/icons/blob-yellow.svg');
-            }
-        }
-
-        &--fish {
-            &:hover::before,
-            &.categories__btn--active::before {
-                background-image: url('/assets/icons/blob-blue.svg');
-            }
-        }
-
-        &--vegan {
-            &:hover::before,
-            &.categories__btn--active::before {
-                background-image: url('/assets/icons/blob-green.svg');
-            }
-        }
+    &__btn--active &__blob,
+    &__btn:hover &__blob {
+        opacity: 1;
     }
 
     &__icon {
@@ -110,6 +75,7 @@
         z-index: 1;
         width: 6rem;
         height: 6rem;
+        color: var(--color-black);
     }
 
     &__label {
@@ -146,15 +112,12 @@
 
         &__btn {
             width: 100%;
+        }
 
-            &--active,
-            &:hover {
-                &::before {
-                    top: 50%;
-                    left: 65%;
-                    transform: translate(-50%, -60%);
-                }
-            }
+        &__blob {
+            top: 50%;
+            left: 65%;
+            transform: translate(-50%, -60%);
         }
 
         &__icon {
@@ -176,15 +139,10 @@
             font-size: var(--size_24);
         }
 
-        &__btn {
-            &--active,
-            &:hover {
-                &::before {
-                    top: 50%;
-                    left: 55%;
-                    transform: translate(-50%, -60%);
-                }
-            }
+        &__blob {
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -60%);
         }
 
         &__icon {
@@ -194,36 +152,6 @@
 
         &__label {
             font-size: var(--size_20);
-        }
-    }
-}
-@include media.M {
-    .categories {
-        padding: var(--size_48) var(--size_32);
-
-        &__container {
-            width: 100%;
-        }
-
-        &__list {
-            justify-content: space-between;
-        }
-
-        &__item {
-            flex: 1;
-        }
-
-        &__btn {
-            width: 100%;
-        }
-
-        &__icon {
-            width: 8rem;
-            height: 8rem;
-        }
-
-        &__label {
-            font-size: var(--size_14);
         }
     }
 }
