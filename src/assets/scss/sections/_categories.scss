@@ -2,6 +2,7 @@
 
 .categories {
     padding: var(--size_48) var(--size_16);
+    padding-bottom: var(--size_30);
     background: var(--color-white);
     overflow: hidden;
 
@@ -108,6 +109,7 @@
 @include media.L {
     .categories {
         padding: var(--size_64) var(--size_48);
+        padding-bottom: var(--size_50);
 
         &__container {
             width: 100%;
@@ -150,6 +152,7 @@
 @include media.XL {
     .categories {
         padding: var(--size_64) var(--size_80);
+        padding-bottom: var(--size_70);
 
         &__title {
             font-size: var(--size_24);

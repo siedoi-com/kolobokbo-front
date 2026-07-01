@@ -1,8 +1,10 @@
 @use "../global/media";
+
 .running-line {
     background: rgba(200, 239, 37, 0.80);
     border-top: 0.1rem solid var(--color-black);
     border-bottom: 0.1rem solid var(--color-black);
+    overflow: hidden;
 
     &__inner {
         display: flex;
@@ -12,27 +14,25 @@
     }
 
     span {
-        display: flex;
-        align-items: center;
-        gap: var(--size_16);
-        padding: var(--size_16) var(--size_24) var(--size_16) 0;
-        font-size: var(--size_16);
-        font-weight: 800;
-        text-transform: uppercase;
-        color: var(--color-black);
-    
-        img {
-            width: 2.3rem;
-            height: 2.3rem;
-        }
+    display: flex;
+    align-items: center;
+    gap: var(--size_8);
+    padding: var(--size_8) 0;
+    font-size: var(--size_14);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+    &__icon {
+        width: 2.3rem;
+        height: 2.3rem;
+        flex-shrink: 0;
+        color: var(--color-accent);
     }
 }
 
 @keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(var(--marquee-width, 50%) * -1)); }
 }
