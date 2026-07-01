@@ -45,8 +45,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--size_48);
-        align-self: stretch;
     }
 
     &__title-wrap {
@@ -64,14 +62,8 @@
         align-items: center;
         gap: var(--size_8);
         border-radius: var(--size_24);
-        border: 1px solid #FFB800;
+        border: 0.1rem solid #FFB800;
         background: rgba(255, 184, 0, 0.20);
-
-        img {
-            width: 1.6rem;
-            height: 1.6rem;
-            aspect-ratio: 1/1;
-        }
 
         span {
             font-size: var(--size_10);
@@ -81,8 +73,15 @@
         }
     }
 
+    &__badge-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        color: var(--color-black);
+    }
+
     &__title {
-        align-self: stretch;
+        margin-top: 1rem;
         color: var(--color-black);
         font-size: var(--size_24);
         font-weight: 950;
@@ -92,8 +91,9 @@
 
     &__rating {
         display: flex;
+        margin-top: 1rem;
         align-items: center;
-        gap: var(--size_8);
+        gap: 2.5rem;
         align-self: stretch;
 
         span {
@@ -107,19 +107,21 @@
     &__stars {
         display: flex;
         align-items: center;
-        gap: var(--size_4);
+        gap: var(--size_6);
+    }
 
-        img {
-            width: 2rem;
-            height: 2rem;
-        }
+    &__star {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        color: var(--color-accent);
     }
 
     &__nutrition {
         display: flex;
+        margin-top: 2rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--size_24);
         align-self: stretch;
     }
 
@@ -127,10 +129,10 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--size_8);
         align-self: stretch;
 
         strong {
+            margin-top: 0.5rem;
             font-size: var(--size_16);
             font-weight: 800;
             color: var(--color-black);
@@ -155,6 +157,7 @@
         display: flex;
         align-items: center;
         gap: var(--size_8);
+        margin-top: 2rem;
         align-self: stretch;
     }
 
@@ -163,12 +166,7 @@
         padding: var(--size_8) var(--size_12);
         align-items: center;
         gap: var(--size_8);
-        border: 1px solid #E5E7EB;
-
-        img {
-            width: 2.4rem;
-            height: 2.4rem;
-        }
+        border: 0.1rem solid #E5E7EB;
 
         span {
             font-size: var(--size_10);
@@ -178,11 +176,20 @@
         }
     }
 
+    &__advantage-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        fill: none;
+        stroke: currentColor;
+        color: var(--color-black);
+    }
+
     &__cta {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--size_32);
+        gap: 1.3rem;
         align-self: stretch;
     }
 
@@ -209,7 +216,7 @@
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
-        border: 1px solid var(--color-black);
+        border: 0.1rem solid var(--color-black);
     }
 
     &__quantity-btn {
@@ -221,8 +228,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: var(--size_20);
-        font-weight: 400;
+        color: var(--color-black);
+        transition: opacity var(--transition);
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &__quantity-icon {
+        width: 1.3rem;
+        height: 1.3rem;
+        flex-shrink: 0;
         color: var(--color-black);
     }
 
@@ -234,8 +251,8 @@
     }
 
     &__btn {
-    flex: 1 0 0;
-}
+        flex: 1 0 0;
+    }
 }
 
 @include media.L {
@@ -243,11 +260,11 @@
         flex-direction: row;
         padding: 0 var(--size_48);
         align-items: stretch;
-        gap: var(--size_24);
+        gap: var(--size_12);
 
         &__left {
-             flex: 0 0 50%;   
-            max-width: 50%;  
+            flex: 0 0 50%;
+            max-width: 50%;
             align-self: stretch;
             height: auto;
             padding: var(--size_64) 0;
@@ -256,7 +273,6 @@
         &__image-wrap {
             height: 100%;
             padding: var(--size_48);
-            background: #FFF7DE;
         }
 
         &__image {
@@ -272,7 +288,16 @@
             gap: var(--size_48);
             height: auto;
         }
-         &__price {
+         &__rating { 
+        margin-top: 3rem;
+        span {
+            color: var(--color-black);
+            font-size: var(--size_12);
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+        &__price {
             font-size: var(--size_32);
         }
     }
@@ -281,15 +306,17 @@
 @include media.XL {
     .product {
         &__left {
-            flex: 0 0 50%;  
+            flex: 0 0 50%;
             max-width: 50%;
             align-self: stretch;
             height: auto;
             padding: var(--size_64) 0;
         }
+
         &__right {
-            justify-content: space-between; 
+            justify-content: space-between;
         }
+
         &__cta {
             flex-direction: row;
             justify-content: space-between;
@@ -298,7 +325,7 @@
             gap: var(--size_32);
         }
 
-         &__price {
+        &__price {
             font-size: var(--size_40);
         }
 
