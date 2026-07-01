@@ -1,4 +1,16 @@
 .promo-line {
     overflow: hidden;
+     &--static {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--size_10);
+        background: var(--color-black);
+        color: var(--color-white);
+        font-size: var(--size_16);
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 
