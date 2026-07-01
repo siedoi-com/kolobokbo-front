@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--size_24);
+       
     }
 
     &__title {
@@ -41,52 +41,68 @@
     }
 
     &__btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: var(--size_8);
-        padding: var(--size_12);
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        position: relative;
-    }
+    --blob-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--size_15);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
 
-    &__blob {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 7.3rem;
-        height: 7.2rem;
-        z-index: 0;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity var(--transition);
-    }
+&__btn--all     { --blob-color: #FF88B9; }
+&__btn--spicy   { --blob-color: #F14321; }
+&__btn--chicken { --blob-color: #FFD039; }
+&__btn--fish    { --blob-color: #0080F4; }
+&__btn--vegan   { --blob-color: #C8EF25; }
+
+&__blob {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    transform: translateX(-50%);
+     width: 7.3rem;
+    height: 7.2rem;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    color: var(--blob-color);
+}
 
     &__btn--active &__blob,
     &__btn:hover &__blob {
-        opacity: 1;
+        opacity: 0.7;
     }
 
-    &__icon {
-        position: relative;
-        z-index: 1;
-        width: 6rem;
-        height: 6rem;
-        color: var(--color-black);
-    }
+   &__icon {
+    position: relative;
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    color: var(--color-black);
+    flex-shrink: 0;
+}
 
-    &__label {
-        position: relative;
-        z-index: 1;
-        color: var(--color-black);
-        font-size: var(--size_12);
-        font-weight: 800;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
+&__btn--all &__icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 0.3rem;
+}
+
+   &__label {
+    position: relative;
+    z-index: 1;
+    color: var(--color-black);
+    font-size: var(--size_16);
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+}
 }
 
 @include media.L {

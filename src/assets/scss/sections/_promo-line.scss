@@ -1,16 +1,23 @@
+@use "../global/media";
 .promo-line {
     overflow: hidden;
-     &--static {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--size_10);
-        background: var(--color-black);
-        color: var(--color-white);
-        font-size: var(--size_16);
-        font-weight: 800;
-        text-transform: uppercase;
-        text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 0.6rem;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--size_16);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--static {
+    
     }
 }
-
+@include media.XL {
+    .promo-line {
+        font-size: var(--size_18);
+    }
+}
