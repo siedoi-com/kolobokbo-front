@@ -1,5 +1,5 @@
 .mobile-menu {
-    background: $color_accent;
+  background: var(--color-accent);
     position: fixed;
     top: 0;
     left: 0;
@@ -21,6 +21,7 @@
     &.active {
         clip-path: circle(150% at 3.55rem 3rem);
         pointer-events: all;
+        visibility: visible;
     }
 
     // .mobile-menu__close
@@ -54,7 +55,7 @@
         font-size: 2rem;
         line-height: 1;
         gap: 3.5rem;
-        color: $color_heading;
+        color: var(--color-heading);
 
         .current-menu-item {
             font-weight: 800;
