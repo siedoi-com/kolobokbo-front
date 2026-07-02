@@ -75,4 +75,10 @@
       <symbol id="icon-plus" viewBox="0 0 13 13">
           <path d="M0 7V6H6V0H7V6H13V7H7V13H6V7H0Z" fill="currentColor"/>
       </symbol>
+       <symbol id="arrow" viewBox="0 0 32 32">
+           <rect x="0.5" y="0.5" width="31" height="31" stroke="currentColor" fill="none"/>
+           <path d="M23.0799 15.5H10.8299L16.0799 10.25L15.4199 9.5L8.91992 16L15.4199 22.5L16.0799 21.75L10.8299 16.5H23.0799V15.5Z" fill="currentColor"/>
+       </symbol>
+
+
 </svg>

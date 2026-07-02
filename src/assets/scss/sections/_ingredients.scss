@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--size_48);
+        gap: 4.2rem;
         padding: var(--size_64) var(--size_16);
         align-self: stretch;
         width: 100%;
@@ -20,7 +20,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: var(--size_24);
         align-self: stretch;
     }
 
@@ -39,47 +38,45 @@
         font-size: var(--size_16);
         font-weight: 600;
         line-height: 1.4;
+        margin-top: 1rem;
     }
 
     &__cards-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--size_24);
-    align-self: stretch;
-    max-width: 100%;
-    
-}
-
-&__slider {
-    display: flex;
-    gap: var(--size_16);
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory;
-    align-self: stretch;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_24);
+        align-self: stretch;
+        max-width: 100%;
     }
-}
+
+    .embla--ingredients-slider {
+        width: 100%;
+
+        .embla__viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .embla__container {
+            display: flex;
+            margin-left: calc(var(--size_16) * -1);
+        }
+    }
 
     &__card {
-    display: flex;
-    min-width: 40%;
-    width: 40%;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    padding: var(--size_48) var(--size_8);
-    flex-direction: column;
-    align-items: center;
-    gap: var(--size_24);
-    border: 1px solid #D1D5DB;
-    background: #FFF;
-    scroll-snap-align: start;
-}
+        display: flex;
+        flex: 0 0 40%;
+        min-width: 0;
+        margin-left: var(--size_16);
+        box-sizing: border-box;
+        padding: var(--size_36) var(--size_8);
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_18);
+        border: 0.1rem solid #D1D5DB;
+        background: #FFF;
+    }
 
     &__card-img {
         width: 11.3rem;
@@ -113,13 +110,15 @@
     &__controls {
         display: flex;
         align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        width: 100%;
         gap: var(--size_24);
+        margin-top: 2.5rem;
     }
 
     &__button {
         display: flex;
-        width: var(--size_32);
-        height: var(--size_32);
         padding: var(--size_8);
         justify-content: center;
         align-items: center;
@@ -127,29 +126,40 @@
         background: transparent;
         border: none;
         cursor: pointer;
+        transition: opacity var(--transition);
 
-        img {
+        .ingredients__icon {
             width: 100%;
             height: 100%;
+            color: var(--color-black);
         }
 
-        &--next img {
-            transform: rotate(180deg);
+        &--next {
+            .ingredients__icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            opacity: 0.6;
         }
     }
 
     &__pagination {
         display: flex;
         align-items: center;
-        gap: var(--size_12);
+        gap: var(--size_16);
     }
 
     &__pagination-item {
         width: var(--size_8);
         height: var(--size_8);
         aspect-ratio: 1/1;
-        border: 1px solid var(--color-black);
+        border: 0.1rem solid var(--color-black);
         cursor: pointer;
+        background: transparent;
+        padding: 0;
+        transition: background var(--transition);
 
         &.active {
             background: var(--color-black);
@@ -169,22 +179,23 @@
         &__title {
             width: 39.3rem;
             flex-shrink: 0;
+            margin-top: calc(0rem - var(--size_18));
+        }
+         &__heading {
+            font-size: var(--size_32);
         }
 
         &__cards-container {
             flex: 1 0 0;
-            min-width: 0; 
+            min-width: 0;
         }
 
-        &__slider {
-            overflow-x: auto;
-            gap: var(--size_16);
+        &__card-name {
+            font-size: var(--size_14);
         }
 
-        &__card {
-            min-width: calc((100% - 3 * var(--size_16)) / 3.5);
-            flex-shrink: 0;
-            padding: var(--size_48) var(--size_12);
+        &__card-desc {
+            font-size: var(--size_14);
         }
     }
 }
@@ -192,29 +203,45 @@
 @include media.XL {
     .ingredients {
         &__container {
-            padding: var(--size_96) var(--size_80);
+            padding: var(--size_90) var(--size_80);
             gap: var(--size_48);
         }
-
+        
         &__heading {
             font-size: var(--size_40);
         }
 
         &__text {
             font-size: var(--size_18);
+            
         }
 
-        &__slider {
-            overflow-x: visible;
-            gap: var(--size_24);
+        .embla--ingredients-slider .embla__viewport {
+            overflow: visible;
+        }
+
+        .embla--ingredients-slider .embla__container {
+            margin-left: calc(var(--size_24) * -1);
             flex-wrap: nowrap;
         }
 
         &__card {
             flex: 1 1 0;
-            min-width: 0; 
+            min-width: 0;
             width: auto;
-            padding: var(--size_48) var(--size_16);
+            margin-left: var(--size_24);
+            padding: var(--size_38) var(--size_16);
         }
+
+        &__card-name {
+            font-size: var(--size_16);
+            margin-top: 1rem;
+        }
+
+        &__card-desc {
+            font-size: var(--size_14);
+        }
+
+       
     }
 }

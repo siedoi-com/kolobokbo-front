@@ -1,5 +1,5 @@
-import 'keen-slider/keen-slider.min.css';
-import KeenSlider from 'keen-slider';
+// import 'keen-slider/keen-slider.min.css';
+// import KeenSlider from 'keen-slider';
 import EmblaCarousel from 'embla-carousel';
 
 document.querySelectorAll('.hero__slider').forEach(item => {
@@ -111,39 +111,45 @@ document.querySelectorAll('.logos__marquee').forEach(marquee => {
     window.addEventListener('resize', fill);
 });
 
-document.querySelectorAll('.ingredients__slider').forEach(item => {
-    const parent_el = item.closest('.ingredients');
-    const paginationEl = parent_el.querySelector('.ingredients__pagination');
+// ─── Ingredients Slider: Embla ──────────────────────────────────────────────
+document.querySelectorAll('.embla--ingredients-slider').forEach(emblaNode => {
+    const viewport = emblaNode.querySelector('.embla__viewport');
+    if (!viewport) return;
 
-    const slider = new KeenSlider(item, {
+    const embla = EmblaCarousel(viewport, {
         loop: true,
-    }, [navigation]);
+        align: 'start',
+    });
 
-    parent_el.querySelector('.ingredients__button--prev')?.addEventListener('click', () => slider.prev());
-    parent_el.querySelector('.ingredients__button--next')?.addEventListener('click', () => slider.next());
+    const prevBtn = emblaNode.querySelector('.ingredients__button--prev');
+    const nextBtn = emblaNode.querySelector('.ingredients__button--next');
+    const paginationEl = emblaNode.querySelector('.ingredients__pagination');
 
-    function navigation(slider) {
-        function createPagination() {
+    if (prevBtn) prevBtn.addEventListener('click', () => embla.scrollPrev());
+    if (nextBtn) nextBtn.addEventListener('click', () => embla.scrollNext());
+
+    if (paginationEl) {
+        function createDots() {
             paginationEl.innerHTML = '';
-            slider.track.details.slides.forEach((_, idx) => {
+            embla.scrollSnapList().forEach((_, idx) => {
                 const dot = document.createElement('div');
                 dot.classList.add('ingredients__pagination-item');
-                dot.addEventListener('click', () => slider.moveToIdx(idx));
+                dot.addEventListener('click', () => embla.scrollTo(idx));
                 paginationEl.appendChild(dot);
             });
-            updatePagination();
+            updateDots();
         }
 
-        function updatePagination() {
-            const current = slider.track.details.rel;
+        function updateDots() {
+            const selected = embla.selectedScrollSnap();
             paginationEl.querySelectorAll('.ingredients__pagination-item').forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === current);
+                dot.classList.toggle('active', idx === selected);
             });
         }
 
-        slider.on('created', createPagination);
-        slider.on('slideChanged', updatePagination);
-        slider.on('updated', updatePagination);
+        embla.on('init', createDots);
+        embla.on('select', updateDots);
+        embla.on('reInit', createDots);
     }
 });
 

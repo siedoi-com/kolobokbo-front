@@ -284,46 +284,56 @@
             <p class="ingredients__text">Ми поєднуємо традиційний японський формат онігірі з локальними смаками та якісними інгредієнтами.</p>
         </div>
 
-        <div class="ingredients__cards-container">
-    <div class="ingredients__slider keen-slider">
-        <div class="ingredients__card keen-slider__slide">
-            <img class="ingredients__card-img" src="/assets/img/ingredient-shrimp.png" alt="Креветка темпура">
-            <div class="ingredients__card-text">
-                <strong class="ingredients__card-name">Креветка темпура</strong>
-                <p class="ingredients__card-desc">Джерело білка та Омега-3</p>
+      <div class="ingredients__cards-container">
+    <div class="embla embla--ingredients-slider">
+        <div class="embla__viewport">
+            <div class="embla__container">
+                <div class="ingredients__card embla__slide">
+                    <img class="ingredients__card-img" src="/assets/img/ingredient-shrimp.png" alt="Креветка темпура">
+                    <div class="ingredients__card-text">
+                        <strong class="ingredients__card-name">Креветка темпура</strong>
+                        <p class="ingredients__card-desc">Джерело білка та Омега-3</p>
+                    </div>
+                </div>
+                <div class="ingredients__card embla__slide">
+                    <img class="ingredients__card-img" src="/assets/img/ingredient-rice.png" alt="Рис преміум">
+                    <div class="ingredients__card-text">
+                        <strong class="ingredients__card-name">Рис преміум</strong>
+                        <p class="ingredients__card-desc">Ідеальна текстура та насичений смак</p>
+                    </div>
+                </div>
+                <div class="ingredients__card embla__slide">
+                    <img class="ingredients__card-img" src="/assets/img/ingredient-nori.png" alt="Норі">
+                    <div class="ingredients__card-text">
+                        <strong class="ingredients__card-name">Норі</strong>
+                        <p class="ingredients__card-desc">Мінерали та йод</p>
+                    </div>
+                </div>
+                <div class="ingredients__card embla__slide">
+                    <img class="ingredients__card-img" src="/assets/img/ingredient-cucumber.png" alt="Огірок">
+                    <div class="ingredients__card-text">
+                        <strong class="ingredients__card-name">Огірок</strong>
+                        <p class="ingredients__card-desc">Свіжість та хруст</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="ingredients__card keen-slider__slide">
-            <img class="ingredients__card-img" src="/assets/img/ingredient-rice.png" alt="Рис преміум">
-            <div class="ingredients__card-text">
-                <strong class="ingredients__card-name">Рис преміум</strong>
-                <p class="ingredients__card-desc">Ідеальна текстура та насичений смак</p>
-            </div>
-        </div>
-        <div class="ingredients__card keen-slider__slide">
-            <img class="ingredients__card-img" src="/assets/img/ingredient-nori.png" alt="Норі">
-            <div class="ingredients__card-text">
-                <strong class="ingredients__card-name">Норі</strong>
-                <p class="ingredients__card-desc">Мінерали та йод</p>
-            </div>
-        </div>
-        <div class="ingredients__card keen-slider__slide">
-            <img class="ingredients__card-img" src="/assets/img/ingredient-cucumber.png" alt="Огірок">
-            <div class="ingredients__card-text">
-                <strong class="ingredients__card-name">Огірок</strong>
-                <p class="ingredients__card-desc">Свіжість та хруст</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="ingredients__controls">
-        <button class="ingredients__button ingredients__button--prev" type="button">
-            <img src="/assets/icons/arrow.svg" alt="">
-        </button>
-        <div class="ingredients__pagination"></div>
-        <button class="ingredients__button ingredients__button--next" type="button">
-            <img src="/assets/icons/arrow.svg" alt="">
-        </button>
+        <div class="ingredients__controls">
+    <button class="ingredients__button ingredients__button--prev" type="button" aria-label="Попередній слайд">
+        <svg class="ingredients__icon" width="32" height="32">
+            <use href="/assets/icons/sprite.svg#arrow"></use> 
+            </svg>
+    </button>
+    
+    <div class="ingredients__pagination"></div>
+    
+    <button class="ingredients__button ingredients__button--next" type="button" aria-label="Наступний слайд">
+        <svg class="ingredients__icon" width="32" height="32">
+            <use href="/assets/icons/sprite.svg#arrow"></use>
+        </svg>
+    </button>
+</div>
     </div>
 </div>
     </div>

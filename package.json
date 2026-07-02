@@ -15,6 +15,7 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "dependencies": {
+    "embla-carousel": "^8.6.0",
     "gsap": "^3.15.0"
   }
 }
