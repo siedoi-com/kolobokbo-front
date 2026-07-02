@@ -285,36 +285,102 @@
         &__right {
             padding: var(--size_64) 0;
             flex: 1 0 0;
-            gap: var(--size_48);
+            gap: var(--size_36);
             height: auto;
         }
-         &__rating { 
-        margin-top: 3rem;
-        span {
-            color: var(--color-black);
-            font-size: var(--size_12);
-            font-weight: 600;
-            line-height: normal;
+
+        &__title {
+            font-size: var(--size_32);
+            margin-top: 0.2rem;
         }
-    }
+
+        &__nutrition {
+            margin-top: 1.3rem;
+        }
+
+        &__nutrition-row {
+            font-size: var(--size_16);
+        }
+
+        &__nutrition-item {
+            margin-top: 0.5rem;
+
+            p {
+                font-size: var(--size_16);
+            }
+        }
+
+        &__rating {
+            margin-top: 1.3rem;
+
+            span {
+                color: var(--color-black);
+                font-size: var(--size_12);
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        &__advantage {
+            span {
+                font-size: var(--size_12);
+            }
+        }
+
         &__price {
             font-size: var(--size_32);
+        }
+
+        &__quantity {
+            margin-top: 0.5rem;
+            padding-right: 5rem;
         }
     }
 }
 
 @include media.XL {
     .product {
-        &__left {
-            flex: 0 0 50%;
-            max-width: 50%;
-            align-self: stretch;
-            height: auto;
-            padding: var(--size_64) 0;
-        }
+        gap: var(--size_22);
+        font-size: var(--size_18);
 
         &__right {
             justify-content: space-between;
+        }
+
+        &__title {
+            font-size: var(--size_38);
+            margin-top: 0.2rem;
+        }
+
+        &__nutrition {
+            margin-top: 1.3rem;
+        }
+
+        &__rating {
+            margin-top: 2rem;
+
+            span {
+                color: var(--color-black);
+                font-size: var(--size_16);
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+
+        &__nutrition-row {
+            margin-top: 1rem;
+        }
+
+        &__nutrition-item {
+            margin-top: 0.5rem;
+
+            p {
+                font-size: var(--size_18);
+            }
+        }
+
+        &__advantages {
+            margin-top: 6rem;
         }
 
         &__cta {
@@ -322,7 +388,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: var(--size_32);
+            margin-top: 1.5rem;
         }
 
         &__price {
@@ -330,8 +396,10 @@
         }
 
         &__quantity {
-            width: 40.4rem;
+            width: 43.5rem;
             min-width: 40.4rem;
+            margin-top: 0;
+            padding-right: 4rem;
             justify-content: flex-end;
         }
     }
