@@ -25,12 +25,12 @@
         width: 100%;
         height: 100%;
         background: #FFF7DE;
+        overflow: visible;
     }
 
     &__image {
         width: 100%;
         object-fit: contain;
-        max-height: 28rem;
     }
 
     &__right {
@@ -267,19 +267,20 @@
             max-width: 50%;
             align-self: stretch;
             height: auto;
-            padding: var(--size_64) 0;
+            padding: 5rem 1rem 6rem 0rem;
         }
 
         &__image-wrap {
-            height: 100%;
-            padding: var(--size_48);
+            position: relative;
+            overflow: visible;
         }
 
         &__image {
+            position: absolute;
+            left: 0;
             width: 100%;
-            height: 100%;
+            height: calc(100% + var(--size_24));
             object-fit: contain;
-            max-height: none;
         }
 
         &__right {
@@ -343,17 +344,18 @@
         gap: var(--size_22);
         font-size: var(--size_18);
 
+        &__left {
+            overflow: visible;
+            padding: 5rem 2rem 5rem 3rem;
+        }
+
         &__right {
-            justify-content: space-between;
+            padding-bottom: 3.8rem;
         }
 
         &__title {
             font-size: var(--size_38);
             margin-top: 0.2rem;
-        }
-
-        &__nutrition {
-            margin-top: 1.3rem;
         }
 
         &__rating {
@@ -372,8 +374,6 @@
         }
 
         &__nutrition-item {
-            margin-top: 0.5rem;
-
             p {
                 font-size: var(--size_18);
             }
