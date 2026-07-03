@@ -107,63 +107,8 @@
         line-height: 1.4;
     }
 
-    &__controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: stretch;
-        width: 100%;
-        gap: var(--size_24);
+    .slider-controls {
         margin-top: 2.5rem;
-    }
-
-    &__button {
-        display: flex;
-        padding: var(--size_8);
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 1/1;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        transition: opacity var(--transition);
-
-        .ingredients__icon {
-            width: 100%;
-            height: 100%;
-            color: var(--color-black);
-        }
-
-        &--next {
-            .ingredients__icon {
-                transform: rotate(180deg);
-            }
-        }
-
-        &:hover {
-            opacity: 0.6;
-        }
-    }
-
-    &__pagination {
-        display: flex;
-        align-items: center;
-        gap: var(--size_16);
-    }
-
-    &__pagination-item {
-        width: var(--size_8);
-        height: var(--size_8);
-        aspect-ratio: 1/1;
-        border: 0.1rem solid var(--color-black);
-        cursor: pointer;
-        background: transparent;
-        padding: 0;
-        transition: background var(--transition);
-
-        &.active {
-            background: var(--color-black);
-        }
     }
 }
 
@@ -181,7 +126,8 @@
             flex-shrink: 0;
             margin-top: calc(0rem - var(--size_18));
         }
-         &__heading {
+
+        &__heading {
             font-size: var(--size_32);
         }
 
@@ -197,7 +143,11 @@
         &__card-desc {
             font-size: var(--size_14);
         }
+          .slider-controls {
+        margin-top: 1.5rem;
     }
+    }
+   
 }
 
 @include media.XL {
@@ -206,14 +156,13 @@
             padding: var(--size_90) var(--size_80);
             gap: var(--size_48);
         }
-        
+
         &__heading {
             font-size: var(--size_40);
         }
 
         &__text {
             font-size: var(--size_18);
-            
         }
 
         .embla--ingredients-slider .embla__viewport {
@@ -241,7 +190,9 @@
         &__card-desc {
             font-size: var(--size_14);
         }
-
-       
+         .slider-controls {
+        margin-top: 0.5rem;
     }
+    }
+    
 }

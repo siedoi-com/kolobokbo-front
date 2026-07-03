@@ -2,6 +2,40 @@
 // import KeenSlider from 'keen-slider';
 import EmblaCarousel from 'embla-carousel';
 
+// ─── Shared slider controls (arrows + pagination dots) ─────────────────────
+function initSliderControls(emblaNode, embla) {
+    const prevBtn = emblaNode.querySelector('.slider-controls__button--prev');
+    const nextBtn = emblaNode.querySelector('.slider-controls__button--next');
+    const paginationEl = emblaNode.querySelector('.slider-controls__pagination');
+
+    if (prevBtn) prevBtn.addEventListener('click', () => embla.scrollPrev());
+    if (nextBtn) nextBtn.addEventListener('click', () => embla.scrollNext());
+
+    if (paginationEl) {
+        function createDots() {
+            paginationEl.innerHTML = '';
+            embla.scrollSnapList().forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-controls__pagination-item');
+                dot.addEventListener('click', () => embla.scrollTo(idx));
+                paginationEl.appendChild(dot);
+            });
+            updateDots();
+        }
+
+        function updateDots() {
+            const selected = embla.selectedScrollSnap();
+            paginationEl.querySelectorAll('.slider-controls__pagination-item').forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === selected);
+            });
+        }
+
+        embla.on('init', createDots);
+        embla.on('select', updateDots);
+        embla.on('reInit', createDots);
+    }
+}
+
 document.querySelectorAll('.hero__slider').forEach(item => {
     const parent_el = item.closest('.hero');
     const emblaApi = EmblaCarousel(item, { loop: true });
@@ -121,36 +155,7 @@ document.querySelectorAll('.embla--ingredients-slider').forEach(emblaNode => {
         align: 'start',
     });
 
-    const prevBtn = emblaNode.querySelector('.ingredients__button--prev');
-    const nextBtn = emblaNode.querySelector('.ingredients__button--next');
-    const paginationEl = emblaNode.querySelector('.ingredients__pagination');
-
-    if (prevBtn) prevBtn.addEventListener('click', () => embla.scrollPrev());
-    if (nextBtn) nextBtn.addEventListener('click', () => embla.scrollNext());
-
-    if (paginationEl) {
-        function createDots() {
-            paginationEl.innerHTML = '';
-            embla.scrollSnapList().forEach((_, idx) => {
-                const dot = document.createElement('div');
-                dot.classList.add('ingredients__pagination-item');
-                dot.addEventListener('click', () => embla.scrollTo(idx));
-                paginationEl.appendChild(dot);
-            });
-            updateDots();
-        }
-
-        function updateDots() {
-            const selected = embla.selectedScrollSnap();
-            paginationEl.querySelectorAll('.ingredients__pagination-item').forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === selected);
-            });
-        }
-
-        embla.on('init', createDots);
-        embla.on('select', updateDots);
-        embla.on('reInit', createDots);
-    }
+    initSliderControls(emblaNode, embla);
 });
 
 // ─── Single product: Embla image slider ─────────────────────────────────────
