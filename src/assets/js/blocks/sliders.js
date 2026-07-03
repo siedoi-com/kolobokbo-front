@@ -157,6 +157,7 @@ document.querySelectorAll('.embla--ingredients-slider').forEach(emblaNode => {
 
     initSliderControls(emblaNode, embla);
 });
+
 // .embla--testimonials-slider
 
 document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
@@ -170,13 +171,13 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
 
     const MOBILE_MAX = 1023.98;
     const SWAP_MAX = 1439.98;
+    const ACTIVE_SLOT_POS = 1; 
 
     let mode = null; 
     let embla = null;
     let windowSize = 3;
     let slots = [];
-    let order = [];        
-    let activeSlotPos = 0; 
+    let anchorIndex = 0; 
 
     function mod(n, m) {
         return ((n % m) + m) % m;
@@ -190,7 +191,7 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
         return window.innerWidth <= SWAP_MAX ? 3 : 4;
     }
 
-    // ─── scroll (мобілка): звичайний Embla ──────────────────────────────
+    // ─── scroll (mobile) ──────────────────────────────
     function updateScrollCenterClass() {
         if (!embla) return;
         const selected = embla.selectedScrollSnap();
@@ -213,40 +214,27 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
         }
     }
 
-    // ─── window (L: 3 слоти, XL: 4 слоти) ───────────────────────────────
+    // ─── window (L: 3, XL: 4 )
     function renderContent() {
         slots.forEach((slot, slotPos) => {
-            slot.innerHTML = cardsData[order[slotPos]];
-            slot.dataset.index = order[slotPos];
-        });
-        updateHighlight();
-    }
-
-    function updateHighlight() {
-        slots.forEach((slot, slotPos) => {
-            slot.classList.toggle('is-center', slotPos === activeSlotPos);
+            const dataIndex = mod(anchorIndex + slotPos - ACTIVE_SLOT_POS, cardsData.length);
+            slot.innerHTML = cardsData[dataIndex];
+            slot.dataset.index = dataIndex;
+            slot.classList.toggle('is-center', slotPos === ACTIVE_SLOT_POS);
         });
     }
 
-    
-    function highlightSlot(slotPos) {
-        if (slotPos === activeSlotPos) return;
-        activeSlotPos = slotPos;
-        updateHighlight();
-    }
-
-   
-    function rotate(direction) {
-        order = order.map(dataIndex => mod(dataIndex + direction, cardsData.length));
+    function goTo(dataIndex) {
+        anchorIndex = mod(dataIndex, cardsData.length);
         renderContent();
     }
 
     function slotClickHandler(e) {
-        highlightSlot(slots.indexOf(e.currentTarget));
+        goTo(Number(e.currentTarget.dataset.index));
     }
 
     function enableWindowMode(size) {
-        windowSize = size;
+        windowSize = Math.min(size, cardsData.length);
         slots = allCards.slice(0, windowSize);
         allCards.forEach(card => { card.style.display = 'none'; });
         slots.forEach(slot => {
@@ -254,8 +242,7 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
             slot.addEventListener('click', slotClickHandler);
         });
 
-        order = Array.from({ length: windowSize }, (_, i) => i % cardsData.length);
-        activeSlotPos = windowSize === 3 ? 1 : 0;
+        anchorIndex = 0;
         renderContent();
     }
 
@@ -271,7 +258,7 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
 
     function handlePrev() {
         if (mode === 'window') {
-            rotate(-1);
+            goTo(anchorIndex - 1);
         } else if (embla) {
             embla.scrollPrev();
         }
@@ -279,7 +266,7 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
 
     function handleNext() {
         if (mode === 'window') {
-            rotate(1);
+            goTo(anchorIndex + 1);
         } else if (embla) {
             embla.scrollNext();
         }
