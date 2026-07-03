@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     background: var(--color-white);
+     overflow: hidden;
 
     &__container {
         padding: var(--size_48) var(--size_16);
@@ -171,7 +172,7 @@
             height: auto;
             aspect-ratio: 61 / 69;
             object-fit: contain;
-            margin-left: 14rem;
+            margin-left: 10rem;
         }
 
         &__blob {

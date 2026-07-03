@@ -3,11 +3,11 @@
 import EmblaCarousel from 'embla-carousel';
 
 // ─── Shared slider controls (arrows + pagination dots) ─────────────────────
-function initSliderControls(emblaNode, embla) {
-    const prevBtn = emblaNode.querySelector('.slider-controls__button--prev');
-    const nextBtn = emblaNode.querySelector('.slider-controls__button--next');
-    const paginationEl = emblaNode.querySelector('.slider-controls__pagination');
-
+function initSliderControls(emblaNode, embla, controlsRoot = emblaNode) {
+    const prevBtn = controlsRoot.querySelector('.slider-controls__button--prev');
+    const nextBtn = controlsRoot.querySelector('.slider-controls__button--next');
+    const paginationEl = controlsRoot.querySelector('.slider-controls__pagination');
+   
     if (prevBtn) prevBtn.addEventListener('click', () => embla.scrollPrev());
     if (nextBtn) nextBtn.addEventListener('click', () => embla.scrollNext());
 
@@ -156,6 +156,158 @@ document.querySelectorAll('.embla--ingredients-slider').forEach(emblaNode => {
     });
 
     initSliderControls(emblaNode, embla);
+});
+// .embla--testimonials-slider
+
+document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
+    const viewport = emblaNode.querySelector('.embla__viewport');
+    const container = emblaNode.querySelector('.embla__container');
+    if (!viewport || !container) return;
+
+    const controlsRoot = emblaNode.closest('.testimonials');
+    const allCards = Array.from(container.querySelectorAll('.embla__slide'));
+    const cardsData = allCards.map(card => card.innerHTML);
+
+    const MOBILE_MAX = 1023.98;
+    const SWAP_MAX = 1439.98;
+
+    let mode = null; 
+    let embla = null;
+    let windowSize = 3;
+    let slots = [];
+    let order = [];        
+    let activeSlotPos = 0; 
+
+    function mod(n, m) {
+        return ((n % m) + m) % m;
+    }
+
+    function currentMode() {
+        return window.innerWidth <= MOBILE_MAX ? 'scroll' : 'window';
+    }
+
+    function currentWindowSize() {
+        return window.innerWidth <= SWAP_MAX ? 3 : 4;
+    }
+
+    // ─── scroll (мобілка): звичайний Embla ──────────────────────────────
+    function updateScrollCenterClass() {
+        if (!embla) return;
+        const selected = embla.selectedScrollSnap();
+        allCards.forEach((card, idx) => {
+            card.classList.toggle('is-center', idx === selected);
+        });
+    }
+
+    function enableScrollMode() {
+        embla = EmblaCarousel(viewport, { loop: true, align: 'start' });
+        embla.on('init', updateScrollCenterClass);
+        embla.on('select', updateScrollCenterClass);
+        embla.on('reInit', updateScrollCenterClass);
+    }
+
+    function disableScrollMode() {
+        if (embla) {
+            embla.destroy();
+            embla = null;
+        }
+    }
+
+    // ─── window (L: 3 слоти, XL: 4 слоти) ───────────────────────────────
+    function renderContent() {
+        slots.forEach((slot, slotPos) => {
+            slot.innerHTML = cardsData[order[slotPos]];
+            slot.dataset.index = order[slotPos];
+        });
+        updateHighlight();
+    }
+
+    function updateHighlight() {
+        slots.forEach((slot, slotPos) => {
+            slot.classList.toggle('is-center', slotPos === activeSlotPos);
+        });
+    }
+
+    
+    function highlightSlot(slotPos) {
+        if (slotPos === activeSlotPos) return;
+        activeSlotPos = slotPos;
+        updateHighlight();
+    }
+
+   
+    function rotate(direction) {
+        order = order.map(dataIndex => mod(dataIndex + direction, cardsData.length));
+        renderContent();
+    }
+
+    function slotClickHandler(e) {
+        highlightSlot(slots.indexOf(e.currentTarget));
+    }
+
+    function enableWindowMode(size) {
+        windowSize = size;
+        slots = allCards.slice(0, windowSize);
+        allCards.forEach(card => { card.style.display = 'none'; });
+        slots.forEach(slot => {
+            slot.style.display = '';
+            slot.addEventListener('click', slotClickHandler);
+        });
+
+        order = Array.from({ length: windowSize }, (_, i) => i % cardsData.length);
+        activeSlotPos = windowSize === 3 ? 1 : 0;
+        renderContent();
+    }
+
+    function disableWindowMode() {
+        allCards.forEach((card, i) => {
+            card.style.display = '';
+            card.classList.remove('is-center');
+            card.innerHTML = cardsData[i];
+            card.removeEventListener('click', slotClickHandler);
+        });
+        slots = [];
+    }
+
+    function handlePrev() {
+        if (mode === 'window') {
+            rotate(-1);
+        } else if (embla) {
+            embla.scrollPrev();
+        }
+    }
+
+    function handleNext() {
+        if (mode === 'window') {
+            rotate(1);
+        } else if (embla) {
+            embla.scrollNext();
+        }
+    }
+
+    const prevBtn = controlsRoot.querySelector('.slider-controls__button--prev');
+    const nextBtn = controlsRoot.querySelector('.slider-controls__button--next');
+    if (prevBtn) prevBtn.addEventListener('click', handlePrev);
+    if (nextBtn) nextBtn.addEventListener('click', handleNext);
+
+    function applyMode() {
+        const newMode = currentMode();
+        const newWindowSize = currentWindowSize();
+        const sizeChanged = newMode === 'window' && windowSize !== newWindowSize;
+
+        if (newMode === mode && !sizeChanged) return;
+
+        if (mode === 'scroll') disableScrollMode();
+        if (mode === 'window') disableWindowMode();
+
+        mode = newMode;
+
+        if (mode === 'scroll') enableScrollMode();
+        if (mode === 'window') enableWindowMode(newWindowSize);
+    }
+
+    applyMode();
+    window.addEventListener('resize', applyMode);
 });
 
 // ─── Single product: Embla image slider ─────────────────────────────────────

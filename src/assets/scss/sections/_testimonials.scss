@@ -1,0 +1,186 @@
+@use "../global/media";
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    background: #FFF7DE;
+    border-bottom: 0.1rem solid var(--color-black);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_14);
+        padding: var(--size_38) var(--size_16) var(--size_48);
+        width: 100%;
+    }
+
+    &__title-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size_16);
+        width: 100%;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_18);
+        font-weight: 800;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__title-controls {
+        display: flex;
+        align-items: center;
+        gap: var(--size_16);
+        flex-shrink: 0;
+    }
+
+    &__cards-container {
+        width: 100%;
+    }
+
+    .embla--testimonials-slider {
+        width: 100%;
+
+        .embla__viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .embla__container {
+            display: flex;
+            align-items: center;
+            margin-left: calc(var(--size_16) * -1);
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 24.2rem;
+        min-height: 18rem;
+        box-sizing: border-box;
+        margin-left: var(--size_16);
+        gap: 1rem;
+        padding: var(--size_32) var(--size_24);
+        border: 0.1rem solid #D1D5DB;
+        background: var(--color-white);
+        transition: border-color var(--transition);
+
+        &.is-center {
+            border-color: var(--color-black);
+        }
+    }
+
+    &__card-stars {
+        display: flex;
+        gap: var(--size_6);
+    }
+
+    &__card-star {
+        width: 2rem;
+        height: 2rem;
+        color: var(--color-accent);
+    }
+
+    &__card-name {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    &__card-text {
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 400;
+        line-height: 1.4;
+    }
+}
+
+@include media.L {
+    .testimonials {
+        &__container {
+            padding: var(--size_38) var(--size_48) var(--size_64);
+        }
+
+        &__title-wrap {
+            margin-top: 3rem;
+        }
+
+        &__title {
+            font-size: var(--size_20);
+        }
+
+        &__card {
+            flex: 0 0 29.3rem;
+            min-height: 0;
+            height: 17.6rem;
+            margin-left: 0;
+            gap: 2rem;
+            cursor: pointer;
+        }
+
+        &__card.is-center {
+            height: 22rem;
+            padding: 4.5rem 5rem 4rem 4rem;
+        }
+
+        &__card-stars {
+            gap: var(--size_8);
+        }
+
+        &__card-star {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+
+        &__card-text {
+            font-size: var(--size_14);
+        }
+
+        .embla--testimonials-slider .embla__viewport {
+            overflow: visible;
+        }
+
+        .embla--testimonials-slider .embla__container {
+            justify-content: space-between;
+            margin-left: 0;
+            gap: var(--size_16);
+        }
+    }
+}
+@include media.XL {
+    .testimonials {
+        &__container {
+            padding: var(--size_38) var(--size_80) var(--size_64);
+        }
+
+        &__card {
+            flex: 1 1 0;
+            min-width: 0;
+            min-height: 0;
+            height: 17.6rem;
+            margin-left: 0;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        &__card.is-center {
+            height: 20rem;
+            padding: var(--size_36) var(--size_24);
+        }
+
+        .embla--testimonials-slider .embla__viewport {
+            overflow: visible;
+        }
+
+        .embla--testimonials-slider .embla__container {
+            margin-left: 0;
+            gap: var(--size_16);
+        }
+    }
+}
