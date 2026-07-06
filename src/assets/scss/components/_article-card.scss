@@ -1,0 +1,97 @@
+.article-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--color-black);
+    background: var(--color-white);
+    transition: background-color var(--transition);
+
+    &:hover {
+        background: var(--color-blob-vegan);
+
+        .button__underline {
+            color: var(--color-black);
+        }
+
+        .button__icon {
+            transform: translateX(1rem) rotate(180deg);
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+        width: 100%;
+    }
+
+    &__image {
+        display: block;
+        box-sizing: border-box;
+        padding: 2.4rem 0.8rem;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__label {
+       position: absolute;
+    top: 4rem;
+    left: 2rem;
+    padding: 1.2rem 1rem;
+    border-radius: var(--size_24);
+    background: #FFB800;
+    color: var(--color-black);
+    font-size: var(--size_10);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: normal;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.8rem 6rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_14);
+        font-weight: 800;
+        line-height: 1.4;
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 400;
+    }
+
+    &__date::after {
+        content: '';
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-left: var(--size_12);
+        background: var(--color-black);
+        vertical-align: middle;
+    }
+
+    &__read-time {
+        display: flex;
+        align-items: center;
+        gap: var(--size_6);
+    }
+
+    &__meta-icon {
+        width: var(--size_16);
+        height: var(--size_16);
+        color: var(--color-black);
+    }
+}

@@ -31,6 +31,7 @@ $breakpoint__2xl: 1440px;
 @use "components/cart-badge";
 @use "components/slider-controls";
 @use "components/review-card";
+@use "components/article-card";
 
 
 @use "components/button";
@@ -49,4 +50,5 @@ $breakpoint__2xl: 1440px;
 @use "sections/ingredients";
 @use "sections/product-info";
 @use "sections/testimonials";
+@use "sections/blog";
 

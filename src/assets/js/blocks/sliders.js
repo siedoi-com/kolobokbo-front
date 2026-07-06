@@ -297,6 +297,19 @@ document.querySelectorAll('.embla--testimonials-slider').forEach(emblaNode => {
     window.addEventListener('resize', applyMode);
 });
 
+// ─── Blog Slider: Embla ─────────────────────────────────────────────────────
+document.querySelectorAll('.embla--blog-slider').forEach(emblaNode => {
+    const viewport = emblaNode.querySelector('.embla__viewport');
+    if (!viewport) return;
+
+    const embla = EmblaCarousel(viewport, {
+        loop: true,
+        align: 'start',
+    });
+
+    initSliderControls(emblaNode, embla);
+});
+
 // ─── Single product: Embla image slider ─────────────────────────────────────
 document.querySelectorAll('.js-product-slider').forEach(emblaNode => {
     const wrap = emblaNode.closest('.sp-preview__image-wrap');

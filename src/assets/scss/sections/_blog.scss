@@ -1,0 +1,139 @@
+@use "../global/media";
+
+.blog {
+    display: flex;
+    justify-content: center;
+    background: var(--color-white); 
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_34); 
+        padding: var(--size_45) var(--size_16); 
+        box-sizing: border-box;
+        width: 100%;
+        border-bottom: 0.1rem solid var(--color-black);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 950;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16); 
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 1rem 0 2.5rem;
+    }
+
+    &__cards-container {
+        width: 100%;
+    }
+
+    .embla--blog-slider {
+        width: 100%;
+
+        .embla__viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .embla__container {
+            display: flex;
+            margin-left: calc(var(--size_16) * -1);
+        }
+    }
+
+    .article-card {
+        flex: 0 0 95%; 
+        margin-left: var(--size_16);
+    }
+
+    .slider-controls {
+        margin-top: 1.6rem; 
+    }
+}
+
+@include media.L {
+    .blog {
+        &__container {
+            flex-direction: row; 
+            align-items: flex-start;
+            gap: var(--size_48); 
+            padding: var(--size_96) var(--size_80); 
+        }
+
+        &__header {
+            gap: var(--size_24); 
+        }
+
+        &__title {
+            font-size: var(--size_32); 
+        }
+
+        &__text {
+            font-size: var(--size_18);
+        }
+
+        .embla--blog-slider .embla__viewport {
+            overflow: hidden; 
+        }
+
+        .embla--blog-slider .embla__container {
+            margin-left: 0;
+            gap: var(--size_24); 
+        }
+
+        .article-card {
+            flex: 0 0 calc((100% - var(--size_24)) / 1.5); 
+            margin-left: 0;
+        }
+    }
+}
+
+@include media.XL {
+    .blog {
+        &__container {
+            padding: var(--size_96) var(--size_80); 
+        }
+
+        &__header {
+            flex: 0 0 30rem; 
+            width: auto;
+        }
+
+        &__title {
+            font-size: var(--size_40); 
+        }
+
+        &__text {
+            font-size: var(--size_18); 
+        }
+
+        &__cards-container {
+            flex: 1 1 0;
+            width: auto;
+        }
+
+        .embla--blog-slider .embla__container {
+            gap: var(--size_32); 
+        }
+
+        .article-card {
+            flex: 0 0 calc((100% - var(--size_32)) / 2); 
+        }
+    }
+}
