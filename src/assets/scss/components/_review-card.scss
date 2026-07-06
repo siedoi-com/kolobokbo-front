@@ -1,0 +1,41 @@
+.review-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    gap: 1rem;
+    padding: var(--size_32) var(--size_24);
+    border: 0.1rem solid #D1D5DB;
+    background: var(--color-white);
+    transition: border-color var(--transition);
+
+    &.is-center {
+        border-color: var(--color-black);
+    }
+
+    &__stars {
+        display: flex;
+        gap: var(--size_6);
+    }
+
+    &__star {
+        width: 2rem;
+        height: 2rem;
+        color: var(--color-accent);
+    }
+
+    &__name {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 800;
+        line-height: 1.4;
+        margin-top: 1.3rem;
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 400;
+        line-height: 1.4;
+        width: 22rem;
+    }
+}

@@ -56,50 +56,11 @@
         }
     }
 
-    &__card {
-        display: flex;
-        flex-direction: column;
-        box-sizing: content-box;
+    .review-card {
         flex: 0 0 19.4rem;
         min-height: 0;
         height: 10.2rem;
         margin-left: var(--size_16);
-        gap: 1rem;
-        padding: var(--size_32) var(--size_24);
-        border: 0.1rem solid #D1D5DB;
-        background: var(--color-white);
-        transition: border-color var(--transition);
-    }
-
-    &__card.is-center {
-        border-color: var(--color-black);
-    }
-
-    &__card-stars {
-        display: flex;
-        gap: var(--size_6);
-    }
-
-    &__card-star {
-        width: 2rem;
-        height: 2rem;
-        color: var(--color-accent);
-    }
-
-    &__card-name {
-        color: var(--color-black);
-        font-size: var(--size_16);
-        font-weight: 800;
-        line-height: 1.4;
-        margin-top: 1.3rem;
-    }
-
-    &__card-text {
-        color: var(--color-black);
-        font-size: var(--size_12);
-        font-weight: 400;
-        line-height: 1.4;
-        width: 22rem;
     }
 }
 
@@ -126,7 +87,7 @@
             height: 22.8rem;
         }
 
-        &__card {
+        .review-card {
             flex: 0 0 22.5rem;
             height: 12.5rem;
             margin: 0 2.4rem;
@@ -135,21 +96,21 @@
             cursor: pointer;
         }
 
-        &__card.is-center {
+        .review-card.is-center {
             padding: 4.8rem 2.4rem;
             margin: 0;
         }
 
-        &__card-star {
+        .review-card__star {
             width: 2.2rem;
             height: 2.2rem;
         }
 
-        &__card-name {
+        .review-card__name {
             margin-top: 0;
         }
 
-        &__card-text {
+        .review-card__text {
             font-size: var(--size_14);
             width: 23rem;
         }
@@ -177,7 +138,7 @@
             justify-content: center;
         }
 
-        &__card {
+        .review-card {
             min-width: 0;
             height: 11.9rem;
             margin: 0;
@@ -185,16 +146,16 @@
             gap: 1rem;
         }
 
-        &__card.is-center {
+        .review-card.is-center {
             height: 13.2rem;
         }
 
-        &__card-name {
+        .review-card__name {
             margin-top: 0.4rem;
             font-size: var(--size_18);
         }
 
-        &__card-text {
+        .review-card__text {
             width: 100%;
         }
     }
