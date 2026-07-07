@@ -10,7 +10,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 4.2rem;
-        padding: var(--size_64) var(--size_16) var(--size_52);
+        padding: var(--size_64) 0 var(--size_52) var(--size_16);
         align-self: stretch;
         width: 100%;
     }
@@ -60,51 +60,15 @@
 
         .embla__container {
             display: flex;
-            margin-left: calc(var(--size_16) * -1);
         }
     }
 
-    &__card {
-        display: flex;
+    .ingredient-card {
         flex: 0 0 40%;
         min-width: 0;
         margin-left: var(--size_16);
-        box-sizing: border-box;
         padding: var(--size_36) var(--size_8);
-        flex-direction: column;
-        align-items: center;
         gap: var(--size_18);
-        border: 0.1rem solid #D1D5DB;
-        background: #FFF;
-    }
-
-    &__card-img {
-        width: 11.3rem;
-        height: 10rem;
-        object-fit: contain;
-    }
-
-    &__card-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: var(--size_16);
-    }
-
-    &__card-name {
-        color: var(--color-black);
-        text-align: center;
-        font-size: var(--size_14);
-        font-weight: 800;
-        line-height: 1.4;
-    }
-
-    &__card-desc {
-        color: var(--color-black);
-        text-align: center;
-        font-size: var(--size_12);
-        font-weight: 600;
-        line-height: 1.4;
     }
 
     .slider-controls {
@@ -118,7 +82,7 @@
             flex-direction: row;
             align-items: center;
             gap: var(--size_24);
-            padding: var(--size_64) var(--size_48);
+            padding: var(--size_64) 0 var(--size_64) var(--size_48);
         }
 
         &__title {
@@ -136,18 +100,18 @@
             min-width: 0;
         }
 
-        &__card-name {
+        .ingredient-card__name {
             font-size: var(--size_14);
         }
 
-        &__card-desc {
+        .ingredient-card__desc {
             font-size: var(--size_14);
         }
-          .slider-controls {
-        margin-top: 1.5rem;
+
+        .slider-controls {
+            margin-top: 1.5rem;
+        }
     }
-    }
-   
 }
 
 @include media.XL {
@@ -174,7 +138,7 @@
             flex-wrap: nowrap;
         }
 
-        &__card {
+        .ingredient-card {
             flex: 1 1 0;
             min-width: 0;
             width: auto;
@@ -182,17 +146,17 @@
             padding: var(--size_38) var(--size_16);
         }
 
-        &__card-name {
+        .ingredient-card__name {
             font-size: var(--size_16);
             margin-top: 1rem;
         }
 
-        &__card-desc {
+        .ingredient-card__desc {
             font-size: var(--size_14);
         }
-         .slider-controls {
-        margin-top: 0.5rem;
+
+        .slider-controls {
+            margin-top: 0.5rem;
+        }
     }
-    }
-    
 }

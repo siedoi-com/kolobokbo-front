@@ -176,6 +176,7 @@
         .article-card__title {
             font-size: var(--size_16);
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             min-height: calc(var(--size_16) * 1.4 * 2);
             width: 70%;
         }
