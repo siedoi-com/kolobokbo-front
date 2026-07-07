@@ -5,6 +5,6 @@ import './blocks/header';
 import './blocks/sliders';
 import './blocks/marquee';
 // import './blocks/tabs';
-// import './blocks/accordion';
+import './blocks/accordion';
 // import './blocks/quantity';
 import './blocks/categories';

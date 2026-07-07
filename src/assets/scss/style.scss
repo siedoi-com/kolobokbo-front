@@ -33,6 +33,7 @@ $breakpoint__2xl: 1440px;
 @use "components/slider-controls";
 @use "components/review-card";
 @use "components/article-card";
+@use "components/faq-item";
 
 
 @use "components/button";
@@ -52,4 +53,5 @@ $breakpoint__2xl: 1440px;
 @use "sections/product-info";
 @use "sections/testimonials";
 @use "sections/blog";
+@use "sections/faq";
 

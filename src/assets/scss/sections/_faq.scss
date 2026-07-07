@@ -1,0 +1,114 @@
+@use "../global/media";
+
+.faq {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--color-white);
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_24);
+        padding: var(--size_48) var(--size_16);
+        width: 100%;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_40);
+        font-weight: 900;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_16);
+        list-style: none;
+        margin-top: 2.5rem;
+        padding: 0 var(--size_16);
+    }
+
+    &__decor {
+        position: absolute;
+        pointer-events: none;
+
+        &--left {
+            z-index: 1;
+            bottom: 15.5rem;
+            left: -15rem;
+            width: 31.2rem;
+            height: 39.4rem;
+            color: var(--color-secondary-accent);
+        }
+
+        &--right {
+            z-index: 0;
+            top: 1rem;
+            right: -19rem;
+            width: 26.7rem;
+            height: 22.9rem;
+            color: var(--color-accent);
+        }
+    }
+}
+
+@include media.L {
+    .faq {
+        &__container {
+            padding: var(--size_64) var(--size_48);
+        }
+
+        &__title {
+            font-size: var(--size_56);
+            margin-top: 1.5rem;
+        }
+
+        &__list {
+            padding: 0 var(--size_48);
+        }
+
+        &__decor--left {
+            bottom: 8.5rem;
+            width: 46.2rem;
+            height: 40.4rem;
+        }
+
+        &__decor--right {
+            display: none;
+        }
+    }
+}
+
+@include media.XL {
+    .faq {
+        &__container {
+            padding: var(--size_64) var(--size_80);
+        }
+
+        &__title {
+            font-size: var(--size_72);
+            margin-top: 1rem;
+        }
+
+        &__list {
+            padding: 0 var(--size_80);
+        }
+
+        &__decor--right {
+            display: block;
+            top: 6rem;
+            right: -23rem;
+            width: 34.7rem;
+            height: 32.9rem;
+        }
+    }
+}
