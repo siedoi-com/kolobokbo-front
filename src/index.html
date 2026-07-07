@@ -695,7 +695,83 @@
         </ul>
     </div>
 </section>
+<footer class="footer">
+    <div class="footer__container">
+        <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
+            <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy" decoding="async">
+        </a>
 
+        <div class="footer__row">
+            <nav class="footer__nav" aria-label="Футер навігація">
+                <ul class="footer__menu">
+                    <li><a href="/" class="footer__link">Головна</a></li>
+                    <li><a href="/shop/" class="footer__link">Каталог</a></li>
+                    <li><a href="/pro-nas/" class="footer__link">Про нас</a></li>
+                    <li><a href="/blog/" class="footer__link">Блог</a></li>
+                    <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
+                    <li><a href="/contacts/" class="footer__link">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__contacts">
+                <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
+                    <svg class="footer__contact-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#mail"></use>
+                    </svg>
+                    kolobokbo@gmail.com
+                </a>
+                <a href="tel:+380955941028" class="footer__contact-item">
+                    <svg class="footer__contact-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    (095) 594 10 28
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__subscribe">
+            <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
+
+            <form class="footer__subscribe-form" action="/subscribe/" method="post">
+                <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail" required aria-label="Ваш E-mail">
+                <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__bottom-left">
+            <span class="footer__copyright">© 2026 Kolobok Bo.</span>
+            <a href="/privacy-policy/" class="footer__legal-link">Політика конфіденційності</a>
+            <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
+        </div>
+
+        <div class="footer__bottom-right">
+            <div class="footer__payments">
+                <img class="footer__payment-icon" src="/assets/icons/visa.svg" alt="Visa" width="48" height="16" loading="lazy" decoding="async">
+                <img class="footer__payment-icon" src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy" decoding="async">
+            </div>
+
+            <div class="footer__social">
+                <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg class="footer__social-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                    <svg class="footer__social-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener">
+                    <svg class="footer__social-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#tiktok"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
         </main>
         <script type="module" src="/assets/js/main.js"></script>
     </body>

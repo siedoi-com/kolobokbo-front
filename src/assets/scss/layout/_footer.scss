@@ -1,0 +1,192 @@
+@use "../global/media";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-cream);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_32);
+        padding: var(--size_24) var(--size_8);
+    }
+
+    &__logo-link {
+        display: flex;
+    }
+
+    &__logo {
+        width: 7.8rem;
+        height: 8rem;
+    }
+
+    &__row {
+        display: flex;
+        gap: var(--size_40);
+        width: 100%;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_16);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        color: var(--color-black);
+        text-decoration: none;
+        font-size: var(--size_16);
+        font-weight: 600;
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--color-secondary-accent);
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_16);
+    }
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        gap: var(--size_12);
+        color: var(--color-black);
+        text-decoration: none;
+        font-size: var(--size_16);
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--color-secondary-accent);
+        }
+    }
+
+    &__contact-icon {
+        width: var(--size_32);
+        height: var(--size_24);
+        color: var(--color-black);
+    }
+
+    &__subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_16);
+        width: 100%;
+    }
+
+    &__subscribe-title {
+        color: var(--color-black);
+        font-size: var(--size_20);
+        font-weight: 800;
+        line-height: 1.3;
+    }
+
+    &__subscribe-form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_12);
+        width: 100%;
+    }
+
+    &__subscribe-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: var(--size_16);
+        border: 0.1rem solid var(--color-black);
+        background: var(--color-white);
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-family: var(--font-secondary);
+
+        &::placeholder {
+            color: var(--color-black);
+            opacity: 0.5;
+        }
+    }
+
+    &__subscribe-btn {
+        width: 100%;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_16);
+        padding: var(--size_24) var(--size_16);
+        background-color: var(--color-black);
+    }
+
+    &__bottom-left {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--size_16) var(--size_24);
+        text-align: left;
+    }
+
+    &__copyright {
+        color: var(--color-white);
+        font-size: var(--size_14);
+    }
+
+    &__legal-link {
+        color: var(--color-white);
+        text-decoration: underline;
+        font-size: var(--size_14);
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--color-secondary-accent);
+        }
+    }
+
+    &__bottom-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--size_16);
+    }
+
+    &__payments {
+        display: flex;
+        align-items: center;
+        gap: var(--size_16);
+    }
+
+    &__payment-icon {
+        height: 2rem;
+        width: auto;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: var(--size_16);
+    }
+
+    &__social-link {
+        display: flex;
+        color: var(--color-white);
+        transition: color var(--transition);
+
+        &:hover {
+            color: var(--color-secondary-accent);
+        }
+    }
+
+    &__social-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+

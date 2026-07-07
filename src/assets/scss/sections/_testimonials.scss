@@ -3,7 +3,7 @@
 .testimonials {
     display: flex;
     justify-content: center;
-    background: #FFF7DE;
+    background: var(--color-bg-cream);
     border-bottom: 0.1rem solid var(--color-black);
 
     &__container {
