@@ -217,6 +217,9 @@ svg {
     inset-block-start: 50%;
     transform: translate(-50%, -50%);
 }
+.no-scroll {
+    overflow: hidden;
+}
 
 // main {
 //     margin-block-start: var(--header-height);
@@ -337,9 +340,7 @@ svg {
 //     height: 100%;
 // }
 
-// .no-scroll {
-//     overflow: hidden;
-// }
+
 
 // .added_to_cart.wc-forward {
 //     display: none !important;

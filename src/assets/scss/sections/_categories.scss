@@ -1,8 +1,7 @@
 @use "../global/media";
 
 .categories {
-    padding: var(--size_48) var(--size_16);
-    padding-bottom: var(--size_30);
+    padding: var(--size_42) 0 var(--size_32) var(--size_16);
     background: var(--color-white);
     overflow: hidden;
 
@@ -10,7 +9,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-       
     }
 
     &__title {
@@ -26,7 +24,7 @@
     &__list {
         display: flex;
         align-items: center;
-        gap: var(--size_8);
+        gap: 5rem;
         list-style: none;
         overflow-x: auto;
         scrollbar-width: none;
@@ -42,74 +40,73 @@
     }
 
     &__btn {
-    --blob-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--size_15);
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-}
+        --blob-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--size_15) 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+    }
 
-&__btn--all     { --blob-color: #FF88B9; }
-&__btn--spicy   { --blob-color: #F14321; }
-&__btn--chicken { --blob-color: #FFD039; }
-&__btn--fish    { --blob-color: #0080F4; }
-&__btn--vegan   { --blob-color: #C8EF25; }
+    &__btn--all { --blob-color: var(--color-blob-all); }
+    &__btn--spicy { --blob-color: var(--color-blob-spicy); }
+    &__btn--chicken { --blob-color: var(--color-blob-chicken); }
+    &__btn--fish { --blob-color: var(--color-blob-fish); }
+    &__btn--vegan { --blob-color: var(--color-blob-vegan); }
 
-&__blob {
-    position: absolute;
-    top: 10%;
-    left: 70%;
-    transform: translateX(-50%);
-     width: 7.3rem;
-    height: 7.2rem;
-    z-index: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity var(--transition);
-    color: var(--blob-color);
-}
+    &__blob {
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        transform: translateX(-50%);
+        width: 7.3rem;
+        height: 7.2rem;
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition);
+        color: var(--blob-color);
+    }
 
     &__btn--active &__blob,
     &__btn:hover &__blob {
         opacity: 0.7;
     }
 
-   &__icon {
-    position: relative;
-    z-index: 1;
-    width: 6rem;
-    height: 6rem;
-    color: var(--color-black);
-    flex-shrink: 0;
-}
+    &__icon {
+        position: relative;
+        z-index: 1;
+        width: 6.2rem;
+        height: 6.2rem;
+        color: var(--color-black);
+        flex-shrink: 0;
+    }
 
-&__btn--all &__icon {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 0.3rem;
-}
+    &__btn--all &__icon {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 0.3rem;
+    }
 
-   &__label {
-    position: relative;
-    z-index: 1;
-    color: var(--color-black);
-    font-size: var(--size_16);
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-align: center;
-}
+    &__label {
+        position: relative;
+        z-index: 1;
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: center;
+    }
 }
 
 @include media.L {
     .categories {
-        padding: var(--size_64) var(--size_48);
-        padding-bottom: var(--size_50);
+        padding: var(--size_60) var(--size_48) var(--size_45);
 
         &__container {
             width: 100%;
@@ -117,11 +114,6 @@
 
         &__title {
             font-size: var(--size_20);
-        }
-
-        &__list {
-            justify-content: space-between;
-            overflow-x: visible;
         }
 
         &__item {
@@ -144,29 +136,37 @@
         }
 
         &__label {
-            font-size: var(--size_14);
+            font-size: var(--size_18);
+            margin-top: 0.8rem;
+            font-weight: 600;
         }
     }
 }
 
 @include media.XL {
     .categories {
-        padding: var(--size_64) var(--size_80);
-        padding-bottom: var(--size_70);
+        padding: var(--size_55) var(--size_80) var(--size_40);
 
         &__title {
             font-size: var(--size_24);
+        }
+
+        &__list {
+            margin-top: 2.5rem;
+        }
+
+        &__item {
+            flex: 1;
+        }
+
+        &__btn {
+            width: 100%;
         }
 
         &__blob {
             top: 50%;
             left: 55%;
             transform: translate(-50%, -60%);
-        }
-
-        &__icon {
-            width: 10rem;
-            height: 10rem;
         }
 
         &__label {

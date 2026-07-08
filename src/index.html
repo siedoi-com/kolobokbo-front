@@ -54,35 +54,53 @@
                 </div>
             </div>
 
-            <div class="mobile-menu ">
-                <button class="mobile-menu__close">
-                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.4365 12.0225L25.4561 0.00292969L26.8701 1.41699L14.8506 13.4365L26.8701 25.4561L25.4561 26.8701L13.4365 14.8506L1.41406 26.873L0 25.459L12.0225 13.4365L0 1.41406L1.41406 0L13.4365 12.0225Z" fill="#1E1E1E"></path>
-                    </svg>
-                </button>
+           <div class="mobile-menu">
+    <button class="mobile-menu__close">
+    <svg class="mobile-menu__close-icon" aria-hidden="true">
+        <use href="/assets/icons/sprite.svg#close"></use>
+    </svg>
+</button>
 
-                <div class="mobile-menu__logo">
-                    <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
-                </div>
+    <div class="mobile-menu__logo">
+        <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
+    </div>
 
-                <ul id="menu-header-1" class="mobile-menu__list">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244"><a href="/" aria-current="page">Головна</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="/shop/">Каталог</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="/pro-nas/">Про нас</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="/blog/">Блог</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="/dostavka-i-oplata/">Доставка</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="/contacts/">Контакти</a></li>
-                </ul>
-                <ul class="mobile-menu__social social-list">
-                    <!-- <br />
-                    <b>Warning</b>
-                    : Invalid argument supplied for foreach() in
-                    <b>/home/kolobok-live/web/kolobokbo.siedoi.com/public_html/wp-content/themes/kolobokbo/header.php</b>
-                    on line
-                    <b>111</b>
-                    <br /> -->
-                </ul>
-            </div>
+    <ul id="menu-header-1" class="mobile-menu__list">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244"><a href="/" aria-current="page">Головна</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="/shop/">Каталог</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="/pro-nas/">Про нас</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="/blog/">Блог</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="/dostavka-i-oplata/">Доставка і оплата</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="/contacts/">Контакти</a></li>
+    </ul>
+
+    <div class="mobile-menu__contact">
+        <a href="tel:+380955941028" class="mobile-menu__phone">
+            <svg class="mobile-menu__phone-icon" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#phone"></use>
+            </svg>
+            (095) 594 10 28
+        </a>
+    </div>
+
+    <ul class="mobile-menu__social social-list">
+        <li class="social-list__item">
+            <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#instagram"></use></svg>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#facebook"></use></svg>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="https://tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="/assets/icons/sprite.svg#tiktok"></use></svg>
+            </a>
+        </li>
+    </ul>
+</div>
         </header>
         <main>
          <section class="hero">

@@ -11,7 +11,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: var(--size_14);
-        padding: var(--size_38) 0 var(--size_45) var(--size_16);
+        padding: var(--size_42) 0 var(--size_45) var(--size_16);
         width: 100%;
     }
 
@@ -120,7 +120,7 @@
 @include media.XL {
     .testimonials {
         &__container {
-            padding: var(--size_64) var(--size_80);
+            padding: var(--size_55) var(--size_80) var(--size_60);
         }
 
         &__title-wrap {

@@ -36,7 +36,7 @@
     &__right {
         display: flex;
         flex-direction: column;
-        gap: var(--size_48);
+        gap: var(--size_40);
         align-self: stretch;
         padding-bottom: var(--size_48);
     }
@@ -62,8 +62,8 @@
         align-items: center;
         gap: var(--size_8);
         border-radius: var(--size_24);
-        border: 0.1rem solid #FFB800;
-        background: rgba(255, 184, 0, 0.20);
+        border: 0.1rem solid var(--color-badge-border);
+        background: var(--color-badge-bg);
 
         span {
             font-size: var(--size_10);
@@ -166,7 +166,7 @@
         padding: var(--size_8) var(--size_12);
         align-items: center;
         gap: var(--size_8);
-        border: 0.1rem solid #E5E7EB;
+        border: 0.1rem solid var(--color-advantage-border);
 
         span {
             font-size: var(--size_10);
@@ -189,7 +189,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1.3rem;
+        gap: 2rem;
         align-self: stretch;
     }
 
@@ -267,7 +267,7 @@
             max-width: 50%;
             align-self: stretch;
             height: auto;
-            padding: 5rem 1rem 6rem 0rem;
+            padding: 5rem 1rem 6rem 0;
         }
 
         &__image-wrap {
@@ -286,7 +286,7 @@
         &__right {
             padding: var(--size_64) 0;
             flex: 1 0 0;
-            gap: var(--size_36);
+            gap: var(--size_34);
             height: auto;
         }
 
@@ -312,8 +312,6 @@
         }
 
         &__rating {
-            margin-top: 1.3rem;
-
             span {
                 color: var(--color-black);
                 font-size: var(--size_12);
@@ -330,6 +328,10 @@
 
         &__price {
             font-size: var(--size_32);
+        }
+
+        &__cta {
+            gap: 1.5rem;
         }
 
         &__quantity {

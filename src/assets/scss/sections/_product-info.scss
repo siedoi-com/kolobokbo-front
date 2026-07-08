@@ -4,10 +4,10 @@
     display: flex;
     justify-content: center;
     background: var(--color-white);
-     overflow: hidden;
+    overflow: hidden;
 
     &__container {
-        padding: var(--size_48) var(--size_16);
+        padding: var(--size_45) var(--size_16);
         width: 100%;
     }
 
@@ -25,7 +25,7 @@
         flex-direction: column;
         align-items: center;
         gap: var(--size_32);
-        margin-top: var(--size_18);
+        margin-top: var(--size_15);
         width: 100%;
     }
 
@@ -132,26 +132,25 @@
         }
 
         &__title {
-            font-size: var(--size_34);
+            font-size: var(--size_32);
         }
 
         &__content {
             flex-direction: row;
             align-items: center;
             gap: var(--size_48);
+            margin-top: var(--size_26);
         }
+
         &__item-title {
-        
-        font-size: var(--size_18);
-       
-    }
+            font-size: var(--size_18);
+        }
 
         &__text {
             align-items: flex-start;
             gap: 4rem;
             flex: 1 0 0;
             min-width: 28rem;
-            margin-top: -1.5rem;
         }
 
         &__item {
@@ -168,15 +167,14 @@
             position: relative;
             z-index: 1;
             display: block;
-            width: 54.4rem;
+            width: 53.4rem;
             height: auto;
-            aspect-ratio: 61 / 69;
             object-fit: contain;
             margin-left: 10rem;
         }
 
         &__blob {
-            top: 4rem;
+            top: 3.5rem;
             left: 12rem;
             width: 51.3rem;
             height: 50.4rem;
@@ -184,14 +182,14 @@
 
         &__decor {
             &--lines {
-                top: -3.5rem;
+                top: -4.5rem;
                 left: 8rem;
                 width: 6.45rem;
                 height: 13.95rem;
             }
 
             &--highlight {
-                top: 43rem;
+                top: 42rem;
                 left: 47rem;
                 width: 24.7rem;
                 height: 24.7rem;
@@ -269,15 +267,14 @@
             position: relative;
             z-index: 1;
             display: block;
-            width: 54.4rem;
+            width: 55rem;
             height: auto;
-            aspect-ratio: 61 / 69;
             object-fit: contain;
             margin-left: 8rem;
         }
 
         &__blob {
-            top: 5.5rem;
+            top: 6rem;
             left: 10rem;
             width: 51.3rem;
             height: 50.4rem;
@@ -286,15 +283,15 @@
         &__decor {
             &--lines {
                 top: -2.5rem;
-                left: 6rem;
+                left: 5rem;
                 width: 6.45rem;
                 height: 13.95rem;
             }
 
             &--highlight {
                 top: 44rem;
-                left: 45rem;
-                width: 24.7rem;
+                left: 44rem;
+                width: 26rem;
                 height: 24.7rem;
             }
         }

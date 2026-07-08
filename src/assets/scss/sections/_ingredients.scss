@@ -10,9 +10,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 4.2rem;
-        padding: var(--size_64) 0 var(--size_52) var(--size_16);
+        padding: var(--size_55) 0 var(--size_52) var(--size_16);
         align-self: stretch;
         width: 100%;
+        min-width: 0;
     }
 
     &__title {
@@ -38,7 +39,7 @@
         font-size: var(--size_16);
         font-weight: 600;
         line-height: 1.4;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
 
     &__cards-container {
@@ -48,6 +49,7 @@
         gap: var(--size_24);
         align-self: stretch;
         max-width: 100%;
+        min-width: 0;
     }
 
     .embla--ingredients-slider {
@@ -64,7 +66,7 @@
     }
 
     .ingredient-card {
-        flex: 0 0 40%;
+        flex: 0 0 43%;
         min-width: 0;
         margin-left: var(--size_16);
         padding: var(--size_36) var(--size_8);
@@ -82,13 +84,12 @@
             flex-direction: row;
             align-items: center;
             gap: var(--size_24);
-            padding: var(--size_64) 0 var(--size_64) var(--size_48);
+            padding: var(--size_60) 0 var(--size_64) var(--size_48);
         }
 
         &__title {
             width: 39.3rem;
             flex-shrink: 0;
-            margin-top: calc(0rem - var(--size_18));
         }
 
         &__heading {
@@ -97,7 +98,10 @@
 
         &__cards-container {
             flex: 1 0 0;
-            min-width: 0;
+        }
+
+        .ingredient-card {
+            flex: 0 0 37%;
         }
 
         .ingredient-card__name {
@@ -109,7 +113,11 @@
         }
 
         .slider-controls {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .embla__container {
+            margin-left: 1.6rem;
         }
     }
 }
@@ -117,8 +125,13 @@
 @include media.XL {
     .ingredients {
         &__container {
-            padding: var(--size_90) var(--size_80);
+            padding: var(--size_90) 0 var(--size_90) var(--size_80);
             gap: var(--size_48);
+        }
+
+        &__title {
+            width: 38rem;
+            flex-shrink: 0;
         }
 
         &__heading {
@@ -134,15 +147,12 @@
         }
 
         .embla--ingredients-slider .embla__container {
-            margin-left: calc(var(--size_24) * -1);
             flex-wrap: nowrap;
         }
 
         .ingredient-card {
-            flex: 1 1 0;
-            min-width: 0;
+            flex: 0 0 19.8rem;
             width: auto;
-            margin-left: var(--size_24);
             padding: var(--size_38) var(--size_16);
         }
 
@@ -156,7 +166,11 @@
         }
 
         .slider-controls {
-            margin-top: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .embla__container {
+            margin: 0;
         }
     }
 }

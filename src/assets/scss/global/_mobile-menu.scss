@@ -1,19 +1,17 @@
 .mobile-menu {
-  background: var(--color-accent);
+    background: var(--color-accent);
     position: fixed;
     top: 0;
     left: 0;
     height: 100dvh;
     width: 100%;
     z-index: 100;
-    padding: 3.4rem 1.5rem;
-
-    // Flex layout: logo → nav (centre) → social (bottom)
+    padding: 2.4rem 1.5rem;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    // Blob reveal from burger position (top-left, ~3.5rem × 3rem centre)
+    justify-content: center;
     clip-path: circle(0% at 3.55rem 3rem);
     transition: clip-path .6s cubic-bezier(.76, 0, .24, 1);
     pointer-events: none;
@@ -24,14 +22,23 @@
         visibility: visible;
     }
 
-    // .mobile-menu__close
-    &__close {
-        position: absolute;
-        top: 1.9rem;
-        right: 1.7rem;
-    }
+   &__close {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    // cursor: pointer;
+    padding: 0;
+    display: flex;
+}
 
-    // .mobile-menu__logo
+&__close-icon {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-black);
+}
+
     &__logo {
         margin: 0 auto;
         display: block;
@@ -44,17 +51,16 @@
         }
     }
 
-    // .mobile-menu__list
     &__list {
         flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         text-align: center;
         font-size: 2rem;
         line-height: 1;
-        gap: 3.5rem;
+        margin-top: 4.8rem;
+        gap: 2.4rem;
         color: var(--color-heading);
 
         .current-menu-item {
@@ -62,20 +68,44 @@
         }
     }
 
-    // .mobile-menu__social
-    &__social {
+    &__contact {
         margin-top: 3rem;
-        padding-bottom: 1rem;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: var(--size_12);
+        color: var(--color-black);
+        text-decoration: none;
+        font-size: var(--size_16);
+        font-weight: 600;
+    }
+
+    &__phone-icon {
+        width: var(--size_32);
+        height: var(--size_24);
+        color: var(--color-black);
+    }
+
+    &__social {
+        margin-top: 2rem;
+        padding-bottom: 2.4rem;
+        display: flex;
+        align-items: center;
+        gap: var(--size_16);
 
         .social-list__item {
             display: flex;
-            width: 4rem;
-            height: 4rem;
-            filter: brightness(0.1);
 
-            img {
-                width: 100%;
-                height: 100%;
+            a {
+                display: flex;
+                color: var(--color-black);
+            }
+
+            svg {
+                width: 3.2rem;
+                height: 3.2rem;
             }
         }
     }

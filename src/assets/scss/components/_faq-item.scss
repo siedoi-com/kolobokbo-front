@@ -7,15 +7,15 @@
     &.active {
         background: var(--color-bg-pink-medium);
         border-color: var(--color-black);
+        
     }
 
     &__question {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: var(--size_8);
         width: 100%;
-        padding: var(--size_24);
+        padding: var(--size_24) var(--size_24) var(--size_28) var(--size_24);
         background: transparent;
         border: none;
         text-align: left;

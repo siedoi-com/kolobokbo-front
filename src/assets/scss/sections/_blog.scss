@@ -36,7 +36,7 @@
         font-size: var(--size_16);
         font-weight: 400;
         line-height: 1.4;
-        margin: 1rem 0 2.5rem;
+        margin: 1rem 0 3rem;
     }
 
     &__cards-container {
@@ -84,7 +84,7 @@
     .article-card .button--secondary {
         font-size: var(--size_16);
         font-weight: 700;
-        margin-top: 1rem;
+        margin-top: 0.8rem;
 
         .button__icon {
             width: var(--size_26);
@@ -111,7 +111,7 @@
             flex-direction: row;
             align-items: flex-start;
             gap: var(--size_24);
-            padding: var(--size_60) 0 var(--size_52) var(--size_48);
+            padding: var(--size_64) 0 var(--size_52) var(--size_48);
         }
 
         &__header {
@@ -125,7 +125,7 @@
         }
 
         &__header .button--spread {
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             font-size: var(--size_16);
             font-weight: 700;
 
@@ -279,11 +279,12 @@
         }
 
         .article-card__bottom {
-            padding: 0 1.6rem 2.4rem;
+            padding: 1rem 1.6rem 2.4rem;
         }
 
         .slider-controls {
             margin-top: 2rem;
         }
+        
     }
 }
