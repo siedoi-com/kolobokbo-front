@@ -41,7 +41,7 @@
         color: var(--color-black);
         text-decoration: none;
         font-size: var(--size_16);
-        font-weight: 600;
+        font-weight: 700;
         transition: color var(--transition);
 
         &:hover {
@@ -53,6 +53,7 @@
         display: flex;
         flex-direction: column;
         gap: var(--size_16);
+        margin-left: 3rem;
     }
 
     &__contact-item {
@@ -61,7 +62,8 @@
         gap: var(--size_12);
         color: var(--color-black);
         text-decoration: none;
-        font-size: var(--size_16);
+        font-size: var(--size_14);
+        font-weight: 600;
         transition: color var(--transition);
 
         &:hover {
@@ -84,7 +86,7 @@
 
     &__subscribe-title {
         color: var(--color-black);
-        font-size: var(--size_20);
+        font-size: var(--size_16);
         font-weight: 800;
         line-height: 1.3;
     }
@@ -92,7 +94,6 @@
     &__subscribe-form {
         display: flex;
         flex-direction: column;
-        gap: var(--size_12);
         width: 100%;
     }
 
@@ -136,13 +137,13 @@
 
     &__copyright {
         color: var(--color-white);
-        font-size: var(--size_14);
+        font-size: var(--size_12);
     }
 
     &__legal-link {
         color: var(--color-white);
         text-decoration: underline;
-        font-size: var(--size_14);
+        font-size: var(--size_12);
         transition: color var(--transition);
 
         &:hover {
@@ -164,8 +165,15 @@
     }
 
     &__payment-icon {
-        height: 2rem;
         width: auto;
+
+        &--visa {
+            height: 1.6rem;
+        }
+
+        &--mastercard {
+            height: 2rem;
+        }
     }
 
     &__social {
@@ -190,3 +198,144 @@
     }
 }
 
+@include media.L {
+    .footer {
+        &__container {
+            padding: var(--size_24) var(--size_48);
+        }
+
+        &__row {
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+
+        &__menu {
+            flex-direction: row;
+            gap: var(--size_24);
+        }
+
+        &__contacts {
+            flex-direction: row;
+            gap: var(--size_32);
+            font-size: var(--size_16);
+            margin: 0;
+        }
+
+        &__contact-item {
+            font-size: var(--size_16);
+            font-weight: 400;
+            gap: var(--size_48);
+        }
+
+        &__subscribe {
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        &__subscribe-title {
+            width: 53rem;
+            flex-shrink: 0;
+        }
+
+        &__subscribe-form {
+            flex-direction: row;
+            width: 53rem;
+        }
+
+        &__subscribe-input {
+            width: 26.8rem;
+        }
+
+        &__subscribe-btn {
+            width: 26rem;
+            height: 5.2rem;
+        }
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: var(--size_12) var(--size_48);
+        }
+
+        &__copyright {
+            font-size: var(--size_14);
+        }
+
+        &__legal-link {
+            font-size: var(--size_14);
+        }
+
+        &__bottom-right {
+            gap: var(--size_32);
+        }
+
+        &__payment-icon {
+            &--visa {
+                height: 2.6rem;
+                width: 8.2rem;
+            }
+
+            &--mastercard {
+                height: 2.6rem;
+                width: 4.4rem;
+            }
+        }
+    }
+}
+
+@include media.XL {
+    .footer {
+        &__container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: var(--size_64) var(--size_80) var(--size_24);
+        }
+
+        &__logo-link {
+            flex-basis: 100%;
+            justify-content: center;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--size_24);
+            width: auto;
+            margin-top: 2.2rem;
+        }
+
+        &__menu {
+            flex-direction: row;
+        }
+
+        &__contacts {
+            flex-direction: row;
+            margin-top: 2rem;
+            gap: 7rem;
+        }
+
+        &__contact-item {
+            gap: 1.5rem;
+        }
+
+        &__subscribe {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--size_16);
+            width: auto;
+            margin-top: 2.2rem;
+        }
+
+        &__subscribe-form {
+            flex-direction: row;
+        }
+
+        &__bottom {
+            padding: var(--size_16) var(--size_80);
+        }
+    }
+}
