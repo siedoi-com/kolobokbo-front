@@ -376,13 +376,24 @@
         height: 1.3rem;
         flex-shrink: 0;
         color: var(--color-black);
+        pointer-events: none; 
     }
 
-    &__quantity-value {
+    &__quantity-input {
+        width: 2.4rem;
+        border: none;
+        text-align: center;
         font-size: var(--size_12);
         font-weight: 600;
         color: var(--color-black);
-        line-height: 1.4;
+        background: transparent;
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     }
 
     &__btn {
