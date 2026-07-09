@@ -4,6 +4,9 @@
     height: var(--size_22);
     inset-block-start: -.6rem;
     inset-inline-end: calc(-1 * var(--size_12));
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 
     &:not(.active) {
         display: none;
