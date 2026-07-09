@@ -387,6 +387,7 @@
         font-weight: 600;
         color: var(--color-black);
         background: transparent;
+        appearance: textfield;
         -moz-appearance: textfield;
 
         &::-webkit-outer-spin-button,

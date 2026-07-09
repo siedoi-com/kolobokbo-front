@@ -24,6 +24,7 @@ $breakpoint__2xl: 1440px;
 
 // Components - DONE
 @use "./components/container";
+@use "components/header-menu";
 @use "./components/logo";
 @use "global/mobile-menu";
 @use "components/burger";

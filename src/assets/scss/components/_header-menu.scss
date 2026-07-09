@@ -1,0 +1,51 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.header-menu {
+    @include media.L {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    @include media.XL {
+        font-size: var(--size_18);
+    }
+
+    &__list {
+        @include media.L {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        li {
+            @include media.L {
+                flex-grow: 1;
+                height: 100%;
+
+                &.current-menu-item a {
+                    color: var(--color-secondary-accent);
+                }
+            }
+        }
+
+        a {
+            @include media.L {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: var(--size_16);
+
+                @include mixins.hover {
+                    color: var(--color-secondary-accent);
+                }
+            }
+        }
+    }
+}

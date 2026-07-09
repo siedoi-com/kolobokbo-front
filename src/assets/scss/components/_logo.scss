@@ -1,5 +1,7 @@
 @use "../global/media";
 
 .logo {
-    height: var(--size_56);
+    width: 5.4rem;
+    height: 5.6rem;
+    // flex-shrink: 0;
 }
