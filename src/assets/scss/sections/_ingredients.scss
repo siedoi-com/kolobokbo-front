@@ -14,6 +14,18 @@
         align-self: stretch;
         width: 100%;
         min-width: 0;
+
+        @include media.L {
+            flex-direction: row;
+            align-items: center;
+            gap: var(--size_24);
+            padding: var(--size_60) 0 var(--size_64) var(--size_48);
+        }
+
+        @include media.XL {
+            padding: var(--size_90) 0 var(--size_90) var(--size_80);
+            gap: var(--size_48);
+        }
     }
 
     &__title {
@@ -22,6 +34,16 @@
         justify-content: center;
         align-items: flex-start;
         align-self: stretch;
+
+        @include media.L {
+            width: 39.3rem;
+            flex-shrink: 0;
+        }
+
+        @include media.XL {
+            width: 38rem;
+            flex-shrink: 0;
+        }
     }
 
     &__heading {
@@ -31,6 +53,14 @@
         font-weight: 950;
         line-height: 1;
         text-transform: uppercase;
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+
+        @include media.XL {
+            font-size: var(--size_40);
+        }
     }
 
     &__text {
@@ -40,6 +70,10 @@
         font-weight: 600;
         line-height: 1.4;
         margin-top: 1.5rem;
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
     }
 
     &__cards-container {
@@ -50,6 +84,10 @@
         align-self: stretch;
         max-width: 100%;
         min-width: 0;
+
+        @include media.L {
+            flex: 1 0 0;
+        }
     }
 
     .embla--ingredients-slider {
@@ -58,10 +96,23 @@
         .embla__viewport {
             overflow: hidden;
             width: 100%;
+
+            @include media.XL {
+                overflow: visible;
+            }
         }
 
         .embla__container {
             display: flex;
+
+            @include media.L {
+                margin-left: 1.6rem;
+            }
+
+            @include media.XL {
+                flex-wrap: nowrap;
+                margin: 0;
+            }
         }
     }
 
@@ -71,106 +122,50 @@
         margin-left: var(--size_16);
         padding: var(--size_36) var(--size_8);
         gap: var(--size_18);
-    }
 
-    .slider-controls {
-        margin-top: 2.5rem;
-    }
-}
-
-@include media.L {
-    .ingredients {
-        &__container {
-            flex-direction: row;
-            align-items: center;
-            gap: var(--size_24);
-            padding: var(--size_60) 0 var(--size_64) var(--size_48);
-        }
-
-        &__title {
-            width: 39.3rem;
-            flex-shrink: 0;
-        }
-
-        &__heading {
-            font-size: var(--size_32);
-        }
-
-        &__cards-container {
-            flex: 1 0 0;
-        }
-
-        .ingredient-card {
+        @include media.L {
             flex: 0 0 37%;
         }
 
-        .ingredient-card__name {
-            font-size: var(--size_14);
-        }
-
-        .ingredient-card__desc {
-            font-size: var(--size_14);
-        }
-
-        .slider-controls {
-            margin-top: 2rem;
-        }
-
-        .embla__container {
-            margin-left: 1.6rem;
-        }
-    }
-}
-
-@include media.XL {
-    .ingredients {
-        &__container {
-            padding: var(--size_90) 0 var(--size_90) var(--size_80);
-            gap: var(--size_48);
-        }
-
-        &__title {
-            width: 38rem;
-            flex-shrink: 0;
-        }
-
-        &__heading {
-            font-size: var(--size_40);
-        }
-
-        &__text {
-            font-size: var(--size_18);
-        }
-
-        .embla--ingredients-slider .embla__viewport {
-            overflow: visible;
-        }
-
-        .embla--ingredients-slider .embla__container {
-            flex-wrap: nowrap;
-        }
-
-        .ingredient-card {
+        @include media.XL {
             flex: 0 0 19.8rem;
             width: auto;
             padding: var(--size_38) var(--size_16);
         }
+    }
 
-        .ingredient-card__name {
-            font-size: var(--size_16);
-            margin-top: 1rem;
-        }
-
-        .ingredient-card__desc {
+    // visible only from L
+    .ingredient-card__name {
+        @include media.L {
             font-size: var(--size_14);
         }
 
-        .slider-controls {
+        @include media.XL {
+            font-size: var(--size_16);
             margin-top: 1rem;
         }
+    }
 
-        .embla__container {
-            margin: 0;
+    // visible only from L
+    .ingredient-card__desc {
+        @include media.L {
+            font-size: var(--size_14);
+        }
+
+        @include media.XL {
+            font-size: var(--size_14);
+        }
+    }
+
+    .slider-controls {
+        margin-top: 2.5rem;
+
+        @include media.L {
+            margin-top: 2rem;
+        }
+
+        @include media.XL {
+            margin-top: 1rem;
         }
     }
 }

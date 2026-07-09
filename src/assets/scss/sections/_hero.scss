@@ -10,11 +10,30 @@
     overflow: hidden;
     gap: 1.2rem;
 
+    @include media.L {
+        flex-direction: row;
+        height: 46rem;
+    }
+
+    @include media.XL {
+        align-content: flex-end;
+        height: 55rem;
+    }
+
     &__left {
         padding: var(--size_64) var(--size_16) var(--size_48);
         align-self: stretch;
         position: relative;
         margin-top: auto;
+
+        @include media.L {
+            padding: var(--size_64) 0 var(--size_64) var(--size_48);
+            margin-top: 0;
+        }
+
+        @include media.XL {
+            padding: var(--size_96) 0 var(--size_64) var(--size_80);
+        }
     }
 
     &__decor {
@@ -25,6 +44,10 @@
         height: auto;
         pointer-events: none;
         z-index: 0;
+
+        @include media.L {
+            width: var(--size_140);
+        }
     }
 
     &__content {
@@ -34,6 +57,10 @@
 
     &__title {
         padding-top: var(--size_24);
+
+        @include media.L {
+            padding-top: 1.5rem;
+        }
 
         h1 {
             color: var(--color-black);
@@ -45,6 +72,14 @@
             span {
                 color: var(--color-secondary-accent);
             }
+
+            @include media.L {
+                font-size: var(--size_56);
+            }
+
+            @include media.XL {
+                font-size: var(--size_72);
+            }
         }
 
         p {
@@ -53,6 +88,15 @@
             font-size: var(--size_16);
             font-weight: 400;
             line-height: normal;
+
+            @include media.L {
+                margin-top: 1.5rem;
+            }
+
+            @include media.XL {
+                font-size: var(--size_18);
+                margin-top: 1rem;
+            }
         }
     }
 
@@ -62,16 +106,40 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+
+        @include media.L {
+            width: 26rem;
+            height: var(--size_52);
+        }
+
+        @include media.XL {
+            width: 26rem;
+            height: var(--size_56);
+        }
     }
 
     &__image {
         width: 100%;
         position: relative;
+
+        @include media.L {
+            flex-grow: 1;
+            width: 60rem;
+        }
     }
 
     &__image-inner {
         height: 40rem;
         overflow: hidden;
+
+        @include media.L {
+            height: 100%;
+            margin-left: 2rem;
+        }
+
+        @include media.XL {
+            margin-left: 25rem;
+        }
     }
 
     &__image-pic {
@@ -80,6 +148,18 @@
         object-fit: cover;
         object-position: left 0rem bottom 4rem;
         display: block;
+
+        @include media.L {
+            object-position: center;
+            width: 81rem;
+            height: 47rem;
+        }
+
+        @include media.XL {
+            object-position: center;
+            width: 70rem;
+            height: 55rem;
+        }
     }
 
     &__blob {
@@ -87,101 +167,15 @@
         bottom: 0;
         right: 28rem;
         z-index: 1;
-    }
-}
 
-@include media.L {
-    .hero {
-        flex-direction: row;
-        height: 46rem;
-    }
-
-    .hero__left {
-        padding: var(--size_64) 0 var(--size_64) var(--size_48);
-        margin-top: 0;
-    }
-
-    .hero__decor {
-        width: var(--size_140);
-    }
-
-    .hero__title {
-        padding-top: 1.5rem;
-
-        h1 {
-            font-size: var(--size_56);
+        @include media.L {
+            top: 43rem;
+            left: 3rem;
         }
 
-        p {
-            margin-top: 1.5rem;
+        @include media.XL {
+            top: 44rem;
+            left: 15rem;
         }
-    }
-
-    .hero__btn {
-        width: 26rem;
-        height: var(--size_52);
-    }
-
-    .hero__image {
-        flex-grow: 1;
-        width: 60rem;
-    }
-
-    .hero__image-inner {
-        height: 100%;
-        margin-left: 2rem;
-    }
-
-    .hero__image-pic {
-        object-position: center;
-        width: 81rem;
-        height: 47rem;
-    }
-
-    .hero__blob {
-        top: 43rem;
-        left: 3rem;
-    }
-}
-
-@include media.XL {
-    .hero {
-        align-content: flex-end;
-        height: 55rem;
-    }
-
-    .hero__left {
-        padding: var(--size_96) 0 var(--size_64) var(--size_80);
-    }
-
-    .hero__title {
-        h1 {
-            font-size: var(--size_72);
-        }
-
-        p {
-            font-size: var(--size_18);
-            margin-top: 1rem;
-        }
-    }
-
-    .hero__btn {
-        width: 26rem;
-        height: var(--size_56);
-    }
-
-    .hero__image-inner {
-        margin-left: 25rem;
-    }
-
-    .hero__image-pic {
-        object-position: center;
-        width: 70rem;
-        height: 55rem;
-    }
-
-    .hero__blob {
-        top: 44rem;
-        left: 15rem;
     }
 }

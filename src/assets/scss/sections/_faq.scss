@@ -15,6 +15,14 @@
         align-items: center;
         padding: var(--size_48) var(--size_16) var(--size_42);
         width: 100%;
+
+        @include media.L {
+            padding: var(--size_64) var(--size_48);
+        }
+
+        @include media.XL {
+            padding: var(--size_64) var(--size_80);
+        }
     }
 
     &__title {
@@ -25,6 +33,16 @@
         text-transform: uppercase;
         text-align: center;
         margin-top: 3rem;
+
+        @include media.L {
+            font-size: var(--size_56);
+            margin-top: 1.5rem;
+        }
+
+        @include media.XL {
+            font-size: var(--size_72);
+            margin-top: 1rem;
+        }
     }
 
     &__list {
@@ -34,6 +52,14 @@
         list-style: none;
         margin-top: 4.5rem;
         padding: 0 var(--size_16);
+
+        @include media.L {
+            padding: 0 var(--size_48);
+        }
+
+        @include media.XL {
+            padding: 0 var(--size_80);
+        }
     }
 
     &__decor {
@@ -47,6 +73,12 @@
             width: 31.2rem;
             height: 39.4rem;
             color: var(--color-secondary-accent);
+
+            @include media.L {
+                bottom: 8.5rem;
+                width: 46.2rem;
+                height: 40.4rem;
+            }
         }
 
         &--right {
@@ -56,58 +88,18 @@
             width: 26.7rem;
             height: 22.9rem;
             color: var(--color-accent);
-        }
-    }
-}
 
-@include media.L {
-    .faq {
-        &__container {
-            padding: var(--size_64) var(--size_48);
-        }
+            @include media.L {
+                display: none;
+            }
 
-        &__title {
-            font-size: var(--size_56);
-            margin-top: 1.5rem;
-        }
-
-        &__list {
-            padding: 0 var(--size_48);
-        }
-
-        &__decor--left {
-            bottom: 8.5rem;
-            width: 46.2rem;
-            height: 40.4rem;
-        }
-
-        &__decor--right {
-            display: none;
-        }
-    }
-}
-
-@include media.XL {
-    .faq {
-        &__container {
-            padding: var(--size_64) var(--size_80);
-        }
-
-        &__title {
-            font-size: var(--size_72);
-            margin-top: 1rem;
-        }
-
-        &__list {
-            padding: 0 var(--size_80);
-        }
-
-        &__decor--right {
-            display: block;
-            top: 6rem;
-            right: -23rem;
-            width: 34.7rem;
-            height: 32.9rem;
+            @include media.XL {
+                display: block;
+                top: 6rem;
+                right: -23rem;
+                width: 34.7rem;
+                height: 32.9rem;
+            }
         }
     }
 }
