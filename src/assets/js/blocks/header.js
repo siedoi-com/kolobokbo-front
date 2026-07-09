@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('resize', updateStickyState.bind(null, false));
 
 // ── Mobile menu toggle ────────────────────────────────────────────────────────
-document.querySelector('.header__burger')?.addEventListener('click', function () {
+document.querySelector('.header-burger')?.addEventListener('click', function () {
     mobileMenuEl.classList.add('active');
     document.body.classList.add('no-scroll');
 });

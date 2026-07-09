@@ -1,11 +1,9 @@
-.burger {
-    &__inner {
-        width: var(--size_30);
-        height: var(--size_20);
-    }
+.header-burger {
+    padding: var(--size_10) 0.5rem;
 
-    &__line {
-        height: .2rem;
+    &__icon {
+        width: var(--size_40);
+        height: var(--size_40);
+        color: var(--color-black);
     }
 }
-// End inner

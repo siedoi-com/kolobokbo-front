@@ -15,13 +15,12 @@
     </div>
     <header class="header bg--white rel anim w-full z5">
         <div class="header__wrapper flex-row j-between">
+             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
             <div class="header__left-part">
-                <button class="button header__burger flex-center burger" type="button" data-modal-open="mobile-menu">
-                    <span class="burger__inner flex-col j-between">
-                        <span class="burger__line w-full bg--black"></span>
-                        <span class="burger__line w-full bg--black"></span>
-                        <span class="burger__line w-full bg--black"></span>
-                    </span>
+                <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
+                    <svg role="presentation" class="header-burger__icon">
+                        <use href="/assets/icons/sprite.svg#icon-burger"></use>
+                    </svg>
                 </button>
             </div>
 
@@ -31,7 +30,7 @@
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
-
+              <!-- Desktop nav, hidden on mobile via d-none -->
             <ul id="menu-header" class="header__menu d-none text--size_16 c--black fw--600">
                 <li id="menu-item-244"
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
