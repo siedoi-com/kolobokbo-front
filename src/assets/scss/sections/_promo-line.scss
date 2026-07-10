@@ -12,13 +12,7 @@
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-
-    &--static {
-    
+    @include media.XL{
+      font-size: var(--size_18);
     }
-}
-@include media.XL {
-    .promo-line {
-        font-size: var(--size_18);
-    }
-}
+ }
