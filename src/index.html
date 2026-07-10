@@ -8,11 +8,13 @@
 </head>
 
 <body>
+    <!-- Free delivery banner above header -->
     <div class="before-header rel z5 w-full">
         <div class="promo-line promo-line--static">
             <div class="container">безкоштовна доставка по Києву</div>
         </div>
     </div>
+    <!-- Site header: burger, logo, nav, cart -->
     <header class="header bg--white rel anim w-full z5">
         <div class="header__wrapper flex-row j-between">
              <!-- Mobile only: opens .mobile-menu via data-modal-open -->
@@ -25,37 +27,39 @@
             </div>
 
             <div class="header__logo-wrapper">
-                <div class="logo header__logo logo--header d-block">
+                <div class="logo header__logo logo--header">
                     <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
-            <!-- Desktop nav, hidden on mobile via d-none -->
-             <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
-                 <ul class="header-menu__list">
-                     <li id="menu-item-244"
-                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
-                         <a href="/" aria-current="page">Головна</a></li>
-                     <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148">
-                            <a href="/shop/">Каталог</a></li>
-                     <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
-                            <a href="/pro-nas/">Про нас</a></li>
-                     <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
-                            <a href="/blog/">Блог</a></li>
-                     <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
-                            <a href="/dostavka-i-oplata/">Доставка</a></li>
-                     <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
-                           <a  href="/contacts/">Контакти</a></li>
-                 </ul>
-             </nav>
+              <!-- Desktop nav, hidden on mobile via d-none -->
+            <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
+                <ul class="header-menu__list">
+                    <li id="menu-item-244"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
+                        <a href="/" aria-current="page">Головна</a></li>
+                    <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop/">Каталог</a></li>
+                    <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/pro-nas/">Про нас</a></li>
+                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog/">Блог</a></li>
+                    <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка</a></li>
+                    <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contacts/">Контакти</a></li>
+                </ul>
+            </nav>
             <div class="header__right-part flex-row j-end">
-                <!-- <a href="" class="button flex-center d-none header__account-icon">
+                <!-- Temporarily hidden per feedback, will be back later
+                <a href="" class="button flex-center d-none header__account-icon">
                     <svg role="presentation" class="wh-full">
                         <use href="/assets/icons/sprite.svg#icon-user"></use>
                     </svg>
-                </a> -->
+                </a>
+                -->
 
-                <a href="/cart/" class="button header__cart-icon rel">
+                <a href="/cart/" class="button header__cart-button">
                     <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
 
                     <svg role="presentation" class="anim">
@@ -76,21 +80,23 @@
                 <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
             </div>
 
-            <ul id="menu-header-1" class="mobile-menu__list">
-                <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
-                    <a href="/" aria-current="page">Головна</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
-                        href="/shop/">Каталог</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
-                        href="/pro-nas/">Про нас</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
-                        href="/blog/">Блог</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
-                        href="/dostavka-i-oplata/">Доставка і оплата</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
-                        href="/contacts/">Контакти</a></li>
-            </ul>
+            <nav class="mobile-menu__nav">
+                <ul id="menu-header-1" class="mobile-menu__list">
+                    <li
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
+                        <a href="/" aria-current="page">Головна</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop/">Каталог</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/pro-nas/">Про нас</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog/">Блог</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка і оплата</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contacts/">Контакти</a></li>
+                </ul>
+            </nav>
 
             <div class="mobile-menu__contact">
                 <a href="tel:+380955941028" class="mobile-menu__phone">
@@ -127,6 +133,7 @@
         </div>
     </header>
     <main>
+        <!-- Hero: main headline + product image -->
         <section class="hero">
             <div class="hero__left">
                 <img class="hero__decor" src="/assets/img/hero-decor-1.svg" alt="" aria-hidden="true">
@@ -145,6 +152,7 @@
                 <img class="hero__blob" src="/assets/img/hero-decor-2.svg" alt="" aria-hidden="true">
             </div>
         </section>
+        <!-- Category filter buttons -->
         <section class="categories">
             <div class="categories__container">
                 <h2 class="categories__title">Обери свій смак</h2>
@@ -207,6 +215,7 @@
                 </ul>
             </div>
         </section>
+        <!-- Scrolling promo line -->
         <div class="promo-line running-line">
             <div class="running-line__inner">
                 <span>СПРОБУЙ НАШІ НОВИНКИ &nbsp;
@@ -216,6 +225,7 @@
                 </span>
             </div>
         </div>
+        <!-- Product card -->
         <section class="product">
             <div class="product__left">
                 <div class="product__image-wrap">
@@ -223,7 +233,6 @@
                         height="600" loading="lazy" decoding="async">
                 </div>
             </div>
-            <!-- product info: badge, title, rating, nutrition, advantages -->
             <div class="product__right">
                 <div class="product__info">
                     <div class="product__title-wrap">
@@ -288,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                     <!-- price + quantity + add to cart -->
+
                 <div class="product__cta">
                     <span class="product__price">150₴</span>
                     <div class="product__quantity">
@@ -312,6 +321,7 @@
                 </div>
             </div>
         </section>
+        <!-- Partner store logos -->
         <section class="partners">
             <div class="partners__left">
                 <div class="partners__title-wrap">
@@ -335,6 +345,7 @@
                 <img class="partners__image" src="/assets/img/onigiri-partners.png" alt="">
             </div>
         </section>
+        <!-- Ingredients slider -->
         <section class="ingredients">
             <div class="ingredients__container">
                 <div class="ingredients__title">
@@ -402,6 +413,7 @@
                 </div>
             </div>
         </section>
+        <!-- Info block -->
         <section class="product-info">
             <div class="product-info__container">
                 <h2 class="product-info__title">Що таке онігірі?</h2>
@@ -473,6 +485,7 @@
                 </div>
             </div>
         </section>
+        <!-- Customer testimonials slider -->
         <section class="testimonials">
             <div class="testimonials__container">
                 <div class="testimonials__title-wrap">
@@ -594,6 +607,7 @@
                 </div>
             </div>
         </section>
+        <!-- Blog articles slider -->
         <section class="blog">
             <div class="blog__container">
                 <div class="blog__header">
@@ -746,6 +760,7 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ accordion -->
         <section class="faq">
             <svg class="faq__decor faq__decor--left" aria-hidden="true">
                 <use href="/assets/icons/sprite.svg#faq-blob-left"></use>
@@ -836,7 +851,8 @@
                 </ul>
             </div>
         </section>
-        <footer class="footer">
+        <!-- Site footer: nav, contacts, newsletter, socials -->
+    <footer class="footer">
             <div class="footer__container">
                 <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
                     <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"

@@ -77,8 +77,9 @@
         }
     }
 
-    &__cart-icon {
+    &__cart-button {
         margin-inline-end: var(--size_12);
+        position: relative;
 
         svg {
             width: var(--size_28);
