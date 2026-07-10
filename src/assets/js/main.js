@@ -8,3 +8,4 @@ import './blocks/marquee';
 import './blocks/accordion';
 import './blocks/quantity';
 import './blocks/categories';
+import './blocks/mini-cart';

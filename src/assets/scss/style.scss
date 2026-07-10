@@ -28,6 +28,8 @@ $breakpoint__2xl: 1440px;
 @use "./components/logo";
 @use "global/mobile-menu";
 @use "components/burger";
+@use "components/mini-cart";
+@use "components/cart-item";
 @use "components/ingredient-card";
 @use "components/embla";
 @use "components/cart-badge";
