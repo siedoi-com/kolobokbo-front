@@ -57,6 +57,7 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         padding: var(--size_32) var(--size_24) var(--size_38) var(--size_24);
         height: 100%;
 
