@@ -17,7 +17,6 @@
     }
 }
 
-
 .cart-success {
     position: fixed;
     top: 0;
@@ -41,18 +40,10 @@
     }
 
     @include media.L {
-        position: fixed;
-        top: 0;
-        right: 0;
         height: 49.3rem;
         width: 66rem;
         max-width: 66rem;
         box-shadow: -0.2rem 0 var(--size_24) rgba(0, 0, 0, 0.15);
-        transform: translateX(100%);
-
-        &.active {
-            transform: translateX(0);
-        }
     }
 
     &__inner {
@@ -60,13 +51,11 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
-
         padding: var(--size_24) var(--size_24) var(--size_48) var(--size_24);
         height: 100%;
 
         @include media.L {
             flex-direction: row;
-            // align-items: center;
             gap: var(--size_32);
             padding: var(--size_32) var(--size_32);
         }
@@ -83,8 +72,8 @@
 
         @include media.L {
             position: absolute;
-            top: var(--size_16);
-            right: var(--size_16);
+            top: var(--size_18);
+            right: var(--size_20);
             z-index: 2;
         }
     }
@@ -100,7 +89,13 @@
         align-self: center;
 
         @include media.L {
+            width: 39rem;
+            height: 36rem;
+            object-fit: contain;
+            align-self: flex-end;
             flex-shrink: 0;
+            margin-left: -5rem;
+            margin-bottom: 4rem;
         }
     }
 
@@ -108,9 +103,12 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        position: relative;
+        z-index: 1;
 
         @include media.L {
             flex: 1 0 0;
+            margin-left: calc(var(--size_32) * -1.8);
         }
     }
 
@@ -120,25 +118,39 @@
         font-weight: 800;
         text-transform: uppercase;
         margin-top: var(--size_32);
-        padding-bottom: 0.6rem;
         display: inline-block;
+    }
+
+    &__title-underline {
+        width: 15.9rem;
+        height: 1.5rem;
+        color: var(--color-accent);
     }
 
     &__product {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: var(--size_16);
         margin: var(--size_24) 0;
         padding: 1.2rem 1.2rem 0;
         border-bottom: 0.1rem solid var(--color-gray-400);
+
+        @include media.L {
+            margin: var(--size_12) 0;
+            gap: var(--size_8);
+        }
     }
 
     &__product-image {
         width: 7rem;
         height: 6rem;
-        margin-bottom: 3rem;
         object-fit: cover;
         flex-shrink: 0;
+
+        @include media.L {
+            margin-top: 1rem;
+        }
     }
 
     &__product-name {
@@ -146,30 +158,50 @@
         font-size: var(--size_16);
         font-weight: 600;
         line-height: 1.4;
+        flex: 1 0 0;
+
+        @include media.L {
+            padding: 0 1rem 1rem 2rem;
+        }
     }
 
     &__product-meta {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-basis: 100%;
         margin-top: var(--size_22);
         padding-bottom: var(--size_16);
+
+        @include media.L {
+            margin: 0;
+            padding-bottom: var(--size_12);
+        }
     }
 
     &__product-price {
         color: var(--color-black);
         font-size: var(--size_18);
         font-weight: 600;
+
+        @include media.L {
+            margin-left: 10rem;
+        }
     }
 
     &__product-qty {
         color: var(--color-black);
         font-size: var(--size_14);
+        font-weight: 600;
     }
 
     &__cta {
         margin-top: var(--size_24);
         width: 100%;
+
+        @include media.L {
+            margin-top: 4rem;
+        }
     }
 
     &__continue {
@@ -209,6 +241,13 @@
             width: 34.5rem;
             height: 24.5rem;
             color: var(--color-accent);
+
+            @include media.L {
+                top: -17rem;
+                left: -22rem;
+                width: 41.5rem;
+                height: 30.5rem;
+            }
         }
 
         &--green {
@@ -217,6 +256,13 @@
             width: 16.5rem;
             height: 12.6rem;
             color: var(--color-blob-vegan);
+
+            @include media.L {
+                bottom: -6rem;
+                left: -7rem;
+                width: 23.5rem;
+                height: 17.6rem;
+            }
         }
 
         &--pink {
@@ -225,6 +271,13 @@
             width: 20.1rem;
             height: 15.3rem;
             color: var(--color-secondary-accent);
+
+            @include media.L {
+                bottom: -19rem;
+                right: -16rem;
+                width: 31.1rem;
+                height: 27.3rem;
+            }
         }
     }
 }

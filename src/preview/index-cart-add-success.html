@@ -18,7 +18,7 @@
     <!-- Site header: burger, logo, nav, cart -->
     <header class="header bg--white rel anim w-full z5">
         <div class="header__wrapper flex-row j-between">
-             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+            <!-- Mobile only: opens .mobile-menu via data-modal-open -->
             <div class="header__left-part">
                 <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
                     <svg role="presentation" class="header-burger__icon">
@@ -33,7 +33,7 @@
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
-              <!-- Desktop nav, hidden on mobile via d-none -->
+            <!-- Desktop nav, hidden on mobile via d-none -->
             <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
                 <ul class="header-menu__list">
                     <li id="menu-item-244"
@@ -60,8 +60,9 @@
                 </a>
                 -->
 
+                <!-- Badge shows the count right after the item was added -->
                 <a href="/cart/" class="button header__cart-button">
-                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
+                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">1</span>
 
                     <svg role="presentation" class="anim">
                         <use href="/assets/icons/sprite.svg#icon-cart"></use>
@@ -133,57 +134,66 @@
             </ul>
         </div>
     </header>
-    <!-- Cart success popup: shown immediately for preview purposes -->
-<div class="cart-success-overlay active" data-cart-success-overlay></div>
 
-<div class="cart-success active" data-cart-success>
-    <svg class="cart-success__decor cart-success__decor--yellow" aria-hidden="true">
-        <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
-    </svg>
-    <svg class="cart-success__decor cart-success__decor--green" aria-hidden="true">
-        <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
-    </svg>
-    <svg class="cart-success__decor cart-success__decor--pink" aria-hidden="true">
-        <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
-    </svg>
+    <!-- Cart success popup: shown open for preview purposes -->
+    <!-- No mini-cart markup on this page — only the success popup, so nothing else can render on top of it -->
+    <div class="cart-success-overlay active" data-cart-success-overlay></div>
 
-    <div class="cart-success__inner">
-        <button class="cart-success__close" type="button" aria-label="Закрити">
-            <svg class="cart-success__close-icon" aria-hidden="true">
-                <use href="/assets/icons/sprite.svg#close"></use>
-            </svg>
-        </button>
+    <div class="cart-success active" data-cart-success>
+        <svg class="cart-success__decor cart-success__decor--yellow" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
+        </svg>
+        <svg class="cart-success__decor cart-success__decor--green" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
+        </svg>
+        <svg class="cart-success__decor cart-success__decor--pink" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#cart-success-blob"></use>
+        </svg>
 
-        <img class="cart-success__illustration" src="/assets/img/cart-empty.png" alt=""
-            aria-hidden="true">
-
-        <div class="cart-success__content">
-            <h2 class="cart-success__title">Товар додано до кошика!</h2>
-
-            <div class="cart-success__product">
-                <img class="cart-success__product-image" src="/assets/img/product-chicken.png" alt=""
-                    width="64" height="64" loading="lazy" decoding="async">
-
-                <p class="cart-success__product-name">Онігірі з куркою в японському каррі</p>
-            </div>
-
-            <div class="cart-success__product-meta">
-                <span class="cart-success__product-price">150₴</span>
-                <span class="cart-success__product-qty">1 шт</span>
-            </div>
-
-            <a href="/cart/" class="cart-success__cta button button--primary">Перейти до кошика</a>
-            <a href="/shop/" class="cart-success__continue">
-                Продовжити покупки
-                <svg class="cart-success__continue-underline" aria-hidden="true" viewBox="0 0 134 5"
-                    preserveAspectRatio="none">
-                    <use href="/assets/icons/sprite.svg#underline-brush"></use>
+        <div class="cart-success__inner">
+            <button class="cart-success__close" type="button" aria-label="Закрити">
+                <svg class="cart-success__close-icon" aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#close"></use>
                 </svg>
-            </a>
+            </button>
+
+            <img class="cart-success__illustration" src="/assets/img/cart-empty.png" alt=""
+                aria-hidden="true">
+
+            <div class="cart-success__content">
+                <h2 class="cart-success__title">Товар додано до кошика!</h2>
+                <svg class="cart-success__title-underline" aria-hidden="true" viewBox="0 0 122 9"
+                        preserveAspectRatio="none">
+                        <use href="/assets/icons/sprite.svg#underline-title"></use>
+                    </svg>
+
+                <div class="cart-success__product">
+                    <img class="cart-success__product-image" src="/assets/img/product-chicken.png" alt=""
+                        width="64" height="64" loading="lazy" decoding="async">
+
+                    <p class="cart-success__product-name">Онігірі з куркою в японському каррі</p>
+
+                    <div class="cart-success__product-meta">
+                    <span class="cart-success__product-price">150₴</span>
+                    <span class="cart-success__product-qty">1 шт</span>
+                </div>
+                </div>
+
+                
+
+                <a href="/cart/" class="cart-success__cta button button--primary">Перейти до кошика</a>
+                <a href="/shop/" class="cart-success__continue">
+                    Продовжити покупки
+                    <svg class="cart-success__continue-underline" aria-hidden="true" viewBox="0 0 134 5"
+                        preserveAspectRatio="none">
+                        <use href="/assets/icons/sprite.svg#underline-brush"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<main>
+
+    <main>
         <!-- Hero: main headline + product image -->
         <section class="hero">
             <div class="hero__left">
@@ -903,7 +913,7 @@
             </div>
         </section>
         <!-- Site footer: nav, contacts, newsletter, socials -->
-    <footer class="footer">
+        <footer class="footer">
             <div class="footer__container">
                 <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
                     <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"

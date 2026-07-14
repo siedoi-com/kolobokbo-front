@@ -18,7 +18,7 @@
     <!-- Site header: burger, logo, nav, cart -->
     <header class="header bg--white rel anim w-full z5">
         <div class="header__wrapper flex-row j-between">
-             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+            <!-- Mobile only: opens .mobile-menu via data-modal-open -->
             <div class="header__left-part">
                 <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
                     <svg role="presentation" class="header-burger__icon">
@@ -33,7 +33,7 @@
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
-              <!-- Desktop nav, hidden on mobile via d-none -->
+            <!-- Desktop nav, hidden on mobile via d-none -->
             <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
                 <ul class="header-menu__list">
                     <li id="menu-item-244"
@@ -60,6 +60,7 @@
                 </a>
                 -->
 
+                <!-- Badge without "active" class and without a number: 0 items -->
                 <a href="/cart/" class="button header__cart-button">
                     <span class="cart-badge abs z1 bg--base-red c--white fw--500"></span>
 
@@ -133,38 +134,42 @@
             </ul>
         </div>
     </header>
-    <!-- Mini-cart -->
-<div class="mini-cart-overlay" data-mini-cart-overlay></div>
 
-<!-- Mini-cart: empty state -->
-<div class="mini-cart mini-cart--empty" data-mini-cart>
-    <div class="mini-cart__inner">
-        <div class="mini-cart__header">
-            <div class="mini-cart__title-wrap">
-                <h2 class="mini-cart__title">Ваш кошик</h2>
-                <svg class="mini-cart__title-underline" aria-hidden="true" viewBox="0 0 122 9" preserveAspectRatio="none">
-                    <use href="/assets/icons/sprite.svg#underline-title"></use>
-                </svg>
+    <!-- Mini-cart: EMPTY state preview -->
+    <!-- No "active" class here: popup opens only on cart-icon click (see main.js) -->
+    <div class="mini-cart-overlay" data-mini-cart-overlay></div>
+
+    <div class="mini-cart mini-cart--empty" data-mini-cart>
+        <div class="mini-cart__inner">
+            <div class="mini-cart__header">
+                <div class="mini-cart__title-wrap">
+                    <h2 class="mini-cart__title">Ваш кошик</h2>
+                    <svg class="mini-cart__title-underline" aria-hidden="true" viewBox="0 0 122 9"
+                        preserveAspectRatio="none">
+                        <use href="/assets/icons/sprite.svg#underline-title"></use>
+                    </svg>
+                </div>
+
+                <button class="mini-cart__close" type="button" aria-label="Закрити кошик">
+                    <svg class="mini-cart__close-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#close"></use>
+                    </svg>
+                </button>
             </div>
 
-            <button class="mini-cart__close" type="button" aria-label="Закрити кошик">
-                <svg class="mini-cart__close-icon" aria-hidden="true">
-                    <use href="/assets/icons/sprite.svg#close"></use>
-                </svg>
-            </button>
-        </div>
+            <!-- Only the empty-state block is rendered — no filled-cart markup on this page -->
+            <div class="mini-cart__empty">
+                <img class="mini-cart__empty-image" src="/assets/img/cart-empty.png" alt="" aria-hidden="true">
 
-        <div class="mini-cart__empty">
-            <img class="mini-cart__empty-image" src="/assets/img/cart-empty.png" alt="" aria-hidden="true">
+                <p class="mini-cart__empty-title">Ваш кошик порожній :(</p>
+                <p class="mini-cart__empty-text">Схоже, ви ще нічого не додали до кошика. Давайте це виправимо!</p>
 
-            <p class="mini-cart__empty-title">Ваш кошик порожній :(</p>
-            <p class="mini-cart__empty-text">Схоже, ви ще нічого не додали до кошика. Давайте це виправимо!</p>
-
-            <a href="/shop/" class="mini-cart__empty-btn button button--primary">Перейти до каталогу</a>
+                <a href="/shop/" class="mini-cart__empty-btn button button--primary">Перейти до каталогу</a>
+            </div>
         </div>
     </div>
-</div>
-<main>
+
+    <main>
         <!-- Hero: main headline + product image -->
         <section class="hero">
             <div class="hero__left">
@@ -884,7 +889,7 @@
             </div>
         </section>
         <!-- Site footer: nav, contacts, newsletter, socials -->
-    <footer class="footer">
+        <footer class="footer">
             <div class="footer__container">
                 <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
                     <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
