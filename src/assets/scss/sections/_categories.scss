@@ -171,4 +171,32 @@
             font-size: var(--size_20);
         }
     }
+//  Page Catalog
+    &--catalog {
+        padding: 7rem 0 6rem 6rem;
+
+        @include media.L {
+            padding: 5rem var(--size_75);
+        }
+
+        @include media.XL {
+            padding: var(--size_22) var(--size_86);
+        }
+    }
+}
+
+// Catalog page: bigger icons + wider gaps on mobile
+.categories--catalog {
+    .categories__list {
+        gap: 10rem;
+
+        @include media.L {
+            gap: 6rem;
+        }
+    }
+
+    .categories__icon {
+        width: 10rem;
+        height: 10rem;
+    }
 }

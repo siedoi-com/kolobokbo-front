@@ -1,0 +1,21 @@
+.select {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size_8);
+    color: var(--color-text-additional);
+    font-size: var(--size_14);
+
+    &__label {
+        white-space: nowrap;
+    }
+
+    &__input {
+        border: 0.1rem solid var(--color-card-border);
+        width: 220px;
+        height: 48px;
+        color: var(--color-black);
+        font-size: var(--size_14);
+        font-weight: 700;
+        cursor: pointer;
+    }
+}

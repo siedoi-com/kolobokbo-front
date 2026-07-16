@@ -1,0 +1,31 @@
+@use "../global/mixins";
+
+.segmented-control {
+    display: flex;
+    align-items: center;
+    gap: var(--size_8);
+    list-style: none;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.2rem;
+        border: 0.1rem solid var(--color-card-border);
+        background: transparent;
+        color: var(--color-black);
+        font-size: var(--size_16);
+        cursor: pointer;
+        transition: background var(--transition), color var(--transition);
+
+        @include mixins.hover {
+            background: var(--color-accent);
+        }
+
+        &--active {
+            background: var(--color-black);
+            color: var(--color-white);
+            border: none;
+        }
+    }
+}

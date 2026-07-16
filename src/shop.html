@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolobok</title>
+</head>
+
+<body>
+    <!-- Free delivery banner above header -->
+    <div class="before-header rel z5 w-full">
+        <div class="promo-line promo-line--static">
+            <div class="container">безкоштовна доставка по Києву</div>
+        </div>
+    </div>
+    <!-- Site header: burger, logo, nav, cart -->
+    <header class="header bg--white rel anim w-full z5">
+        <div class="header__wrapper flex-row j-between">
+             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+            <div class="header__left-part">
+                <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
+                    <svg role="presentation" class="header-burger__icon">
+                        <use href="/assets/icons/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="header__logo-wrapper">
+                <div class="logo header__logo logo--header">
+                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
+                        fetchpriority="high" decoding="async" />
+                </div>
+            </div>
+              <!-- Desktop nav, hidden on mobile via d-none -->
+            <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
+    <ul class="header-menu__list">
+        <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+            <a href="/">Головна</a></li>
+        <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
+            <a href="/shop/" aria-current="page">Каталог</a></li>
+        <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
+               <a href="/pro-nas/">Про нас</a></li>
+        <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
+               <a href="/blog/">Блог</a></li>
+        <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+               <a href="/dostavka-i-oplata/">Доставка</a></li>
+        <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
+               <a href="/contacts/">Контакти</a></li>
+    </ul>
+</nav>
+            <div class="header__right-part flex-row j-end">
+                <!-- Temporarily hidden per feedback, will be back later
+                <a href="" class="button flex-center d-none header__account-icon">
+                    <svg role="presentation" class="wh-full">
+                        <use href="/assets/icons/sprite.svg#icon-user"></use>
+                    </svg>
+                </a>
+                -->
+
+                <a href="/cart/" class="button header__cart-button">
+                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
+
+                    <svg role="presentation" class="anim">
+                        <use href="/assets/icons/sprite.svg#icon-cart"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <button class="mobile-menu__close">
+                <svg class="mobile-menu__close-icon" aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <div class="mobile-menu__logo">
+                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
+            </div>
+
+        <nav class="mobile-menu__nav">
+    <ul id="menu-header-1" class="mobile-menu__list">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+            <a href="/">Головна</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
+            <a href="/shop/" aria-current="page">Каталог</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
+            <a href="/pro-nas/">Про нас</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
+            <a href="/blog/">Блог</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+            <a href="/dostavka-i-oplata/">Доставка і оплата</a></li>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
+            <a href="/contacts/">Контакти</a></li>
+    </ul>
+</nav>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+380955941028" class="mobile-menu__phone">
+                    <svg class="mobile-menu__phone-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    (095) 594 10 28
+                </a>
+            </div>
+
+            <ul class="mobile-menu__social social-list">
+                <li class="social-list__item">
+                    <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#tiktok"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+          <section class="catalog-hero">
+             <img class="catalog-hero__decor" src="/assets/img/hero-decor-1.svg" alt="" aria-hidden="true">
+    <ul class="catalog-hero__breadcrumbs">
+        <li class="catalog-hero__crumb">
+            <a href="/">Головна</a>
+        </li>
+        <svg class="catalog-hero__crumb-icon" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#chevron"></use>
+        </svg>
+        <li class="catalog-hero__crumb" aria-current="page">Каталог</li>
+    </ul>
+
+    <div class="catalog-hero__body">
+       <h1 class="catalog-hero__title">
+    Каталог
+    <svg class="catalog-hero__title-decor" aria-hidden="true">
+        <use href="/assets/icons/sprite.svg#arrow-decor"></use>
+    </svg>
+</h1>
+        <p class="catalog-hero__text">Обери свій смак та заряджай день енергією з Колобок Бо!</p>
+        <a href="#catalog" class="button button--primary">Дивитись меню</a>
+    </div>
+
+    <div class="catalog-hero__image-wrap">
+        <img class="catalog-hero__image" src="/assets/img/catalog-hero.jpg" alt="Онігірі асорті"
+            width="800" height="600" loading="eager" decoding="async">
+    </div>
+</section>
+        <!-- Category filter buttons -->
+        <section class="categories categories--catalog">
+            <div class="categories__container">
+                <ul class="categories__list">
+                    <li class="categories__item">
+                        <button class="categories__btn categories__btn--all" type="button">
+                            <svg class="categories__blob" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#blob"></use>
+                            </svg>
+                            <svg class="categories__icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#category-all"></use>
+                            </svg>
+                            <span class="categories__label">Всі онігірі</span>
+                        </button>
+                    </li>
+                    <li class="categories__item">
+                        <button class="categories__btn categories__btn--spicy" type="button">
+                            <svg class="categories__blob" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#blob"></use>
+                            </svg>
+                            <svg class="categories__icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#category-spicy"></use>
+                            </svg>
+                            <span class="categories__label">Гострі</span>
+                        </button>
+                    </li>
+                    <li class="categories__item">
+                        <button class="categories__btn categories__btn--chicken" type="button">
+                            <svg class="categories__blob" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#blob"></use>
+                            </svg>
+                            <svg class="categories__icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#category-chicken"></use>
+                            </svg>
+                            <span class="categories__label">З куркою</span>
+                        </button>
+                    </li>
+                    <li class="categories__item">
+                        <button class="categories__btn categories__btn--fish" type="button">
+                            <svg class="categories__blob" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#blob"></use>
+                            </svg>
+                            <svg class="categories__icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#category-fish"></use>
+                            </svg>
+                            <span class="categories__label">З рибою</span>
+                        </button>
+                    </li>
+                    <li class="categories__item">
+                        <button class="categories__btn categories__btn--vegan" type="button">
+                            <svg class="categories__blob" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#blob"></use>
+                            </svg>
+                            <svg class="categories__icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#category-vegan"></use>
+                            </svg>
+                            <span class="categories__label">Веган</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+                      <!-- Сatalog-grid -->
+      <section class="catalog-grid">
+    <div class="container">
+        <div class="catalog-grid__toolbar">
+            <div class="select">
+                <span class="select__label">Сортувати:</span>
+                <select class="select__input">
+                    <option value="popular">Популярні</option>
+                    <option value="cheap">Спочатку дешевші</option>
+                    <option value="expensive">Спочатку дорожчі</option>
+                </select>
+            </div>
+
+            <div class="select">
+                <span class="select__label">Показати:</span>
+                <ul class="segmented-control">
+                    <li><button class="segmented-control__btn segmented-control__btn--active" type="button">12</button></li>
+                    <li><button class="segmented-control__btn" type="button">24</button></li>
+                    <li><button class="segmented-control__btn" type="button">36</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="catalog-grid__items">
+            <!-- .product-card -->
+        </div>
+
+        <div class="catalog-grid__load-more">
+            <button class="button button--secondary" type="button">Завантажити ще</button>
+        </div>
+    </div>
+</section>
+
+          <!-- Blog articles slider -->
+        <section class="blog">
+            <div class="blog__container">
+                <div class="blog__header">
+                    <h2 class="blog__title">Корисне<br> про онігірі</h2>
+                    <p class="blog__text">Ділимось знаннями, щоб ти дізнався більше про улюблений смак.</p>
+
+                    <a href="/blog/" class="button button--secondary button--spread">
+                        <span class="button__label">Читати блог</span>
+                        <svg class="button__icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#arrow-plain"></use>
+                        </svg>
+                        <svg class="button__underline" aria-hidden="true" viewBox="0 0 134 5"
+                            preserveAspectRatio="none">
+                            <use href="/assets/icons/sprite.svg#underline-brush"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="blog__cards-container">
+                    <div class="embla embla--blog-slider">
+                        <div class="embla__viewport">
+                            <div class="embla__container">
+                                <article class="article-card embla__slide">
+                                    <div class="article-card__image-wrap">
+                                        <img class="article-card__image" src="/assets/img/blog-rice.jpg" alt=""
+                                            width="382" height="232" loading="lazy" decoding="async">
+                                        <span class="article-card__label">Популярне</span>
+                                    </div>
+
+                                    <div class="article-card__bottom">
+                                        <div class="article-card__text">
+                                            <h3 class="article-card__title">5 причин додати рис у свій раціон</h3>
+                                            <div class="article-card__meta">
+                                                <time class="article-card__date" datetime="2026-05-07">7 травня
+                                                    2026</time>
+                                                <span class="article-card__read-time">
+                                                    <svg class="article-card__meta-icon" aria-hidden="true">
+                                                        <use href="/assets/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                    5 хв читання
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <a href="/blog/5-prychyn-rys/" class="button button--secondary button--card">
+                                            Читати блог
+                                            <svg class="button__icon" aria-hidden="true">
+                                                <use href="/assets/icons/sprite.svg#arrow-plain"></use>
+                                            </svg>
+                                            <svg class="button__underline" aria-hidden="true" viewBox="0 0 134 5"
+                                                preserveAspectRatio="none">
+                                                <use href="/assets/icons/sprite.svg#underline-brush"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="article-card embla__slide">
+                                    <div class="article-card__image-wrap">
+                                        <img class="article-card__image" src="/assets/img/blog-onigiri.jpg" alt=""
+                                            width="382" height="232" loading="lazy" decoding="async">
+                                        <span class="article-card__label">Популярне</span>
+                                    </div>
+
+                                    <div class="article-card__bottom">
+                                        <div class="article-card__text">
+                                            <h3 class="article-card__title">Як приготувати онігірі вдома: покроковий
+                                                гайд</h3>
+                                            <div class="article-card__meta">
+                                                <time class="article-card__date" datetime="2026-04-20">20 квітня
+                                                    2026</time>
+                                                <span class="article-card__read-time">
+                                                    <svg class="article-card__meta-icon" aria-hidden="true">
+                                                        <use href="/assets/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                    5 хв читання
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <a href="/blog/onigiri-guide/" class="button button--secondary button--card">
+                                            Читати блог
+                                            <svg class="button__icon" aria-hidden="true">
+                                                <use href="/assets/icons/sprite.svg#arrow-plain"></use>
+                                            </svg>
+                                            <svg class="button__underline" aria-hidden="true" viewBox="0 0 134 5"
+                                                preserveAspectRatio="none">
+                                                <use href="/assets/icons/sprite.svg#underline-brush"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="article-card embla__slide">
+                                    <div class="article-card__image-wrap">
+                                        <img class="article-card__image" src="/assets/img/blog-onigiri.jpg" alt=""
+                                            width="382" height="232" loading="lazy" decoding="async">
+                                        <span class="article-card__label">Популярне</span>
+                                    </div>
+
+                                    <div class="article-card__bottom">
+                                        <div class="article-card__text">
+                                            <h3 class="article-card__title">Як приготувати онігірі вдома: покроковий
+                                                гайд</h3>
+                                            <div class="article-card__meta">
+                                                <time class="article-card__date" datetime="2026-04-20">20 квітня
+                                                    2026</time>
+                                                <span class="article-card__read-time">
+                                                    <svg class="article-card__meta-icon" aria-hidden="true">
+                                                        <use href="/assets/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                    5 хв читання
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <a href="/blog/onigiri-guide/" class="button button--secondary button--card">
+                                            Читати блог
+                                            <svg class="button__icon" aria-hidden="true">
+                                                <use href="/assets/icons/sprite.svg#arrow-plain"></use>
+                                            </svg>
+                                            <svg class="button__underline" aria-hidden="true" viewBox="0 0 134 5"
+                                                preserveAspectRatio="none">
+                                                <use href="/assets/icons/sprite.svg#underline-brush"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="slider-controls">
+                            <button class="slider-controls__button slider-controls__button--prev" type="button"
+                                aria-label="Попередня стаття">
+                                <svg class="slider-controls__icon" aria-hidden="true">
+                                    <use href="/assets/icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+
+                            <div class="slider-controls__pagination"></div>
+
+                            <button class="slider-controls__button slider-controls__button--next" type="button"
+                                aria-label="Наступна стаття">
+                                <svg class="slider-controls__icon" aria-hidden="true">
+                                    <use href="/assets/icons/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+            <!-- Site footer: nav, contacts, newsletter, socials -->
+        <footer class="footer">
+            <div class="footer__container">
+                <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
+                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
+                        decoding="async">
+                </a>
+
+                <div class="footer__row">
+                    <nav class="footer__nav" aria-label="Футер навігація">
+                        <ul class="footer__menu">
+                            <li><a href="/" class="footer__link">Головна</a></li>
+                            <li><a href="/shop/" class="footer__link">Каталог</a></li>
+                            <li><a href="/pro-nas/" class="footer__link">Про нас</a></li>
+                            <li><a href="/blog/" class="footer__link">Блог</a></li>
+                            <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
+                            <li><a href="/contacts/" class="footer__link">Контакти</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer__contacts">
+                        <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#mail"></use>
+                            </svg>
+                            kolobokbo@gmail.com
+                        </a>
+                        <a href="tel:+380955941028" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#phone"></use>
+                            </svg>
+                            (095) 594 10 28
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__subscribe">
+                    <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
+
+                    <form class="footer__subscribe-form" action="/subscribe/" method="post">
+                        <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail"
+                            required aria-label="Ваш E-mail">
+                        <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <span class="footer__copyright">© 2026 Kolobok Bo.</span>
+                    <a href="/privacy-policy/" class="footer__legal-link">Політика конфіденційності</a>
+                    <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
+                </div>
+
+                <div class="footer__bottom-right">
+                    <div class="footer__payments">
+                        <img class="footer__payment-icon footer__payment-icon--visa" src="/assets/icons/visa.svg"
+                            alt="Visa" width="48" height="16" loading="lazy" decoding="async">
+                        <img class="footer__payment-icon footer__payment-icon--mastercard"
+                            src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank"
+                            rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+
+</html>

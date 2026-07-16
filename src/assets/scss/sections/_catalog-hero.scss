@@ -1,0 +1,190 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.catalog-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--size_24) var(--size_16);
+    background: var(--color-bg-cream);
+    overflow: hidden;
+    height: 71.5rem;
+
+    @include media.L {
+        padding: var(--size_48);
+        height: 56rem;
+    }
+
+    @include media.XL {
+        height: 72rem;
+        padding: 12rem 0 0 8rem;
+    }
+
+    &__image-wrap {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    &__image {
+        position: absolute;
+        top: 35rem;
+        left: -26rem;
+        width: 95rem;
+        max-width: none;
+        height: auto;
+        transform: translateY(-50%);
+        object-fit: contain;
+
+        @include media.L {
+            position: static;
+            transform: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: auto;
+        pointer-events: none;
+    }
+
+    &__breadcrumbs {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        margin-top: 7rem;
+        list-style: none;
+
+        @include media.L {
+            margin-top: 9.5rem;
+        }
+    }
+
+    &__crumb {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        font-size: var(--size_14);
+
+        a {
+            text-decoration: none;
+            transition: color var(--transition);
+            margin-right: 1.3rem;
+
+            @include mixins.hover {
+                color: var(--color-black);
+            }
+
+            @include media.L {
+                margin-right: 1rem;
+            }
+        }
+
+        @include media.L {
+            font-size: var(--size_16);
+        }
+    }
+
+    &__crumb-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        rotate: 270deg;
+        flex-shrink: 0;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_8);
+        margin-top: 17rem;
+
+        .button {
+            align-self: stretch;
+            justify-content: center;
+            margin-top: 4rem;
+            width: 26rem;
+
+            @include media.L {
+                align-self: flex-start;
+                margin-top: 3rem;
+            }
+
+            @include media.XL {
+                margin-top: 3.5rem;
+            }
+        }
+
+        @include media.L {
+            margin-top: var(--size_32);
+            max-width: 50%;
+        }
+
+        @include media.XL {
+            margin-top: var(--size_48);
+            max-width: 35%;
+        }
+    }
+
+    &__title {
+        position: relative;
+        color: var(--color-black);
+        font-size: var(--size_40);
+        font-weight: 950;
+        text-transform: uppercase;
+        line-height: normal;
+
+        @include media.L {
+            font-size: var(--size_56);
+        }
+
+        @include media.XL {
+            font-size: 7.2rem;
+        }
+    }
+
+    &__title-decor {
+        display: none;
+        position: absolute;
+        top: -4rem;
+        right: -8rem;
+        width: 6.5rem;
+        height: 7.1rem;
+        transform: rotate(100deg);
+        color: var(--color-black);
+        pointer-events: none;
+
+        @include media.L {
+            display: block;
+        }
+
+        @include media.XL {
+            top: -3rem;
+            right: -8rem;
+            width: 7.5rem;
+            height: 8.1rem;
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 500;
+        line-height: 1.4;
+        width: 70%;
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+}

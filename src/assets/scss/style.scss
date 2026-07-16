@@ -43,6 +43,9 @@ $breakpoint__2xl: 1440px;
 @use "components/button";
 @use "components/before-header";
 
+@use "components/select";
+@use "components/segmented-control";
+
 // LAYOUT
 @use "layout/header";
 @use "layout/footer";
@@ -60,3 +63,5 @@ $breakpoint__2xl: 1440px;
 @use "sections/blog";
 @use "sections/faq";
 
+@use "sections/catalog-hero";
+@use "sections/catalog-grid";

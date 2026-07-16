@@ -1,0 +1,47 @@
+@use "../global/media";
+
+.catalog-grid {
+    padding: var(--size_16) 0;
+
+    @include media.L {
+        padding: var(--size_24) 0;
+    }
+
+    &__toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size_16);
+        margin-bottom: var(--size_24);
+
+        @include media.L {
+            margin-bottom: var(--size_32);
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--size_16);
+
+        @include media.L {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--size_24);
+        }
+
+        @include media.XL {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__load-more {
+        display: flex;
+        justify-content: center;
+        margin-top: var(--size_24);
+
+        @include media.L {
+            margin-top: var(--size_48);
+        }
+    }
+}
