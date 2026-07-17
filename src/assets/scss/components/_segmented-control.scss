@@ -1,3 +1,4 @@
+@use "../global/media";
 @use "../global/mixins";
 
 .segmented-control {
@@ -10,22 +11,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1.2rem;
-        border: 0.1rem solid var(--color-card-border);
+        min-width: 4.2rem;
+        height: var(--size_48);
+        padding: var(--size_8);
+        border: 0.1rem solid var(--color-advantage-border);
         background: transparent;
         color: var(--color-black);
-        font-size: var(--size_16);
+        font-size: var(--size_14);
         cursor: pointer;
-        transition: background var(--transition), color var(--transition);
+        transition: background var(--transition), color var(--transition), border-color var(--transition);
+
+        @include media.L {
+            height: var(--size_38);
+        }
+         @include media.XL{
+            height: var(--size_48);
+         }
 
         @include mixins.hover {
-            background: var(--color-accent);
+            border-color: var(--color-text-additional);
         }
 
         &--active {
             background: var(--color-black);
             color: var(--color-white);
-            border: none;
+            border-color: transparent;
         }
+    }
+    @include media.XL{
+        gap: var(--size_12);
     }
 }

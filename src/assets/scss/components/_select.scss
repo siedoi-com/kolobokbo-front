@@ -1,21 +1,154 @@
-.select {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--size_8);
-    color: var(--color-text-additional);
-    font-size: var(--size_14);
+@use "../global/media";
+@use "../global/mixins";
 
-    &__label {
-        white-space: nowrap;
+.select {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__control {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size_8);
+        height: var(--size_48);
+        padding: 0 var(--size_16);
+        outline: none;
+        border: 0.1rem solid var(--color-advantage-border);
+        background: var(--color-white);
+        cursor: pointer;
+        transition: border-color var(--transition);
+
+        @include mixins.hover {
+            border-color: var(--color-text-additional);
+        }
+        @include media.L{
+            padding-left: var(--size_20);
+        }
     }
 
-    &__input {
-        border: 0.1rem solid var(--color-card-border);
-        width: 220px;
-        height: 48px;
+    &__value {
+        overflow: hidden;
+        color: var(--color-text-additional);
+        font-size: var(--size_12);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include media.L{
+            font-size: var(--size_14);
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        flex-shrink: 0;
+    }
+
+    &__clear {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: var(--size_16);
+        height: var(--size_16);
+        border: none;
+        background: transparent;
+        color: var(--color-text-additional);
+        cursor: pointer;
+        transition: color var(--transition);
+
+        @include mixins.hover {
+            color: var(--color-black);
+        }
+    }
+
+    &__clear-icon {
+        width: 1rem;
+        height: 1rem;
+        pointer-events: none;
+    }
+
+    &__chevron {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: var(--color-text-additional);
+        transition: transform var(--transition), color var(--transition);
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: calc(100% + var(--size_8));
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        max-height: 10.2rem;
+        overflow-y: auto;
+        box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.04);
+        background: var(--color-white);
+        list-style: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity var(--transition), visibility var(--transition);
+    }
+
+    &__option {
+        padding:var(--size_8) var(--size_16) ;
         color: var(--color-black);
         font-size: var(--size_14);
-        font-weight: 700;
         cursor: pointer;
+        transition: background var(--transition);
+
+        // @include mixins.hover {
+        //     background: var(--color-bg-cream);
+        // }
+
+        // &--active {
+        //     font-weight: 700;
+        // }
+    }
+
+    &--open {
+        .select__control {
+            border-color: var(--color-black);
+        }
+
+        .select__chevron {
+            transform: rotate(180deg);
+            color: var(--color-black);
+        }
+
+        .select__dropdown {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+
+    &--filled {
+        .select__value {
+            color: var(--color-black);
+        }
+
+        .select__clear {
+            display: flex;
+        }
+    }
+
+    &--disabled {
+        .select__control {
+            border-color: var(--color-advantage-border);
+            background: var(--color-bg-cream);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .select__value,
+        .select__chevron {
+            color: var(--color-text-additional);
+            opacity: 0.6;
+        }
     }
 }

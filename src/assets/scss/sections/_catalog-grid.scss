@@ -1,10 +1,13 @@
 @use "../global/media";
 
 .catalog-grid {
-    padding: var(--size_16) 0;
+    padding: var(--size_20) var(--size_16);
 
     @include media.L {
-        padding: var(--size_24) 0;
+        padding: var(--size_52) var(--size_48);
+    }
+    @include media.XL {
+        padding: var(--size_82) var(--size_80);
     }
 
     &__toolbar {
