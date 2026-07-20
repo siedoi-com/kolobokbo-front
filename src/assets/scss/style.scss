@@ -50,6 +50,8 @@ $breakpoint__2xl: 1440px;
 @use "components/badge";
 @use "components/product-card";
 
+@use "components/product-summary";
+
 // LAYOUT
 @use "layout/header";
 @use "layout/footer";
