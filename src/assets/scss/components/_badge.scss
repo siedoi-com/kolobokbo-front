@@ -1,0 +1,39 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    height: 3.2rem;
+    padding: var(--size_8) var(--size_12);
+    gap: var(--size_8);
+    border-radius: var(--size_24);
+    border: 0.1rem solid var(--color-badge-border);
+    background: var(--color-badge-bg);
+
+    &__label {
+        color: var(--color-black);
+        font-size: var(--size_10);
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        color: var(--color-black);
+    }
+
+    &--hit {
+        border-color: var(--color-badge-border);
+        background: var(--color-badge-bg);
+    }
+
+    &--new {
+        border-color: var(--color-badge-new-border);
+        background: var(--color-badge-new-bg);
+    }
+
+    &--recommend {
+        border-color: var(--color-badge-recommend-border);
+        background: var(--color-badge-recommend-bg);
+    }
+}

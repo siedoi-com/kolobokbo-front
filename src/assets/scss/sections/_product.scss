@@ -104,31 +104,6 @@
         align-self: stretch;
     }
 
-    &__badge {
-        display: inline-flex;
-        height: 3.2rem;
-        padding: var(--size_8) var(--size_12);
-        align-items: center;
-        gap: var(--size_8);
-        border-radius: var(--size_24);
-        border: 0.1rem solid var(--color-badge-border);
-        background: var(--color-badge-bg);
-
-        span {
-            font-size: var(--size_10);
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--color-black);
-        }
-    }
-
-    &__badge-icon {
-        width: 1.6rem;
-        height: 1.6rem;
-        flex-shrink: 0;
-        color: var(--color-black);
-    }
-
     &__title {
         margin-top: 1rem;
         color: var(--color-black);

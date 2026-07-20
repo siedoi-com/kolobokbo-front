@@ -6,6 +6,7 @@
     @include media.L {
         padding: var(--size_52) var(--size_48);
     }
+    
     @include media.XL {
         padding: var(--size_82) var(--size_80);
     }
@@ -31,6 +32,7 @@
         @include media.L {
             grid-template-columns: repeat(2, 1fr);
             gap: var(--size_24);
+            margin-top: var(--size_48);
         }
 
         @include media.XL {

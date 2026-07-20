@@ -47,6 +47,9 @@ $breakpoint__2xl: 1440px;
 @use "components/segmented-control";
 @use "components/field";
 
+@use "components/badge";
+@use "components/product-card";
+
 // LAYOUT
 @use "layout/header";
 @use "layout/footer";

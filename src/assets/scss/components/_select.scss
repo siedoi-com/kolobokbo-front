@@ -24,6 +24,7 @@
         @include mixins.hover {
             border-color: var(--color-text-additional);
         }
+
         @include media.L{
             padding-left: var(--size_20);
         }
@@ -35,6 +36,7 @@
         font-size: var(--size_12);
         white-space: nowrap;
         text-overflow: ellipsis;
+
         @include media.L{
             font-size: var(--size_14);
         }
@@ -100,14 +102,6 @@
         font-size: var(--size_14);
         cursor: pointer;
         transition: background var(--transition);
-
-        // @include mixins.hover {
-        //     background: var(--color-bg-cream);
-        // }
-
-        // &--active {
-        //     font-weight: 700;
-        // }
     }
 
     &--open {

@@ -1,0 +1,194 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: var(--size_12);
+    border: 0.1rem solid var(--color-advantage-border);
+    background: var(--color-white);
+    transition: background var(--transition), border-color var(--transition);
+    cursor: pointer;
+
+    @include mixins.hover {
+        border-color: var(--color-gray-300);
+        background: var(--card-tint, var(--color-bg-cream));
+    }
+
+    &--fish {
+        --card-tint: var(--color-card-tint-fish);
+    }
+
+    &--vegan {
+        --card-tint: var(--color-card-tint-vegan);
+    }
+
+    &--spicy {
+        --card-tint: var(--color-card-tint-spicy);
+    }
+
+    &--chicken {
+        --card-tint: var(--color-bg-cream);
+    }
+
+    &__badge {
+        position: absolute;
+        top: var(--size_14);
+        right: var(--size_8);
+        z-index: 2;
+    }
+
+    // Product photo 
+    &__image-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    // Text content
+    &__body {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin-top: var(--size_22);
+        padding: 0 var(--size_8);
+
+        @include media.L {
+            margin-top: var(--size_20);
+            padding: 0 var(--size_12);
+        }
+
+        @include media.XL {
+            margin-top: var(--size_30);
+            padding: 0 var(--size_16);
+        }
+    }
+
+    &__title {
+        @include mixins.max-rows(2, 1.3);
+        width: 40%;
+        color: var(--color-black);
+        font-size: var(--size_14);
+        font-weight: 800;
+
+        @include media.L {
+            font-size: var(--size_16);
+        }
+        @include media.XL {
+            font-size: var(--size_16);
+            width: 60%;
+        }
+    }
+
+    &__desc {
+        color: var(--color-black);
+        font-size: var(--size_12);
+        margin-top: var(--size_8);
+        @include media.L {
+            font-size: var(--size_14);
+        }
+    }
+
+    // Weight + calories 
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: var(--size_12);
+        margin-top: var(--size_8);
+         @include media.XL{
+            margin-top: var(--size_18);
+             gap: var(--size_16);
+         }
+    }
+
+    &__meta-item {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        color: var(--color-black);
+        font-size: var(--size_12);
+        @include media.L {
+            font-size: var(--size_14);
+        }
+        
+    }
+
+    &__meta-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        color: var(--color-black);
+    }
+
+    &__meta-icon--kcal {
+    width: 1.3rem;
+    height: 1.3rem;
+    }
+
+    // Price + add to cart
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size_8);
+        margin-top: var(--size_24);
+        padding: 0 var(--size_8);
+
+         @include media.XL{
+            padding: 0 var(--size_12);
+            margin-top: var(--size_30);
+         }
+    }
+
+    &__price {
+        color: var(--color-black);
+        font-size: var(--size_18);
+        font-weight: 600;
+
+        @include media.L {
+            font-size: var(--size_20);
+        }
+
+        @include media.XL {
+            font-size: var(--size_24);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: var(--size_24);
+        padding: var(--size_8) var(--size_12);
+        background: var(--color-accent);
+        cursor: pointer;
+        transition: background var(--transition);
+
+        @include mixins.hover {
+            background: var(--color-secondary-accent);
+        }
+
+        @include media.XL{
+            width: var(--size_48);
+            height: var(--size_48);
+        }
+    }
+
+    &__btn-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        color: var(--color-black);
+        pointer-events: none;
+    }
+}

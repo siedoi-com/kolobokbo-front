@@ -15,20 +15,23 @@
     &__label {
         color: var(--color-black);
         font-size: var(--size_16);
-         @include media.XL{
+         
+        @include media.XL{
             font-size: var(--size_18);
          }
     }
 
     &--end {
         align-items: flex-end;
+
         @include media.L {
-        align-items: center;
-        justify-content: flex-end;
-        gap: var(--size_10);
-    }
-    @include media.XL{
-         gap: var(--size_16);
-    }
+            align-items: center;
+            justify-content: flex-end;
+            gap: var(--size_10);
+        }
+
+        @include media.XL{
+            gap: var(--size_16);
+        }
     }
 }

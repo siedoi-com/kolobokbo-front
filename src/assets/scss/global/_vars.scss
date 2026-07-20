@@ -24,8 +24,20 @@
   --color-blob-fish: #0080F4;
   --color-blob-vegan: #C8EF25;
 
+  // Badge-colors
   --color-badge-border: #FFB800;
   --color-badge-bg: rgba(255, 184, 0, 0.20);
+  --color-badge-recommend-border: #FF7A45;
+  --color-badge-recommend-bg: rgba(255, 122, 69, 0.20);
+  --color-badge-new-border: #B06CFF;
+  --color-badge-new-bg: rgba(176, 108, 255, 0.20);
+
+  // Product-card :hover-colors
+  --color-card-tint-fish: rgba(0, 128, 244, 0.10);
+  --color-card-tint-vegan: rgba(200, 239, 37, 0.20);
+  --color-card-tint-spicy: rgba(241, 67, 33, 0.10);
+  --color-bg-cream: #FFF7DE;
+
   --color-advantage-border: #E5E7EB;
   --color-card-border: #D1D5DB;
   --color-gray-400: #9CA3AF;

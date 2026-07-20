@@ -113,11 +113,11 @@
             align-self: stretch;
             justify-content: center;
             margin-top: 4rem;
-            width: 26rem;
 
             @include media.L {
                 align-self: flex-start;
                 margin-top: 3rem;
+                width: 26rem;
             }
 
             @include media.XL {

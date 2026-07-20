@@ -24,9 +24,10 @@
         @include media.L {
             height: var(--size_38);
         }
-         @include media.XL{
+
+        @include media.XL{
             height: var(--size_48);
-         }
+        }
 
         @include mixins.hover {
             border-color: var(--color-text-additional);
