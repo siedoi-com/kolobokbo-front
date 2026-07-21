@@ -94,7 +94,7 @@
         }
 
         @include media.XL {
-                   margin-top: var(--size_14);
+            margin-top: var(--size_14);
         }
     }
 
@@ -123,7 +123,7 @@
 
             @include media.XL {
                 font-size: var(--size_18);
-                        margin-top: var(--size_10);
+                margin-top: var(--size_10);
             }
         }
     }

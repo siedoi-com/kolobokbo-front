@@ -1,25 +1,33 @@
 @use "../global/media";
 
 .product-page {
+    position: relative;
     display: flex;
     flex-direction: column;
-    padding: var(--size_24) var(--size_20) var(--size_48) var(--size_20);
     gap: var(--size_16);
+    padding: var(--size_56) var(--size_20) var(--size_45) var(--size_20);
     overflow: hidden;
-    position: relative;
 
     @include media.L {
-        padding: var(--size_48);
         flex-direction: row;
         gap: var(--size_24);
+        padding: var(--size_48) var(--size_48) var(--size_64) var(--size_48);
+    }
+
+    @include media.XL {
+        flex-direction: row;
+        gap: var(--size_24);
+        padding: var(--size_72) var(--size_82) var(--size_60) var(--size_82);
     }
 
     .breadcrumbs {
         width: 100%;
+        position: absolute;
+        top: var(--size_20);
 
-        @include media.L {
-            position: absolute;
-            top: var(--size_20);
+        @include media.XL {
+            top: var(--size_44);
+            font-size: var(--size_14);
         }
     }
 
@@ -33,6 +41,11 @@
             flex-direction: row;
             flex: 0 0 50%;
             max-width: 50%;
+            margin-top: var(--size_10);
+        }
+
+        @include media.XL {
+            margin-top: var(--size_34);
         }
     }
 
@@ -48,22 +61,21 @@
     }
 
     &__thumb {
-        flex-shrink: 0;
-        width: 6rem;
-        height: 6rem;
+        flex: 0 0 auto;
+        width: 5.8rem;
+        height: 5.8rem;
         padding: 0;
-        border: 0.1rem solid var(--color-advantage-border);
+        border: none;
         background: var(--color-white);
         cursor: pointer;
-        transition: border-color var(--transition);
-
-        &--active {
-            border-color: var(--color-accent);
-        }
 
         @include media.L {
-            width: 8rem;
-            height: 8rem;
+            width: 8.5rem;
+            height: 9rem;
+        }
+
+        &--active {
+            border: 0.1rem solid var(--color-accent);
         }
     }
 
@@ -78,21 +90,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex: 1 0 0;
-        width: 40.2rem;
-        height: 32.2rem;
+        flex: 1 0 auto;
+        width: 100%;
+        height: 31.2rem;
         background: var(--color-bg-cream);
-        @include media.L{
-            width: 34rem;
-        height: 50.5rem;
+
+        @include media.L {
+            flex: 0 0 34rem;
+            width: auto;
+            height: 50.5rem;
+        }
+
+        @include media.XL {
+            flex: 0 0 52.1rem;
+            width: auto;
+            height: 48.6rem;
         }
     }
 
     &__main-image {
         width: 100%;
         height: 100%;
-        object-fit: contain;
         max-width: none;
+        object-fit: contain;
     }
 
     &__right {
@@ -101,42 +121,144 @@
         @include media.L {
             flex: 1 0 0;
         }
-    }
 
-  // Override product-summary spacing/typography for the product page context
-    .product-summary__rating {
-        margin-top: var(--size_18);
-        gap: var(--size_10);
-
-        span {
-            color: var(--color-text-additional);
+        @include media.XL {
+            margin-top: var(--size_34);
         }
     }
 
-    .product-summary__stars {
-        gap: 0.4rem;
-    }
+    .product-summary {
+        &__title-wrap {
+            margin-top: var(--size_10);
 
-    .product-summary__star {
-        width: 1.6rem;
-        height: 1.6rem;
-    }
+            @include media.L {
+                margin: 0;
+            }
+        }
 
-    .product-summary__nutrition {
-        margin-top: var(--size_16);
-    }
+        &__title {
+            @include media.XL {
+                font-size: var(--size_40);
+            }
+        }
 
-    .product-summary__nutrition-item {
-        margin-top: var(--size_16);
-        width: 80%;
-    }
+        &__rating {
+            margin-top: var(--size_18);
+            gap: var(--size_10);
 
-    .product-summary__advantages {
-        margin-top: var(--size_16);
-        flex-grow: 1;
-    }
+            span {
+                color: var(--color-text-additional);
 
-    .product-summary__advantage {
-        flex-grow: 1;
+                @include media.L {
+                    font-size: var(--size_16);
+                }
+
+                @include media.XL {
+                    font-size: var(--size_14);
+                }
+            }
+
+            @include media.XL {
+                margin-top: var(--size_12);
+            }
+        }
+
+        &__star {
+            flex: 0 0 1.6rem;
+            aspect-ratio: 1;
+        }
+
+        &__nutrition {
+            margin-top: var(--size_16);
+
+            @include media.XL {
+                margin-top: var(--size_18);
+            }
+        }
+
+        &__nutrition-item {
+            flex: 0 0 80%;
+            margin-top: var(--size_16);
+
+            strong {
+                @include media.XL {
+                    font-size: var(--size_18);
+                }
+            }
+
+            p {
+                @include media.XL {
+                    font-size: var(--size_16);
+                }
+            }
+
+            @include media.XL {
+                margin-top: var(--size_8);
+                flex-basis: 60%;
+            }
+        }
+
+        &__nutrition-row {
+            margin-top: 0;
+
+            span {
+                @include media.XL {
+                    font-size: var(--size_16);
+                }
+            }
+
+            @include media.XL {
+                margin-top: var(--size_8);
+            }
+        }
+
+        &__advantages {
+            margin-top: var(--size_16);
+
+            @include media.L {
+                margin-top: var(--size_18);
+                gap: var(--size_10);
+            }
+        }
+
+        &__advantage {
+            flex: 1 1 18rem;
+            white-space: nowrap;
+
+            @include media.L {
+                flex: 0 0 20rem;
+            }
+        }
+
+        &__advantage-icon {
+            flex: 0 0 1.6rem;
+            aspect-ratio: 1;
+        }
+
+        &__cta {
+            margin-top: var(--size_10);
+        }
+
+        &__quantity {
+            @include media.L {
+                margin-top: var(--size_15);
+            }
+
+            @include media.XL {
+                padding: 0;
+            }
+        }
+
+        &__quantity-input {
+            @include media.XL {
+                font-size: var(--size_16);
+            }
+        }
+
+        &__btn {
+            @include media.XL {
+                font-size: var(--size_16);
+            }
+        }
     }
 }
