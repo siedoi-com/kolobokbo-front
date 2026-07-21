@@ -52,6 +52,8 @@ $breakpoint__2xl: 1440px;
 
 @use "components/product-summary";
 
+@use "components/breadcrumbs";
+
 // LAYOUT
 @use "layout/header";
 @use "layout/footer";
@@ -71,3 +73,5 @@ $breakpoint__2xl: 1440px;
 
 @use "sections/catalog-hero";
 @use "sections/catalog-grid";
+@use "sections/product-page";
+@use "sections/points";

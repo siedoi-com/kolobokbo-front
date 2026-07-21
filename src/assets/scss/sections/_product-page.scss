@@ -1,0 +1,142 @@
+@use "../global/media";
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    padding: var(--size_24) var(--size_20) var(--size_48) var(--size_20);
+    gap: var(--size_16);
+    overflow: hidden;
+    position: relative;
+
+    @include media.L {
+        padding: var(--size_48);
+        flex-direction: row;
+        gap: var(--size_24);
+    }
+
+    .breadcrumbs {
+        width: 100%;
+
+        @include media.L {
+            position: absolute;
+            top: var(--size_20);
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: var(--size_12);
+        width: 100%;
+
+        @include media.L {
+            flex-direction: row;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    &__thumbs {
+        display: flex;
+        flex-direction: row;
+        gap: var(--size_8);
+        list-style: none;
+
+        @include media.L {
+            flex-direction: column;
+        }
+    }
+
+    &__thumb {
+        flex-shrink: 0;
+        width: 6rem;
+        height: 6rem;
+        padding: 0;
+        border: 0.1rem solid var(--color-advantage-border);
+        background: var(--color-white);
+        cursor: pointer;
+        transition: border-color var(--transition);
+
+        &--active {
+            border-color: var(--color-accent);
+        }
+
+        @include media.L {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__thumb-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    &__main-image-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 0;
+        width: 40.2rem;
+        height: 32.2rem;
+        background: var(--color-bg-cream);
+        @include media.L{
+            width: 34rem;
+        height: 50.5rem;
+        }
+    }
+
+    &__main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-width: none;
+    }
+
+    &__right {
+        width: 100%;
+
+        @include media.L {
+            flex: 1 0 0;
+        }
+    }
+
+  // Override product-summary spacing/typography for the product page context
+    .product-summary__rating {
+        margin-top: var(--size_18);
+        gap: var(--size_10);
+
+        span {
+            color: var(--color-text-additional);
+        }
+    }
+
+    .product-summary__stars {
+        gap: 0.4rem;
+    }
+
+    .product-summary__star {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .product-summary__nutrition {
+        margin-top: var(--size_16);
+    }
+
+    .product-summary__nutrition-item {
+        margin-top: var(--size_16);
+        width: 80%;
+    }
+
+    .product-summary__advantages {
+        margin-top: var(--size_16);
+        flex-grow: 1;
+    }
+
+    .product-summary__advantage {
+        flex-grow: 1;
+    }
+}

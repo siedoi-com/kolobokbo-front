@@ -10,3 +10,4 @@ import './blocks/quantity';
 import './blocks/categories';
 import './blocks/mini-cart';
 import './blocks/select';
+import './blocks/product-gallery';

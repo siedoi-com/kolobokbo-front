@@ -1,0 +1,43 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: var(--size_8);
+    list-style: none;
+
+    &__crumb {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        font-size: var(--size_14);
+        color: var(--color-black);
+        white-space: nowrap;
+
+        a {
+            text-decoration: none;
+            transition: color var(--transition);
+            margin-right: var(--size_12);
+
+            @include media.L{
+                margin-right: var(--size_10);
+            }
+        }
+
+        &[aria-current="page"] {
+            color: var(--color-black);
+        }
+        @include media.L{
+            font-size: var(--size_16);
+        }
+    }
+
+    &__icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        rotate: 270deg;
+        flex-shrink: 0;
+        color: var(--color-black);
+    }
+}
