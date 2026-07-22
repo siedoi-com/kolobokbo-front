@@ -116,6 +116,7 @@
             font-weight: 400;
             color: var(--color-black);
             line-height: 1.4;
+            width: 80%;
 
             @include media.L {
                 font-size: var(--size_16);

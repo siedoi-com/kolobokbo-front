@@ -1,0 +1,146 @@
+@use "../global/media";
+
+.product-composition {
+    display: flex;
+    justify-content: center;
+    background: var(--color-bg-cream);
+    padding: var(--size_60) var(--size_16);
+
+    @include media.L {
+        padding: var(--size_60) var(--size_48);
+    }
+
+    @include media.XL {
+        padding: var(--size_96) var(--size_80);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_8);
+        width: 100%;
+        max-width: 144rem;
+
+        @include media.L {
+            flex-direction: row;
+            align-items: center;
+            gap: var(--size_48);
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+
+        @include media.L {
+            width: 30.9rem;
+            flex-shrink: 0;
+        }
+
+        @include media.XL {
+            width: 39.3rem;
+        }
+    }
+
+    &__heading {
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 950;
+        line-height: 1;
+        text-transform: uppercase;
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+
+        @include media.XL {
+            font-size: var(--size_40);
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 600;
+        line-height: 1.4;
+        margin-top: 1.5rem;
+        width: 80%;
+
+        @include media.L {
+            width: 100%;
+        }
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: var(--size_8);
+        list-style: none;
+        align-self: stretch;
+        min-width: 0;
+        margin-top: var(--size_32);
+
+        @include media.L {
+            flex: 1 0 0;
+            gap: var(--size_16);
+            margin-top: 0;
+        }
+
+        @include media.XL {
+            gap: var(--size_24);
+        }
+    }
+
+    .ingredient-card {
+        flex: 1 1 0;
+        min-width: 0;
+        gap: var(--size_8);
+        padding: var(--size_22) var(--size_8);
+
+        @include media.L {
+            padding: var(--size_48) var(--size_12);
+        }
+
+        @include media.XL {
+            padding: var(--size_48) var(--size_16);
+        }
+    }
+
+    .ingredient-card__img {
+        width: 6.8rem;
+        height: 6rem;
+
+        @include media.L {
+            width: 10rem;
+            height: 10.3rem;
+        }
+
+        @include media.XL {
+            width: 11.3rem;
+            height: 10rem;
+        }
+    }
+
+    .ingredient-card__name {
+        font-size: var(--size_14);
+
+        @include media.L {
+            font-size: var(--size_16);
+        }
+    }
+
+    .ingredient-card__desc {
+        font-size: var(--size_12);
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
+    }
+}
