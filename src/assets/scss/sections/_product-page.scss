@@ -1,33 +1,32 @@
 @use "../global/media";
 
 .product-page {
-    position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--size_16);
-    padding: var(--size_56) var(--size_20) var(--size_45) var(--size_20);
     overflow: hidden;
+    gap: var(--size_16);
+    padding: var(--size_20) var(--size_20) var(--size_50) var(--size_20);
 
     @include media.L {
         flex-direction: row;
-        gap: var(--size_24);
-        padding: var(--size_48) var(--size_48) var(--size_64) var(--size_48);
+        flex-wrap: wrap;
+        padding: var(--size_20) var(--size_48) var(--size_64) var(--size_48);
     }
 
     @include media.XL {
-        flex-direction: row;
-        gap: var(--size_24);
-        padding: var(--size_72) var(--size_82) var(--size_60) var(--size_82);
+        padding: var(--size_45) var(--size_82) var(--size_64) var(--size_82);
     }
 
     .breadcrumbs {
         width: 100%;
-        position: absolute;
-        top: var(--size_20);
-
+        gap: var(--size_18);
+        
+        @include media.L{
+            gap: var(--size_16);
+        }
         @include media.XL {
-            top: var(--size_44);
             font-size: var(--size_14);
+            margin-bottom: var(--size_28);
         }
     }
 
@@ -41,11 +40,6 @@
             flex-direction: row;
             flex: 0 0 50%;
             max-width: 50%;
-            margin-top: var(--size_10);
-        }
-
-        @include media.XL {
-            margin-top: var(--size_34);
         }
     }
 
@@ -120,31 +114,40 @@
 
         @include media.L {
             flex: 1 0 0;
-        }
-
-        @include media.XL {
-            margin-top: var(--size_34);
+            margin-left: var(--size_10);
         }
     }
 
     .product-summary {
         &__title-wrap {
-            margin-top: var(--size_10);
+            margin-top: var(--size_14);
 
             @include media.L {
-                margin: 0;
+                margin-top: 0;
             }
         }
 
         &__title {
+            @include media.L {
+                margin-top: 0;
+            }
+
             @include media.XL {
                 font-size: var(--size_40);
             }
         }
 
         &__rating {
-            margin-top: var(--size_18);
+            margin-top: var(--size_12);
             gap: var(--size_10);
+
+            @include media.L {
+                margin-top: var(--size_18);
+            }
+
+            @include media.XL {
+                margin-top: var(--size_16);
+            }
 
             span {
                 color: var(--color-text-additional);
@@ -157,10 +160,6 @@
                     font-size: var(--size_14);
                 }
             }
-
-            @include media.XL {
-                margin-top: var(--size_12);
-            }
         }
 
         &__star {
@@ -171,14 +170,23 @@
         &__nutrition {
             margin-top: var(--size_16);
 
+            @include media.L {
+                margin-top: var(--size_12);
+            }
+
             @include media.XL {
-                margin-top: var(--size_18);
+                margin-top: var(--size_16);
             }
         }
 
         &__nutrition-item {
             flex: 0 0 80%;
             margin-top: var(--size_16);
+
+            @include media.XL {
+                margin-top: var(--size_10);
+                flex-basis: 60%;
+            }
 
             strong {
                 @include media.XL {
@@ -191,24 +199,19 @@
                     font-size: var(--size_16);
                 }
             }
-
-            @include media.XL {
-                margin-top: var(--size_8);
-                flex-basis: 60%;
-            }
         }
 
         &__nutrition-row {
             margin-top: 0;
 
+            @include media.XL {
+                margin-top: var(--size_8);
+            }
+
             span {
                 @include media.XL {
                     font-size: var(--size_16);
                 }
-            }
-
-            @include media.XL {
-                margin-top: var(--size_8);
             }
         }
 
@@ -216,8 +219,12 @@
             margin-top: var(--size_16);
 
             @include media.L {
-                margin-top: var(--size_18);
+                margin-top: var(--size_22);
                 gap: var(--size_10);
+            }
+
+            @include media.XL {
+                margin-top: var(--size_38);
             }
         }
 
@@ -236,15 +243,19 @@
         }
 
         &__cta {
-            margin-top: var(--size_10);
+            @include media.XL {
+                margin-top: var(--size_10);
+            }
         }
 
         &__quantity {
             @include media.L {
                 margin-top: var(--size_15);
+                padding-right: var(--size_40);
             }
 
             @include media.XL {
+                margin-top: 0;
                 padding: 0;
             }
         }

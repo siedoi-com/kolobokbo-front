@@ -10,7 +10,6 @@
     &__crumb {
         display: flex;
         align-items: center;
-        gap: var(--size_8);
         font-size: var(--size_14);
         color: var(--color-black);
         white-space: nowrap;
@@ -18,19 +17,20 @@
         a {
             text-decoration: none;
             transition: color var(--transition);
-            margin-right: var(--size_12);
-
-            @include media.L{
-                margin-right: var(--size_10);
-            }
         }
 
         &[aria-current="page"] {
             color: var(--color-black);
         }
-        @include media.L{
+
+        @include media.L {
             font-size: var(--size_16);
         }
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
     }
 
     &__icon {

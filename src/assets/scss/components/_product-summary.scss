@@ -221,25 +221,22 @@
     }
 
     &__quantity {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: var(--size_24);
-        align-self: stretch;
-        margin-top: var(--size_8);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--size_24);
+    align-self: stretch;
+    margin-top: var(--size_8);
 
-        @include media.L {
-            padding-right: 5rem;
-        }
-
-        @include media.XL {
-            width: 43.5rem;
-            min-width: 40.4rem;
-            margin-top: 0;
-            padding-right: 4rem;
-            justify-content: flex-end;
-        }
+    @include media.L {
+        padding-right: 5rem;
     }
+
+    @include media.XL {
+        margin-top: 0;
+       width: 40.4rem;
+    }
+}
 
     &__quantity-counter {
         display: flex;
