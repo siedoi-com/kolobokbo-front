@@ -16,49 +16,65 @@ $breakpoint_lg: 992px;
 $breakpoint_xl: 1200px;
 $breakpoint__2xl: 1440px;
 
-// General
+// ==========================================================================
+// Global
+// ==========================================================================
 @use "global/base";
-@use "global/display";
 @use "global/bg";
+@use "global/display";
+@use "global/mobile-menu";
 @use "global/text";
 
-// Components - DONE
-@use "./components/container";
-@use "components/header-menu";
-@use "./components/logo";
-@use "global/mobile-menu";
+// ==========================================================================
+// Components
+// ==========================================================================
+
+// Navigation & structure
+@use "components/breadcrumbs";
 @use "components/burger";
-@use "components/mini-cart";
+@use "components/container";
+@use "components/header-menu";
+@use "components/logo";
+
+// Buttons & form controls
+@use "components/button";
+@use "components/field";
+@use "components/segmented-control";
+@use "components/select";
+
+// Cart
+@use "components/cart-badge";
 @use "components/cart-item";
 @use "components/cart-success";
-@use "components/ingredient-card";
-@use "components/embla";
-@use "components/cart-badge";
-@use "components/slider-controls";
-@use "components/review-card";
+@use "components/mini-cart";
+
+// Cards
 @use "components/article-card";
+@use "components/badge";
+@use "components/ingredient-card";
+@use "components/product-card";
+@use "components/product-summary";
+@use "components/review-card";
+
+// Sliders
+@use "components/embla";
+@use "components/slider-controls";
+
+// Misc
+@use "components/before-header";
 @use "components/faq-item";
 
-
-@use "components/button";
-@use "components/before-header";
-
-@use "components/select";
-@use "components/segmented-control";
-@use "components/field";
-
-@use "components/badge";
-@use "components/product-card";
-
-@use "components/product-summary";
-
-@use "components/breadcrumbs";
-
-// LAYOUT
+// ==========================================================================
+// Layout
+// ==========================================================================
 @use "layout/header";
 @use "layout/footer";
 
+// ==========================================================================
 // Sections
+// ==========================================================================
+
+// Home page
 @use "sections/promo-line";
 @use "sections/hero";
 @use "sections/categories";
@@ -71,9 +87,13 @@ $breakpoint__2xl: 1440px;
 @use "sections/blog";
 @use "sections/faq";
 
+// Catalog page
 @use "sections/catalog-hero";
 @use "sections/catalog-grid";
+
+// Product page
 @use "sections/product-page";
 @use "sections/points";
 @use "sections/product-composition";
 @use "sections/characteristics";
+@use "sections/related-products";

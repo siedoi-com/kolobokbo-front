@@ -310,6 +310,19 @@ document.querySelectorAll('.embla--blog-slider').forEach(emblaNode => {
     initSliderControls(emblaNode, embla);
 });
 
+// ─── Related Products: Embla slider ─────────────
+document.querySelectorAll('.related-products__carousel').forEach(emblaNode => {
+    const viewport = emblaNode.querySelector('.embla__viewport');
+    if (!viewport) return;
+
+    const embla = EmblaCarousel(viewport, {
+        loop: false,
+        align: 'start',
+    });
+
+    initSliderControls(emblaNode, embla);
+});
+
 // ─── Single product: Embla image slider ─────────────────────────────────────
 document.querySelectorAll('.js-product-slider').forEach(emblaNode => {
     const wrap = emblaNode.closest('.sp-preview__image-wrap');

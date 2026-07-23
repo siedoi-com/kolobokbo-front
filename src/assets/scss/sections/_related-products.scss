@@ -1,0 +1,65 @@
+@use "../global/media";
+
+.related-products {
+    border-top: 0.1rem solid var(--color-black) ;
+    border-bottom: 0.1rem solid var(--color-black);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_24);
+        padding: var(--size_38) var(--size_16);
+
+        @include media.L {
+            padding: var(--size_52) var(--size_48);
+        }
+
+        @include media.XL {
+            padding: var(--size_60) var(--size_80);
+        }
+    }
+
+    &__heading {
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+        
+        @include media.XL{
+            font-size: var(--size_40);
+        }
+    }
+
+    &__items {
+        gap: var(--size_16);
+
+        @include media.L {
+            gap: var(--size_24);
+        }
+    }
+
+    .product-card.embla__slide {
+        flex: 0 0 100%;
+
+        @include media.L {
+            flex: 0 0 calc(50% - var(--size_12));
+        }
+
+        @include media.XL {
+            flex: 0 0 calc(25% - var(--size_18));
+        }
+    }
+
+    &__slider-controls {
+        @include media.L{
+            margin-top: var(--size_8);
+        }
+        @include media.XL{
+            margin-top: var(--size_20);
+        }
+    }
+}
