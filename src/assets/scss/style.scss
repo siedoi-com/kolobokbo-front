@@ -49,6 +49,7 @@ $breakpoint__2xl: 1440px;
 @use "components/mini-cart";
 
 // Cards
+@use "components/article-badge";
 @use "components/article-card";
 @use "components/badge";
 @use "components/ingredient-card";
@@ -97,3 +98,9 @@ $breakpoint__2xl: 1440px;
 @use "sections/product-composition";
 @use "sections/characteristics";
 @use "sections/related-products";
+
+// Blog page
+@use "sections/blog-hero";
+@use "sections/blog-list";
+@use "sections/blog-tabs";
+@use "sections/blog-featured";

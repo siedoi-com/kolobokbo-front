@@ -1,0 +1,25 @@
+.article-badge {
+    position: absolute;
+    top: 4rem;
+    left: 2.5rem;
+    padding: var(--size_8) var(--size_10);
+    border-radius: var(--size_24);
+    background: var(--color-article-badge-bg, #FFB800);
+    color: var(--color-black);
+    font-size: var(--size_10);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: normal;
+
+    &--popular {
+        background: var(--color-article-badge-popular);
+    }
+
+    &--article {
+        background: var(--color-article-badge-article);
+    }
+
+    &--event {
+        background: var(--color-article-badge-event);
+    }
+}

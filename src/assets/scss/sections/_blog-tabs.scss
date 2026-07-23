@@ -1,0 +1,35 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.blog-tabs {
+    display: flex;
+    align-items: center;
+    gap: var(--size_24);
+    list-style: none;
+    margin-top: var(--size_10);
+
+    &__btn {
+        padding: var(--size_8) 0;
+        border: none;
+        border-bottom: 0.2rem solid transparent;
+        background: transparent;
+        color: var(--color-text-additional);
+        font-size: var(--size_16);
+        cursor: pointer;
+        transition: color var(--transition), border-color var(--transition);
+
+        @include mixins.hover {
+            color: var(--color-black);
+        }
+
+        &--active {
+            border-bottom-color: var(--color-black);
+            color: var(--color-black);
+            font-weight: 700;
+        }
+
+        @include media.XL{
+            font-size: var(--size_18);
+        }
+    }
+}

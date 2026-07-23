@@ -32,20 +32,6 @@
         object-fit: cover;
     }
 
-    &__label {
-       position: absolute;
-    top: 4rem;
-    left: 2rem;
-    padding: 1.2rem 1rem;
-    border-radius: var(--size_24);
-    background: #FFB800;
-    color: var(--color-black);
-    font-size: var(--size_10);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: normal;
-    }
-
     &__bottom {
         display: flex;
         flex-direction: column;
