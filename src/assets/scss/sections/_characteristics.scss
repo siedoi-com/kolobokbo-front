@@ -17,6 +17,18 @@
             height: 23.9rem;
             transform: rotate(15.3deg);
             color: var(--color-secondary-accent);
+
+            @include media.L {
+                top: 14rem;
+                left: -12rem;
+                width: 22.4rem;
+                height: 30.9rem;
+            }
+
+            @include media.XL {
+                top: 15rem;
+                left: -9rem;
+            }
         }
 
         &--bottom {
@@ -26,6 +38,19 @@
             height: 17.1rem;
             transform: rotate(55deg);
             color: var(--color-accent);
+
+            @include media.L {
+                right: -18rem;
+                bottom: -25rem;
+                width: 34.7rem;
+                height: 35.1rem;
+                transform: rotate(40deg);
+            }
+
+            @include media.XL {
+                right: -18rem;
+                bottom: -20rem;
+            }
         }
     }
 
@@ -39,13 +64,13 @@
 
         @include media.L {
             flex-direction: row;
-            align-items: flex-start;
-            gap: var(--size_24);
-            padding: var(--size_48);
+            align-items: stretch;
+            gap: var(--size_48);
+            padding: var(--size_64) var(--size_48);
         }
 
         @include media.XL {
-            padding: var(--size_60) var(--size_80);
+            padding: var(--size_90) var(--size_80);
         }
     }
 
@@ -55,6 +80,14 @@
         font-weight: 900;
         text-transform: uppercase;
         line-height: 1.2;
+
+        @include media.L {
+            font-size: var(--size_20);
+        }
+
+        @include media.XL {
+            font-size: var(--size_24);
+        }
     }
 
     &__specs {
@@ -63,8 +96,15 @@
         gap: var(--size_10);
 
         @include media.L {
+            order: 1;
             flex: 1 0 0;
             max-width: 32rem;
+            margin-top: var(--size_60);
+        }
+
+        @include media.XL {
+            max-width: none;
+            margin-top: var(--size_30);
         }
     }
 
@@ -72,6 +112,14 @@
         display: flex;
         flex-direction: column;
         list-style: none;
+
+        @include media.L {
+            gap: var(--size_8);
+        }
+
+        @include media.XL {
+            margin-top: var(--size_12);
+        }
     }
 
     &__row {
@@ -81,17 +129,29 @@
         gap: var(--size_12);
         padding: var(--size_8) 0;
         border-bottom: 0.1rem solid var(--color-card-border);
+
+        @include media.XL {
+            padding: var(--size_12) 0;
+        }
     }
 
     &__label {
-         color: var(--color-black);
+        color: var(--color-black);
         font-size: var(--size_12);
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
     }
 
     &__value {
         color: var(--color-black);
         font-size: var(--size_12);
         text-align: right;
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
     }
 
     &__bottom-row {
@@ -100,9 +160,7 @@
         gap: var(--size_16);
 
         @include media.L {
-            flex: 1 0 0;
-        align-items: stretch;
-        gap: var(--size_24);
+            display: contents;
         }
     }
 
@@ -115,6 +173,12 @@
         gap: var(--size_12);
         flex: 1 0 0;
         background-color: var(--color-bg-pink-medium);
+
+        @include media.L {
+            order: 2;
+            flex: 0 0 32rem;
+            padding-bottom: var(--size_55);
+        }
     }
 
     &__badge {
@@ -125,6 +189,12 @@
         justify-content: center;
         width: 6.9rem;
         margin-top: var(--size_32);
+
+        @include media.L {
+            width: 14.4rem;
+            height: 14.2rem;
+            margin-top: var(--size_70);
+        }
     }
 
     &__badge-shape {
@@ -135,9 +205,11 @@
         z-index: 0;
         width: 7.6rem;
         height: 7.5rem;
-        color: var(--color-white);
-        stroke: var(--color-black);
-        stroke-width: 0.15rem;
+
+        @include media.L {
+            width: 14.4rem;
+            height: 14.2rem;
+        }
     }
 
     &__badge-value {
@@ -147,6 +219,14 @@
         font-size: var(--size_18);
         font-weight: 800;
         line-height: 1;
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+
+        @include media.XL {
+            font-size: var(--size_40);
+        }
     }
 
     &__badge-unit {
@@ -155,14 +235,26 @@
         color: var(--color-black);
         font-size: var(--size_12);
         text-transform: lowercase;
+
+        @include media.L {
+            font-size: var(--size_20);
+        }
+
+        @include media.XL {
+            font-size: var(--size_24);
+        }
     }
 
     &__badge-desc {
-        color: var(--color-text-additional);
+        color: var(--color-black);
         font-size: var(--size_10);
         font-weight: 500;
         text-align: center;
         margin-top: 1rem;
+
+        @include media.L {
+            font-size: 1.4rem;
+        }
     }
 
     &__badge-spark {
@@ -172,6 +264,13 @@
         width: 4rem;
         height: 4rem;
         color: var(--color-black);
+
+        @include media.L {
+            top: 4rem;
+            right: 4.5rem;
+            width: 6rem;
+            height: 6rem;
+        }
     }
 
     &__profile {
@@ -181,7 +280,12 @@
         flex: 1 0 0;
 
         @include media.L {
-           
+            order: 3;
+            margin-top: var(--size_55);
+        }
+
+        @include media.XL {
+            margin-top: var(--size_24);
         }
     }
 
@@ -189,6 +293,14 @@
         display: flex;
         flex-direction: column;
         list-style: none;
+
+        @include media.L {
+            gap: var(--size_8);
+        }
+
+        @include media.XL {
+            margin-top: var(--size_12);
+        }
     }
 
     &__profile-row {
@@ -197,12 +309,20 @@
         justify-content: space-between;
         gap: var(--size_12);
         padding: var(--size_8) 0;
+
+        @include media.XL {
+            padding: var(--size_12) 0;
+        }
     }
 
     &__profile-label {
         color: var(--color-black);
         font-size: var(--size_12);
         font-weight: 500;
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
     }
 
     &__dots {
@@ -216,6 +336,11 @@
         height: 0.8rem;
         border-radius: 50%;
         background: var(--color-dot-inactive);
+
+        @include media.L {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
 
         &--active {
             &.characteristics__dot--spicy {
