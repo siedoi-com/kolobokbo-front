@@ -1,5 +1,6 @@
 .article-badge {
     position: absolute;
+    display: flex;
     top: 4rem;
     left: 2.5rem;
     padding: var(--size_8) var(--size_10);
@@ -7,6 +8,10 @@
     background: var(--color-article-badge-bg, #FFB800);
     color: var(--color-black);
     font-size: var(--size_10);
+    align-items: center;
+    justify-content: center;
+    width: 8.7rem;
+    height: 3.2rem;
     font-weight: 700;
     text-transform: uppercase;
     line-height: normal;

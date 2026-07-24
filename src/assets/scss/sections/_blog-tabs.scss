@@ -8,6 +8,11 @@
     list-style: none;
     margin-top: var(--size_10);
 
+    @include media.XL{
+        margin-top: 0;
+        gap: var(--size_48);
+    }
+
     &__btn {
         padding: var(--size_8) 0;
         border: none;

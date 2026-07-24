@@ -14,10 +14,15 @@
 
     @include media.L {
         flex-direction: row;
-        gap: var(--size_32);
+        gap: var(--size_24);
         padding: var(--size_24);
-        border: none;
+        border: 0.1rem solid var(--color-card-border);
         background: var(--color-bg-cream);
+    }
+
+    @include media.XL {
+        margin-top: var(--size_48);
+        gap: var(--size_12);
     }
 
     &__link {
@@ -45,8 +50,13 @@
         position: relative;
         width: 100%;
 
+        .article-badge {
+            top: 1rem;
+            left: 1.5rem;
+        }
+
         @include media.L {
-            flex: 0 0 45%;
+            flex: 0 0 50%;
         }
     }
 
@@ -56,7 +66,12 @@
         object-fit: cover;
 
         @include media.L {
-            height: 100%;
+            width: 42.8rem;
+            height: 27.2rem;
+        }
+
+        @include media.XL {
+            width: 100%;
         }
     }
 
@@ -67,6 +82,7 @@
 
         @include media.L {
             flex: 1 0 0;
+            gap: var(--size_10);
         }
     }
 
@@ -78,30 +94,48 @@
         width: 50%;
 
         @include media.L {
-            font-size: var(--size_28);
+            font-size: var(--size_20);
+            width: 53%;
+        }
+
+        @include media.XL {
+            font-size: var(--size_24);
+            width: 45%;
         }
     }
 
     &__desc {
         display: none;
-        color: var(--color-text-additional);
+        color: var(--color-black);
         font-size: var(--size_14);
         margin-top: var(--size_12);
 
         @include media.L {
             display: block;
             font-size: var(--size_16);
+            margin-top: 0;
+        }
+
+        @include media.XL {
+            font-size: var(--size_18);
         }
     }
 
     &__footer {
         display: flex;
-        gap: var(--size_8);
-        // align-items: center;
-        // justify-content: space-between;
         flex-direction: column;
-        // margin-top: var(--size_24);
+        gap: var(--size_8);
         padding-bottom: var(--size_20);
+
+        @include media.L {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+
+        @include media.XL {
+            margin-top: var(--size_20);
+        }
     }
 
     &__meta {
@@ -110,15 +144,18 @@
         gap: var(--size_12);
         color: var(--color-black);
         font-size: var(--size_12);
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
     }
 
     &__date::after {
         content: '';
         display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
+        width: 0.8rem;
+        height: 0.8rem;
         margin-left: var(--size_12);
-        border-radius: 50%;
         background: var(--color-black);
         vertical-align: middle;
     }
