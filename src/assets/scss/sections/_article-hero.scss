@@ -1,0 +1,200 @@
+@use "../global/media";
+
+.article-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-cream);
+    border-bottom: 0.1rem solid var(--color-black);
+    overflow: hidden;
+
+    @include media.L {
+        flex-direction: row;
+        align-items: stretch;
+        gap: var(--size_24);
+        padding: 0;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        padding: var(--size_60) var(--size_16) var(--size_48) var(--size_16);
+
+        @include media.L {
+            flex: 0 0 50%;
+            justify-content: center;
+            padding: var(--size_64) 0 var(--size_60) var(--size_48);
+        }
+
+        @include media.XL {
+            padding: var(--size_110) 0 var(--size_64) var(--size_80);
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 13rem;
+        height: auto;
+        pointer-events: none;
+    }
+
+    .breadcrumbs {
+        margin-bottom: var(--size_34);
+        z-index: 1;
+
+        @include media.L {
+            margin-bottom: var(--size_30);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_16);
+
+        @include media.L {
+            margin-top: var(--size_10);
+        }
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_40);
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1.1;
+        z-index: 1;
+
+        @include media.L {
+            font-size: var(--size_56);
+            margin-top: var(--size_10);
+        }
+
+        @include media.XL {
+            font-size: var(--size_72);
+            margin-top: var(--size_20);
+        }
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: var(--size_12);
+        color: var(--color-black);
+        font-size: var(--size_14);
+
+        @include media.L {
+            font-size: var(--size_16);
+        }
+    }
+
+    &__date::after {
+        content: '';
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-left: var(--size_12);
+        background: var(--color-black);
+        vertical-align: middle;
+    }
+
+    &__read-time {
+        display: flex;
+        align-items: center;
+        gap: var(--size_6);
+    }
+
+    &__meta-icon {
+        width: var(--size_16);
+        height: var(--size_16);
+        color: var(--color-black);
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 36.7rem;
+
+        @include media.L {
+            flex: 1 0 0;
+            margin-top: 0;
+            height: 59.8rem;
+        }
+
+        @include media.XL {
+            height: 72rem;
+        }
+    }
+
+    &__image-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__pic {
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+
+        @include media.L {
+            top: 57%;
+            left: 62%;
+        }
+
+        @include media.XL{
+            top: 50%;
+            left: 50%;
+        }
+    }
+
+    &__spark {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        color: var(--color-black);
+        pointer-events: none;
+
+        @include media.XL {
+            display: block;
+            left: -9rem;
+            bottom: 3rem;
+            width: 8rem;
+            height: 9rem;
+            transform: rotate(280deg);
+        }
+    }
+
+    &__highlight {
+        position: absolute;
+        top: 7.5rem;
+        left: 5rem;
+        z-index: 1;
+        width: 7.8rem;
+        height: 12.9rem;
+        transform: rotate(168deg);
+        color: var(--color-black);
+        pointer-events: none;
+
+        @include media.L {
+            top: 5.5rem;
+            left: -1rem;
+            width: 25.4rem;
+            height: 26.9rem;
+        }
+
+        @include media.XL {
+            top: 4.5rem;
+            left: 1rem;
+        }
+    }
+}

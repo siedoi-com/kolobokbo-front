@@ -104,3 +104,7 @@ $breakpoint__2xl: 1440px;
 @use "sections/blog-list";
 @use "sections/blog-tabs";
 @use "sections/blog-featured";
+
+// Article page
+@use "sections/article-hero";
+@use "sections/article-content";
