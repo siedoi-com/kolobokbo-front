@@ -15,52 +15,51 @@
         padding: var(--size_64) var(--size_48);
     }
 
-    @include media.L {
+    @include media.XL {
         padding: var(--size_90) var(--size_80);
     }
 
-    &__decor {
-        position: absolute;
-        z-index: 0;
-        width: 16rem;
-        height: auto;
-        color: var(--color-secondary-accent);
-        pointer-events: none;
+  &__decor {
+    position: absolute;
+    z-index: 0;
+    width: 16rem;
+    height: auto;
+    color: var(--color-secondary-accent);
+    pointer-events: none;
 
-        &--left {
-            top: 34%;
+    &--left {
+        top: 34%;
+        left: -9rem;
+        width: 21rem;
+        height: 26rem;
+        color: var(--color-accent);
+        transform: rotate(22deg);
+
+        @include media.L {
+            top: 47%;
             left: -9rem;
-            width: 21rem;
+            width: 26rem;
             height: 26rem;
-            color: var(--color-accent);
-            transform: rotate(22deg);
-
-            @include media.L{
-                top: 47%;
-                left: -9rem;
-                width: 26rem;
-                height: 26rem;
-                color: var(--color-accent);
-                transform: rotate(19deg);
-            }
-        }
-
-        &--right {
-            top: 7%;
-            left: 32rem;
-            width: 21rem;
-            height: 30rem;
-            transform: rotate(-23deg) scaleX(-1);
-            
-            @include media.L{
-                top: 24%;
-                left: 78rem;
-                width: 31rem;
-                height: 38rem;
-                transform: rotate(-18deg) scaleX(-1);
-            }
+            transform: rotate(19deg);
         }
     }
+
+    &--right {
+        top: 7%;
+        right: -9rem;
+        width: 21rem;
+        height: 30rem;
+        transform: rotate(-23deg) scaleX(-1);
+
+        @include media.L {
+            top: 24%;
+            right: -9rem;
+            width: 31rem;
+            height: 38rem;
+            transform: rotate(-18deg) scaleX(-1);
+        }
+    }
+}
 
     &__intro,
     &__list-title,

@@ -1,0 +1,74 @@
+@use "../global/media";
+
+.faq-teaser {
+    padding: var(--size_80) var(--size_16) var(--size_50);
+
+    @include media.L {
+        padding: var(--size_64) var(--size_48) var(--size_48);
+    }
+
+    @include media.XL {
+        padding: var(--size_64) var(--size_80);
+    }
+
+    &__character-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 18rem;
+        background-color: rgba(253, 245, 235, 1);
+        overflow: hidden;
+
+        @include media.L {
+            height: 24rem;
+            align-items: center;
+        }
+
+        @include media.XL {
+            height: 32rem;
+            align-items: center;
+        }
+    }
+
+    &__character {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_24);
+        text-align: center;
+
+        .button {
+            align-self: center;
+            margin-top: var(--size_10);
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_18);
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: var(--size_20);
+
+        @include media.L {
+            font-size: var(--size_20);
+            margin-top: 0;
+        }
+
+        @include media.XL{
+            font-size: var(--size_24);
+        }
+    }
+}

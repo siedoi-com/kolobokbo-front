@@ -1,0 +1,147 @@
+@use "../global/media";
+
+.message-popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition), visibility var(--transition);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+.message-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    width: calc(100% - var(--size_32));
+    max-width: 40rem;
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+
+    @include media.L{
+        width: 66rem;
+    max-width: none;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--size_24) var(--size_16);
+        background: var(--color-white);
+        text-align: center;
+
+        @include media.L {
+            padding: var(--size_32) var(--size_24);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 2.2rem;
+        right: 2.2rem;
+        width: var(--size_32);
+        height: var(--size_32);
+        border: none;
+        background: transparent;
+        color: var(--color-black);
+        cursor: pointer;
+        transition: opacity var(--transition);
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        @include media.L{
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+    }
+
+    &__close-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size_24);
+        border-bottom: 0.1rem solid var(--color-gray-400);
+        padding-bottom: var(--size_18);
+
+        @include media.L{
+            
+        }
+    }
+
+    &__image {
+        width: 26.5rem;
+        height: 20rem;
+
+        @include media.L{
+            height: 46rem;
+            width: 100%;
+        }
+    }
+
+    &__title-wrap {
+        position: relative;
+        display: inline-flex;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_20);
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @include media.L{
+            font-size: var(--size_24);
+        }
+    }
+
+    &__title-underline {
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0;
+        width: 100%;
+        height: 0.9rem;
+        color: var(--color-accent);
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+
+        @include media.L{
+            font-size: var(--size_20);
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-top: var(--size_50);
+    }
+}

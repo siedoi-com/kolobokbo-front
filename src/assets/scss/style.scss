@@ -65,6 +65,8 @@ $breakpoint__2xl: 1440px;
 @use "components/before-header";
 @use "components/faq-item";
 
+@use "components/message-popup";
+
 // ==========================================================================
 // Layout
 // ==========================================================================
@@ -108,3 +110,10 @@ $breakpoint__2xl: 1440px;
 // Article page
 @use "sections/article-hero";
 @use "sections/article-content";
+
+// Contact page
+@use "sections/contact-hero";
+@use "sections/contact-details";
+@use "sections/contact-faq-teaser";
+
+
