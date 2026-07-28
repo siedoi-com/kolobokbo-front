@@ -323,6 +323,19 @@ document.querySelectorAll('.related-products__carousel').forEach(emblaNode => {
     initSliderControls(emblaNode, embla);
 });
 
+// ─── About team: photo slider ───────────────────────────────────────────────
+document.querySelectorAll('.embla--team-slider').forEach(function (emblaNode) {
+    var viewport = emblaNode.querySelector('.embla__viewport');
+    if (!viewport) return;
+
+    var embla = EmblaCarousel(viewport, {
+        loop: true,
+        align: 'start',
+    });
+
+    initSliderControls(emblaNode, embla);
+});
+
 // ─── Single product: Embla image slider ─────────────────────────────────────
 document.querySelectorAll('.js-product-slider').forEach(emblaNode => {
     const wrap = emblaNode.closest('.sp-preview__image-wrap');

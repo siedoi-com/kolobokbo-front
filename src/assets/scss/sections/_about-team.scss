@@ -1,0 +1,56 @@
+@use "../global/media";
+
+.about-team {
+    &__slide {
+        flex: 0 0 auto;
+        width: 37.5rem;
+        height: 51.5rem;
+        margin-right: var(--size_24);
+
+        @include media.L {
+            width: 45.3rem;
+            height: 53.3rem;
+        }
+
+        &.is-center {
+            @include media.XL {
+                width: 85rem;
+                height: 53.3rem;
+            }
+        }
+    }
+
+    .embla__container {
+        @include media.L {
+            justify-content: center;
+        }
+
+        @include media.XL {
+            justify-content: center;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slider-controls {
+        margin-top: var(--size_24);
+
+        @include media.L {
+            margin-top: var(--size_32);
+        }
+    }
+
+    .embla__viewport {
+        margin-left: calc(var(--size_44) * -1);
+        padding-right: var(--size_44);
+
+        @include media.L {
+            margin-left: 0;
+            padding-right: 0;
+        }
+    }
+}

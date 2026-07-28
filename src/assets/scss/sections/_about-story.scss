@@ -1,0 +1,77 @@
+@use "../global/media";
+
+.about-story {
+    background: var(--color-white);
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_24);
+        padding: var(--size_64) var(--size_16) var(--size_24);
+
+        @include media.L {
+            flex-direction: row;
+            // align-items: center;
+            padding: var(--size_64) var(--size_48) var(--size_32);
+        }
+
+        @include media.XL {
+            padding: var(--size_96) var(--size_80) var(--size_48);
+            gap: var(--size_48);
+        }
+    }
+
+    &__image-wrap {
+        width: 100%;
+        height: 26.6rem;
+
+        @include media.L {
+                    width: 60.4rem;
+        height: 41.5rem;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_10);
+
+        @include media.L {
+            flex: 1 0 0;
+        }
+
+        @include media.XL{
+            gap: var(--size_18);
+        }
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+
+        @include media.XL{
+            font-size: var(--size_40);
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        line-height: 1.6;
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+}

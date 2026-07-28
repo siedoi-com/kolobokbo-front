@@ -1,0 +1,129 @@
+@use "../global/media";
+
+.about-hero {
+    position: relative;
+    overflow: hidden;
+    height: 67.7rem;
+    border-bottom: 0.1rem solid var(--color-black);
+
+    &__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 13rem;
+        height: auto;
+        pointer-events: none;
+    }
+
+    &__image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    &__image-inner {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__overlay {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: var(--size_64) 0 var(--size_48) var(--size_16);
+        margin-top: 16rem;
+
+        @include media.L {
+            padding:var(--size_64) 0 var(--size_64) var(--size_48);
+            max-width: 55%;
+            margin-top: 14rem;
+        }
+
+        @include media.XL {
+            padding: var(--size_96) 0 var(--size_64) var(--size_80);
+            margin-top: 10rem;
+        }
+    }
+
+    .breadcrumbs {
+        margin-bottom: var(--size_16);
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--size_12);
+        width: 70%;
+
+        @include media.L{
+            gap: 0;
+        }
+        @include media.XL{
+            width: 50%;
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        color: var(--color-black);
+        font-size: var(--size_40);
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-top: var(--size_24);
+
+        @include media.L {
+            font-size: var(--size_56);
+        }
+
+        @include media.XL{
+            font-size: var(--size_72);
+            margin-top: var(--size_44);
+        }
+    }
+
+    &__subtitle {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 700;
+        margin-top: var(--size_10);
+
+        @include media.L {
+            font-size: var(--size_18);
+            line-height: 1.4;
+        }
+
+        @include media.XL{
+            font-size: var(--size_20);
+            margin-top: var(--size_14);
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        line-height: 1.5;
+        margin-top: var(--size_10);
+
+        @include media.L {
+            font-size: var(--size_16);
+             margin-top: var(--size_20);
+        }
+
+        @include media.XL{
+            font-size: var(--size_18);
+        }
+    }
+}
