@@ -1,0 +1,78 @@
+@use "../global/media";
+
+.success-hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--size_48) var(--size_16) var(--size_36);
+    border-bottom: 0.1rem solid var(--color-black);
+
+    @include media.L {
+        padding: var(--size_64) var(--size_48);
+    }
+
+    @include media.XL {
+        padding: var(--size_64) var(--size_80);
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__character {
+        position: relative;
+        z-index: 1;
+        width: 24.8rem;
+        height: 16rem;
+
+        @include media.L {
+            width: 59rem;
+            height: 38rem;
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        color: var(--color-black);
+        font-size: var(--size_24);
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: var(--size_16);
+
+        @include media.L {
+            font-size: var(--size_32);
+        }
+
+        @include media.XL {
+            font-size: var(--size_40);
+            margin-top: var(--size_34);
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        color: var(--color-black);
+        font-size: var(--size_16);
+        line-height: 1.5;
+        margin-top: var(--size_8);
+
+        @include media.L {
+            font-size: var(--size_18);
+        }
+
+        @include media.XL {
+            font-size: var(--size_20);
+            margin-top: var(--size_32);
+        }
+    }
+}

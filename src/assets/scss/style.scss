@@ -52,6 +52,7 @@ $breakpoint__2xl: 1440px;
 @use "components/article-badge";
 @use "components/article-card";
 @use "components/badge";
+@use "components/status-badge";
 @use "components/ingredient-card";
 @use "components/product-card";
 @use "components/product-summary";
@@ -123,5 +124,9 @@ $breakpoint__2xl: 1440px;
 @use "sections/about-values";
 @use "sections/about-team";
 
+// Success page
+@use "sections/success-hero";
+@use "sections/order-details";
+@use "sections/success-recommend";
 
 

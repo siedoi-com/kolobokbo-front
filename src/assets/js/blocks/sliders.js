@@ -336,6 +336,19 @@ document.querySelectorAll('.embla--team-slider').forEach(function (emblaNode) {
     initSliderControls(emblaNode, embla);
 });
 
+// ─── Succes Recommend: Embla slider ─────────────
+document.querySelectorAll('.embla--success-slider').forEach(function (emblaNode) {
+    var viewport = emblaNode.querySelector('.embla__viewport');
+    if (!viewport) return;
+
+    var embla = EmblaCarousel(viewport, {
+        loop: false,
+        align: 'start',
+    });
+
+    initSliderControls(emblaNode, embla);
+});
+
 // ─── Single product: Embla image slider ─────────────────────────────────────
 document.querySelectorAll('.js-product-slider').forEach(emblaNode => {
     const wrap = emblaNode.closest('.sp-preview__image-wrap');

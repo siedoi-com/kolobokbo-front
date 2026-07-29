@@ -1,0 +1,121 @@
+@use "../global/media";
+
+.order-details {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 0 0.4rem 1.2rem 0 rgba(0, 0, 0, 0.08);
+    margin-top: var(--size_12);
+    padding: var(--size_24) var(--size_8);
+
+    @include media.L {
+        padding: var(--size_24) var(--size_24) var(--size_10) ;
+    }
+
+    @include media.XL {
+        padding: var(--size_24) var(--size_16) 0;
+        margin-top: var(--size_38);
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_8);
+        text-align: left;
+
+        @include media.L {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: var(--size_8) 0 var(--size_24);
+            gap: var(--size_24);
+        }
+
+        @include media.XL {
+            padding: var(--size_12) var(--size_12) var(--size_24);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_8);
+        padding: var(--size_24);
+
+        &:not(:first-child) {
+            border-top: 0.1rem solid var(--color-card-border);
+        }
+
+        @include media.L {
+            padding: var(--size_24) 0 var(--size_24) var(--size_12);
+            flex: 1;
+
+            &:not(:first-child) {
+                border-top: none;
+                border-left: 0.1rem solid var(--color-card-border);
+                padding: var(--size_24);
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__row--reversed-border {
+
+        @include media.L {
+            border-top: 0.1rem solid var(--color-card-border);
+            padding: var(--size_8) 0;
+            display: flex;
+            gap: var(--size_24);
+        }
+
+        @include media.XL {
+            padding: var(--size_12) var(--size_12) var(--size_24);
+        }
+
+        .order-details__item {
+            border-top: none;
+            flex: 1;
+
+            @include media.L {
+                gap: var(--size_24);
+
+                &:not(:first-child) {
+                    border-top: none;
+                    border-left: none;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    &__label {
+        color: var(--color-text-additional);
+        font-size: var(--size_16);
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+
+    &__value {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 600;
+
+        @include media.L {
+            font-size: var(--size_18);
+        }
+
+        @include media.XL {
+            font-size: var(--size_20);
+        }
+    }
+
+    .status-badge {
+        margin-top: 0.8rem;
+
+        @include media.XL {
+            margin-top: 0;
+        }
+    }
+}
