@@ -42,6 +42,20 @@
         }
     }
 
+    &__value-wrap {
+        display: flex;
+        align-items: center;
+        gap: var(--size_8);
+        min-width: 0;
+    }
+
+    &__prefix-icon {
+        flex-shrink: 0;
+        width: var(--size_16);
+        height: var(--size_16);
+        color: var(--color-text-additional);
+    }
+
     &__actions {
         display: flex;
         align-items: center;
