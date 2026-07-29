@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolobok</title>
+</head>
+
+<body>
+    <!-- Free delivery banner above header -->
+    <div class="before-header rel z5 w-full">
+        <div class="promo-line promo-line--static">
+            <div class="container">безкоштовна доставка по Києву</div>
+        </div>
+    </div>
+    <!-- Site header: burger, logo, nav, cart -->
+    <header class="header bg--white rel anim w-full z5">
+        <div class="header__wrapper flex-row j-between">
+            <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+            <div class="header__left-part">
+                <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
+                    <svg role="presentation" class="header-burger__icon">
+                        <use href="/assets/icons/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="header__logo-wrapper">
+                <div class="logo header__logo logo--header">
+                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
+                        fetchpriority="high" decoding="async" />
+                </div>
+            </div>
+            <!-- Desktop nav, hidden on mobile via d-none -->
+            <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
+                <ul class="header-menu__list">
+                    <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+                        <a href="/">Головна</a>
+                    </li>
+                    <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
+                        <a href="/shop/" aria-current="page">Каталог</a>
+                    </li>
+                    <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
+                        <a href="/pro-nas/">Про нас</a>
+                    </li>
+                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
+                        <a href="/blog/">Блог</a>
+                    </li>
+                    <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+                        <a href="/dostavka-i-oplata/">Доставка</a>
+                    </li>
+                    <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
+                        <a href="/contacts/">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__right-part flex-row j-end">
+                <!-- Temporarily hidden per feedback, will be back later
+                <a href="" class="button flex-center d-none header__account-icon">
+                    <svg role="presentation" class="wh-full">
+                        <use href="/assets/icons/sprite.svg#icon-user"></use>
+                    </svg>
+                </a>
+                -->
+
+                <a href="/cart/" class="button header__cart-button">
+                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
+
+                    <svg role="presentation" class="anim">
+                        <use href="/assets/icons/sprite.svg#icon-cart"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <button class="mobile-menu__close">
+                <svg class="mobile-menu__close-icon" aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <div class="mobile-menu__logo">
+                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
+            </div>
+
+            <nav class="mobile-menu__nav">
+                <ul id="menu-header-1" class="mobile-menu__list">
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
+                        <a href="/">Головна</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
+                        <a href="/shop/" aria-current="page">Каталог</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
+                        <a href="/pro-nas/">Про нас</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
+                        <a href="/blog/">Блог</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
+                        <a href="/dostavka-i-oplata/">Доставка і оплата</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
+                        <a href="/contacts/">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+380955941028" class="mobile-menu__phone">
+                    <svg class="mobile-menu__phone-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    (095) 594 10 28
+                </a>
+            </div>
+
+            <ul class="mobile-menu__social social-list">
+                <li class="social-list__item">
+                    <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#tiktok"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <!-- Legal hero: breadcrumbs, title, дата оновлення -->
+        <section class="legal-hero">
+            <img class="hero__decor" src="/assets/img/hero-decor-1.svg" alt="" aria-hidden="true">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__crumb">
+                        <a href="/">Головна</a>
+                    </li>
+                    <li class="breadcrumbs__separator" aria-hidden="true">
+                        <svg class="breadcrumbs__icon">
+                            <use href="/assets/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__crumb" aria-current="page">Умови</li>
+                </ul>
+
+                <h1 class="legal-hero__title">Політика конфіденційності</h1>
+        </section>
+
+        <!-- Legal content:-->
+        <section class="legal-content">
+
+                <!-- 1 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">1. ЗАГАЛЬНІ ПОЛОЖЕННЯ</h2>
+                    <p class="legal-content__text">1.1. Ця Політика конфіденційності (тут і далі за текстом — «Політика») встановлює порядок одержання, зберігання, обробки, використання та розкриття інформації, в тому числі персональних даних користувачів веб-сайту kolobokbo.com.ua (тут і далі за текстом — «Колобок Бо»). Інформацію про персональні дані отримує ФОП, якому належить веб-сайт «Колобок Бо», від користувачів цього веб-сайту.</p>
+                    <p class="legal-content__text">1.2. «Колобок Бо» з повагою ставиться до конфіденційної інформації будь-якої особи, яка відвідує наш веб-сайт. У зв'язку з цим «Колобок Бо» розробив дану Політику, мета якої — проінформувати Користувача про порядок збору, зберігання і обробки персональних даних та інформації, що надається Користувачами в процесі користування цим веб-сайтом.</p>
+                    <p class="legal-content__text">1.3. Використовуючи будь-яку частину Сайту, Користувач автоматично надає свою згоду з умовами цієї Політики конфіденційності. Користувач не має права використовувати Сайт, якщо він не згоден з умовами цієї Політики або якщо він не досяг встановленого законом віку, коли він має право укладати такі угоди. У цьому випадку Користувачеві забороняється використовувати Сайт, будь-яку інформацію, розміщену на Сайті, будь-які послуги, що надаються за допомогою Сайту, і Користувач зобов'язаний покинути Сайт.</p>
+                    <p class="legal-content__text">1.4. «Колобок Бо» не несе відповідальності за порядок одержання, зберігання, обробки, використання та розкриття Персональних даних Користувача сторонніми підприємствами та організаціями, які не перебувають у власності або під керуванням «Колобок Бо», та фізичними особами, які не є працівниками «Колобок Бо», навіть якщо Користувач отримав доступ до сайтів, товарів або послуг цих осіб за допомогою Сайту.</p>
+                    <p class="legal-content__text">1.5. Користувач визнає, що у разі недбалого ставлення Користувача до безпеки і захисту його персональних даних і даних авторизації треті особи можуть отримати несанкціонований доступ до облікового запису та персональних і інших даних Користувача. «Колобок Бо» не несе відповідальності за збитки, завдані таким доступом.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">2. Персональні дані, що збираються за допомогою веб-сайту</h2>
+                    <p class="legal-content__text">2.1. «Колобок Бо» збирає інформацію, яка стосується певних осіб, лише з метою обробки і використання, і лише в тому випадку, якщо Користувач добровільно надав згоду на її використання.</p>
+                    <p class="legal-content__text">2.2. Персональні дані представляють собою інформацію, яка дає можливість встановити особу Користувача та/або використовується для зв'язку з Користувачем. До такої інформації належить ім'я, прізвище, по батькові, адреса місцезнаходження та адреса електронної пошти Користувача. Дана інформація про Користувача може зберігатися в наших контактних або адміністративних базах даних у зв'язку з минулим чи поточним співробітництвом з Користувачем або з огляду на те, що, на нашу думку, Користувачеві може бути цікаво отримувати від «Колобок Бо» матеріали про нашу діяльність та послуги.</p>
+                    <p class="legal-content__text">2.3. Інша інформація, яка може збиратися автоматично при відвідуванні Користувачем Сайту:</p>
+                    <ul class="legal-content__list">
+                        <li class="legal-content__list-item">адреси сторонніх сайтів, з яких Користувач перейшов на Сайт;</li>
+                        <li class="legal-content__list-item">адреса мережевого протоколу IP (IP-адреса) Користувача;</li>
+                        <li class="legal-content__list-item">адреси веб-сайтів, які Користувач відвідував одночасно з веб-сайтом;</li>
+                        <li class="legal-content__list-item">технічна інформація про браузер і комп'ютер Користувача;</li>
+                        <li class="legal-content__list-item">інформація про помилки роботи ресурсу, ініційовані Користувачем;</li>
+                        <li class="legal-content__list-item">дані про версію програмного забезпечення браузера Користувача;</li>
+                        <li class="legal-content__list-item">дані про операційну систему комп'ютера, з якого Користувач відвідав веб-сайт;</li>
+                        <li class="legal-content__list-item">дані про параметри пошуку, що привели Користувача на сайт.</li>
+                    </ul>
+                    <p class="legal-content__text">2.4. «Колобок Бо» також зберігає на комп'ютері Користувача файл cookie як допоміжний засіб для функціональності Сайту. Коли Користувач відвідує Сайт, «Колобок Бо» автоматично відстежує інформацію про візит, використовуючи стандартні інструменти e-commerce, в тому числі програмне забезпечення для відстеження в мережі Інтернет, журнали сервера і файли cookie першої сторони. Файли cookie являють собою текстові файли, які Сайт розміщує на жорсткому диску. У файлах cookie може зберігатися інформація про комп'ютер Користувача, тип використовуваного ним браузера і кількість відвідувань того чи іншого сайту з даного комп'ютера. «Колобок Бо» також використовує файли cookie для:</p>
+                    <ul class="legal-content__list">
+                        <li class="legal-content__list-item">збору інформації про способи використання веб-сайту відвідувачами: відвідуваних сторінок, посилань, що на них використовуються, і тривалості перебування на кожній сторінці;</li>
+                        <li class="legal-content__list-item">визначення ефективності рекламних кампаній і управління ними;</li>
+                        <li class="legal-content__list-item">підтримки функцій веб-сайту, наприклад, для усунення необхідності повторно вводити вхідні відомості, що вже знаходяться в базі даних, або повторно задавати налаштування, вже задані при минулих відвідуваннях веб-сайту;</li>
+                        <li class="legal-content__list-item">персоналізації роботи з веб-сайтом.</li>
+                    </ul>
+                    <p class="legal-content__text">2.5. «Колобок Бо» може дозволити розміщення сторонніх файлів cookie, наприклад, від мереж рекламних агентств, які можуть сприяти передачі оголошень про послуги, що надаються Користувачу, на інші сайти.</p>
+                    <p class="legal-content__text">2.6. Інформація, яку «Колобок Бо» збирає автоматично, сама по собі не може використовуватися для встановлення особи Користувача. Вся інформація не змінюється в процесі збору даних.</p>
+                </div>
+
+                <!-- 3-->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">3. Спосіб і мета використання персональних даних</h2>
+                    <p class="legal-content__text">3.1. Інформація про Користувача, в тому числі персональні дані, використовується з метою забезпечення реалізації цивільно-правових відносин, податкових та відносин у сфері бухгалтерського обліку, виконання договірних зобов'язань з реалізації товарів чи надання послуг.</p>
+                    <p class="legal-content__text">3.2. Метою одержання, зберігання, обробки та використання Персональних даних Користувача є захист як інтересів Користувача, так і інтересів «Колобок Бо», а також надання Користувачеві послуг, включаючи показ персоналізованої або загальної інформації, поліпшення якості обслуговування під час реалізації товарів і надання послуг за допомогою веб-сайту «Колобок Бо».</p>
+                    <p class="legal-content__text">3.3. «Колобок Бо» зазвичай використовує персональну інформацію, зібрану за допомогою нашого сайту, для:</p>
+                    <ul class="legal-content__list">
+                        <li class="legal-content__list-item">надання інформації та послуг, запитуваних Користувачами;</li>
+                        <li class="legal-content__list-item">безпеки та запобігання шахрайству;</li>
+                        <li class="legal-content__list-item">якісного клієнтського обслуговування;</li>
+                        <li class="legal-content__list-item">персоналізації використання веб-сайту;</li>
+                        <li class="legal-content__list-item">відображення персоналізованої реклами при відвідуванні веб-сайту;</li>
+                        <li class="legal-content__list-item">надання Користувачам спеціальних пропозицій та іншої інформації, яка, на нашу думку, може бути цікава Користувачам (але тільки з їх дозволу);</li>
+                        <li class="legal-content__list-item">надання Користувачам відомостей і повідомлень щодо використання Користувачами веб-сайту;</li>
+                        <li class="legal-content__list-item">надання Користувачам запрошень взяти участь в опитуваннях і залишити відгуки про компанію;</li>
+                        <li class="legal-content__list-item">кращого розуміння потреб та інтересів Користувачів;</li>
+                        <li class="legal-content__list-item">вдосконалення контенту, функціоналу і зручності веб-сайту;</li>
+                        <li class="legal-content__list-item">вдосконалення наших товарів і послуг;</li>
+                        <li class="legal-content__list-item">вдосконалення наших маркетингових і рекламних заходів;</li>
+                        <li class="legal-content__list-item">будь-яких інших цілей, зазначених у діючому повідомленні про конфіденційність або інших угодах між «Колобок Бо» та Користувачами.</li>
+                    </ul>
+                    <p class="legal-content__text">3.4. «Колобок Бо» може використовувати контактну інформацію в поштових розсилках, а саме повідомляти Користувача про нові можливості, акції та інші новини «Колобок Бо», а також для відправки інших повідомлень рекламного характеру від «Колобок Бо» або від партнерів «Колобок Бо», що пройшли ретельний відбір, про товари і послуги, які можуть представляти для Користувача інтерес. Користувач може відмовитися від розсилки, скориставшись посиланням «Відмовитись від підписки» в отриманому від «Колобок Бо» електронному листі.</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">4. Умови надання доступу до бази даних</h2>
+                    <p class="legal-content__text">4.1. Передача Персональних даних третім особам допускається у наступних випадках:</p>
+                    <ul class="legal-content__list">
+                        <li class="legal-content__list-item">після отримання згоди Користувача, якого стосується ця інформація;</li>
+                        <li class="legal-content__list-item">при необхідності передачі Персональних даних з метою виконання замовлення або запиту Користувача;</li>
+                        <li class="legal-content__list-item">за обґрунтованими запитами державних органів, які мають право отримувати такі дані;</li>
+                        <li class="legal-content__list-item">у випадку, якщо, на думку «Колобок Бо», Користувач порушує умови цієї Політики та/або інших договорів і угод між «Колобок Бо» і Користувачем.</li>
+                    </ul>
+                    <p class="legal-content__text">4.2. Користувач дозволяє «Колобок Бо» надавати іншим компаніям, з якими «Колобок Бо» уклав відповідні угоди, право отримувати, зберігати й обробляти дані про Користувача (крім Персональних даних), такі як IP-адреса Користувача, файли cookie, а також статистична інформація про активність Користувача для поліпшення якості надаваних цими компаніями послуг та інформації рекламного характеру.</p>
+                    <p class="legal-content__text">4.3. Розкриття персональних даних також проводиться при замовленні Користувачем послуг на Сайті, але тільки в обсязі, необхідному для ідентифікації Користувача і його замовлення.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">5. Персональні дані малолітніх дітей</h2>
+                    <p class="legal-content__text">5.1. «Колобок Бо» не бажає збирати інформацію про відвідувачів, які не досягли 14 років. У разі необхідності ми можемо недвозначно привернути увагу дитини до того, що вона не зобов'язана надсилати на нашу адресу жодної особистої інформації. Якщо батьки або інші законні представники дитини виявлять, що дитина надала певну інформацію «Колобок Бо», і визнають, що ці дані мають бути знищені, батькам або іншим законним представникам необхідно зв'язатися з нами електронною поштою. У цьому випадку ми негайно видалимо відповідну особисту інформацію.</p>
+                </div>
+
+                <!-- 6-->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">6. Порядок зміни/видалення інформації</h2>
+                    <p class="legal-content__text">6.1. Користувач у будь-який момент має право не надавати «Колобок Бо» особисту інформацію або вирішити заблокувати прийом файлів cookie. Користувач також може відмовитися від отримання електронних листів рекламного характеру, або звернутися до «Колобок Бо» із запитом про те, щоб «Колобок Бо» не ділився особистою інформацією, зібраною на Сайті, з неафілійованими третіми особами для використання ними в їхніх власних маркетингових цілях. Звернутися з таким запитом Користувач може, надіславши електронний лист.</p>
+                    <p class="legal-content__text">6.2. Робота деяких можливостей Сайту, для яких необхідна наявність інформації про Користувача, може бути припинена з моменту зміни/видалення інформації.</p>
+                    <p class="legal-content__text">6.3. Персональні дані Користувача зберігаються до моменту їх видалення Користувачем.</p>
+                    <p class="legal-content__text">6.4. Достатнім повідомленням Користувача про видалення чи іншу обробку персональних даних буде лист (інформація), надісланий на електронну пошту, вказану Користувачем.</p>
+                </div>
+
+                <!-- 7-->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">7. Контактні дані «Колобок Бо»</h2>
+                    <p class="legal-content__text">7.1. У разі виникнення питань, побажань, скарг щодо інформації, яку надає Користувач, Користувач може звернутися за контактами: <a href="mailto:kolobokbo@gmail.com">kolobokbo@gmail.com</a>, тел. <a href="tel:+380955941028">(095) 594 10 28</a>.</p>
+                    <p class="legal-content__text">7.2. Користувачу за письмовим запитом і при пред'явленні документа, що встановлює його особу, може бути надана інформація про порядок отримання відомостей про місцезнаходження бази даних.</p>
+                </div>
+
+                <!-- 8 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">8. Захист інформації</h2>
+                    <p class="legal-content__text">8.1. «Колобок Бо» вживає всіх розумних запобіжних заходів для захисту конфіденційності даних. Доступ до інформації про користувачів мають лише ті співробітники «Колобок Бо», яким це необхідно для виконання робочих функцій.</p>
+                    <p class="legal-content__text">8.2. «Колобок Бо» користується комплексною програмою безпеки даних, що включає комерційно обґрунтовані адміністративні, фізичні і технологічні заходи безпеки для захисту персональної інформації Користувача від несанкціонованого доступу, використання, несанкціонованого або випадкового руйнування, зміни або розкриття. Хоча «Колобок Бо» вживає комерційно обґрунтованих запобіжних заходів для забезпечення рівня безпеки, Користувач погоджується з тим, що конфіденційність переданих через Інтернет даних не гарантована, і в разі, якщо доступ до цих даних отримано третіми особами поза зоною технічних засобів зв'язку, підвладних «Колобок Бо», «Колобок Бо» не несе відповідальності за збитки, завдані таким доступом.</p>
+                </div>
+
+                <!-- 9-->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">9. Порядок зміни політики конфіденційності</h2>
+                    <p class="legal-content__text">9.1. «Колобок Бо» може змінити умови Політики конфіденційності. У такому випадку «Колобок Бо» замінить версію документа на сторінці «Політика конфіденційності». Будь ласка, періодично переглядайте ці умови, щоб бути поінформованими про те, як «Колобок Бо» захищає інформацію про Користувачів на Сайті.</p>
+                    <p class="legal-content__text">9.2. «Колобок Бо» не несе відповідальності за шкоду або збитки, яких зазнав Користувач або треті особи в результаті помилкового розуміння або нерозуміння умов цієї Політики конфіденційності, інструкцій або вказівок щодо порядку використання Сайту, порядку розміщення даних та інших технічних питань.</p>
+                </div>
+
+                <!-- 10 -->
+                <div class="legal-content__section">
+                    <h2 class="legal-content__section-title">10. Додаткові умови</h2>
+                    <p class="legal-content__text">10.1. У разі, якщо будь-яке положення Політики конфіденційності, включаючи будь-яку пропозицію, пункт або їх частину, визнається таким, що суперечить закону, або є недійсним, це не вплине на інші положення, які не суперечать закону, — вони залишаються в повній силі і є дійсними, а будь-яке недійсне положення, або положення, яке не може бути виконане, без подальших дій Сторін вважається зміненим, виправленим у тій мірі, в якій це необхідно для забезпечення його дійсності і можливості виконання.</p>
+                    <p class="legal-content__text">10.2. Ця Політика конфіденційності поширюється на Користувача з моменту, коли під час використання Сайту він при передачі своїх Персональних даних погодився з умовами цієї Політики, і діє до тих пір, поки на Сайті зберігається будь-яка інформація про Користувача, у тому числі персональні дані.</p>
+                    <p class="legal-content__text">10.3. До відносин між «Колобок Бо» і Користувачем застосовується законодавство України. Кожна сторона повністю погоджується з тим, що відповідні суди України мають виняткову юрисдикцію щодо будь-яких претензій і суперечок, які стосуються цієї Політики.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- Site footer: nav, contacts, newsletter, socials -->
+    <footer class="footer">
+        <div class="footer__container">
+            <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
+                <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
+                    decoding="async">
+            </a>
+
+            <div class="footer__row">
+                <nav class="footer__nav" aria-label="Футер навігація">
+                    <ul class="footer__menu">
+                        <li><a href="/" class="footer__link">Головна</a></li>
+                        <li><a href="/shop/" class="footer__link">Каталог</a></li>
+                        <li><a href="/pro-nas/" class="footer__link">Про нас</a></li>
+                        <li><a href="/blog/" class="footer__link">Блог</a></li>
+                        <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
+                        <li><a href="/contacts/" class="footer__link">Контакти</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer__contacts">
+                    <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
+                        <svg class="footer__contact-icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#mail"></use>
+                        </svg>
+                        kolobokbo@gmail.com
+                    </a>
+                    <a href="tel:+380955941028" class="footer__contact-item">
+                        <svg class="footer__contact-icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#phone"></use>
+                        </svg>
+                        (095) 594 10 28
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__subscribe">
+                <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
+
+                <form class="footer__subscribe-form" action="/subscribe/" method="post">
+                    <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail"
+                        required aria-label="Ваш E-mail">
+                    <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
+                <span class="footer__copyright">© 2026 Kolobok Bo.</span>
+                <a href="/privacy-policy/" class="footer__legal-link">Політика конфіденційності</a>
+                <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
+            </div>
+
+            <div class="footer__bottom-right">
+                <div class="footer__payments">
+                    <img class="footer__payment-icon footer__payment-icon--visa" src="/assets/icons/visa.svg"
+                        alt="Visa" width="48" height="16" loading="lazy" decoding="async">
+                    <img class="footer__payment-icon footer__payment-icon--mastercard"
+                        src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy"
+                        decoding="async">
+                </div>
+
+                <div class="footer__social">
+                    <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram"
+                        target="_blank" rel="noopener">
+                        <svg class="footer__social-icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook"
+                        target="_blank" rel="noopener">
+                        <svg class="footer__social-icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank"
+                        rel="noopener">
+                        <svg class="footer__social-icon" aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#tiktok"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+
+</html>

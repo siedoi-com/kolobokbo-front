@@ -1,0 +1,50 @@
+@use "../global/media";
+
+.legal-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--size_64) var(--size_16);
+    gap: var(--size_24);
+
+    @include media.L{
+        padding: var(--size_64) var(--size_48);
+    }
+
+    @include media.XL{
+        padding: var(--size_96) var(--size_80);
+    }
+
+    &__section-title {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        font-weight: 600;
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+
+    &__text {
+        color: var(--color-black);
+        font-size: var(--size_16);
+        line-height: 1.6;
+        margin-top: var(--size_24);
+       
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+
+    &__list-item {
+        margin-left: var(--size_24);
+        color: var(--color-black);
+        font-size: var(--size_16);
+        line-height: 1.6;
+        list-style-type: disc;
+
+        @include media.XL {
+            font-size: var(--size_18);
+        }
+    }
+}
