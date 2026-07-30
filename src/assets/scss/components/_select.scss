@@ -24,10 +24,6 @@
         @include mixins.hover {
             border-color: var(--color-text-additional);
         }
-
-        @include media.L{
-            padding-left: var(--size_20);
-        }
     }
 
     &__value {
@@ -51,9 +47,9 @@
 
     &__prefix-icon {
         flex-shrink: 0;
-        width: var(--size_16);
-        height: var(--size_16);
-        color: var(--color-text-additional);
+        width: var(--size_20);
+        height: var(--size_20);
+        color: var(--color-black);
     }
 
     &__actions {

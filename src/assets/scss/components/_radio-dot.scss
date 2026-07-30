@@ -1,0 +1,24 @@
+
+.radio-dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: var(--size_16);
+    height: var(--size_16);
+    border: 0.1rem solid var(--color-black);
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: border-color var(--transition);
+
+    &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background: var(--color-black);
+        transform: scale(0);
+        transition: transform var(--transition);
+    }
+}

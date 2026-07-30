@@ -57,6 +57,8 @@ $breakpoint__2xl: 1440px;
 @use "components/product-card";
 @use "components/product-summary";
 @use "components/review-card";
+@use "components/choice-card";
+@use "components/payment-card";
 
 // Sliders
 @use "components/embla";
@@ -67,6 +69,9 @@ $breakpoint__2xl: 1440px;
 @use "components/faq-item";
 
 @use "components/message-popup";
+@use "components/radio-dot";
+
+@use "components/checkout-form";
 
 // ==========================================================================
 // Layout

@@ -1,0 +1,210 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.checkout-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_16);
+    min-width: 0;
+    margin-top: var(--size_24);
+    
+    @include media.L{
+        gap: var(--size_24);
+    }
+
+    @include media.XL {
+        width: 74rem;
+        margin-top: var(--size_32);
+        gap: var(--size_48);
+    }
+
+    &__decor {
+        position: absolute;
+        left: -0.7rem;
+        bottom: -3rem;
+        width: 3rem;
+        height: 3.2rem;
+        transform: rotate(250deg);
+        color: var(--color-black);
+        pointer-events: none;
+
+        @include media.L{
+            left: -3rem;
+            bottom: -4rem;
+            width: 4.2rem;
+            height: 4.8rem;
+            transform: rotate(260deg);
+        }
+    }
+}
+
+.checkout-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_8);
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    @include media.L{
+        gap: var(--size_12);
+    }
+
+    @include media.XL{
+         gap: var(--size_16);
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: var(--size_18);
+        font-weight:900;
+        text-transform: uppercase;
+
+        @include media.L {
+            font-size: var(--size_20);
+        }
+
+        @include media.XL{
+            font-size: var(--size_24);
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_8);
+        margin-top: var(--size_24);
+
+        @include media.L {
+            gap: var(--size_12);
+            margin-top: var(--size_14);
+            flex-direction: row;
+        }
+        @include media.XL{
+            flex-direction: row;
+             gap: var(--size_16);
+        }
+
+        &--compact {
+            flex-direction: row;
+            gap: var(--size_8);
+            margin-top: 0;
+
+            @include media.L{
+                gap: var(--size_12);
+            }
+
+            @include media.XL{
+                 gap: var(--size_16);
+            }
+        }
+    }
+}
+
+.checkout-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: var(--size_12) var(--size_8);
+        border: 0.1rem solid var(--color-advantage-border);
+        background: var(--color-white);
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-family: var(--font-secondary);
+        transition: border-color var(--transition);
+
+        &::placeholder {
+            color: var(--color-text-additional);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: var(--color-black);
+        }
+
+        @include media.L {
+            font-size: var(--size_14);
+            padding: var(--size_12);
+        }
+    }
+
+    textarea {
+        height: 4.4rem;
+        resize: none;
+    }
+
+    &__clear {
+        position: absolute;
+        top: 50%;
+        right: var(--size_16);
+        transform: translateY(-50%);
+        width: var(--size_16);
+        height: var(--size_16);
+        color: var(--color-text-additional);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: color var(--transition);
+
+        svg {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        @include mixins.hover {
+            color: var(--color-black);
+        }
+    }
+}
+
+.checkout-fields {
+    display: none;
+    flex-direction: column;
+    gap: var(--size_8);
+
+    @include media.L{
+        gap: var(--size_12);
+    }
+
+    @include media.XL{
+         gap: var(--size_16);
+    }
+}
+
+.checkout-step:has(#delivery-method-courier:checked) .checkout-fields--courier {
+    display: flex;
+}
+
+.checkout-step:has(#delivery-method-pickup:checked) .checkout-fields--pickup {
+    display: flex;
+    margin-top: var(--size_12);
+
+    @include media.L{
+        margin-top: var(--size_8);
+    }
+
+    @include media.XL{
+        flex-direction: row;    
+        > * {
+            flex: 1 1 0;
+        }
+    }
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_12);
+    margin-top: var(--size_18);
+
+    @include media.L {
+        flex-direction: row;
+    }
+}

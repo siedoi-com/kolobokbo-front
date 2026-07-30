@@ -1,0 +1,119 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.choice-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_8);
+    margin-top: var(--size_18);
+
+    @include media.L {
+        flex-direction: row;
+        gap: var(--size_12);
+    }
+
+    @include media.XL{
+         gap: var(--size_16);
+    }
+
+    &__input {
+        &:checked + .choice-card__option .radio-dot {
+            border-color: var(--color-black);
+
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__option {
+        position: relative;
+        display: flex;
+        gap: var(--size_8);
+        width: 100%;
+        padding: var(--size_24) var(--size_8);
+        border: 0.1rem solid var(--color-advantage-border);
+        cursor: pointer;
+        transition: border-color var(--transition);
+
+        @include mixins.hover {
+            border-color: var(--color-text-additional);
+        }
+
+        @include media.L {
+            flex: 1 1 0;
+            padding: var(--size_24) var(--size_12);
+        }
+
+        @include media.L {
+            flex: 1 1 0;
+            padding: var(--size_24) var(--size_16);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        gap: var(--size_10);
+        
+    }
+
+    &__label {
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 700;
+
+         @include media.L {
+            font-size: var(--size_14);
+        }
+    }
+
+    &__desc {
+        color: var(--color-text-additional);
+        font-size: var(--size_10);
+
+        @include media.L {
+            font-size: var(--size_12);
+        }
+    }
+
+    &__price {
+        position: relative;
+        display: inline-block;
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 600;
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
+
+                @include media.XL {
+            margin-top: var(--size_24);
+        }
+
+    }
+
+    &__price-underline {
+        position: absolute;
+        left: 0;
+        bottom: -0.4rem;
+        width: 7.7rem;
+        height: 0.4rem;
+        color: var(--color-text-additional);
+        pointer-events: none;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 8rem;
+        height: 6.8rem;
+        object-fit: contain;
+
+        @include media.L {
+            width: var(--size_80);
+            height: var(--size_80);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@use "../global/media";
+@use "../global/mixins";
+
+.payment-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--size_12);
+    width: 100%;
+    padding: var(--size_8);
+    border: 0.1rem solid var(--color-advantage-border);
+    cursor: pointer;
+    transition: border-color var(--transition);
+
+    @include mixins.hover {
+        border-color: var(--color-text-additional);
+    }
+
+    @include media.L {
+        flex: 1 1 0;
+        padding: var(--size_12);
+        gap: var(--size_24);
+    }
+
+    &__input {
+        &:checked + .payment-card .radio-dot {
+            border-color: var(--color-black);
+
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: start;
+        gap: var(--size_12);
+    }
+
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size_12);
+
+        @include media.L{
+            gap: var(--size_8);
+        }
+    }
+
+    &__label {
+        color: var(--color-black);
+        font-size: var(--size_12);
+        font-weight: 700;
+
+        @include media.L {
+            font-size: var(--size_14);
+        }
+    }
+
+    &__desc {
+        color: var(--color-text-additional);
+        font-size: var(--size_10);
+
+        @include media.L{
+            font-size: var(--size_12);
+        }
+    }
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        gap: var(--size_8);
+    }
+
+    &__logo-icon {
+        width: var(--size_56);
+        height: var(--size_28);
+    }
+
+    &__icon {
+        align-self: flex-end;
+        width: var(--size_40);
+        height: var(--size_24);
+        color: var(--color-black);
+    }
+}
