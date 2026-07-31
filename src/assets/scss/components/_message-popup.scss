@@ -8,7 +8,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition: var(--transition);
 
     &.active {
         opacity: 1;
@@ -28,7 +28,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+    transition: var(--transition);
 
     @include media.L{
         width: 66rem;
@@ -66,7 +66,7 @@
         background: transparent;
         color: var(--color-black);
         cursor: pointer;
-        transition: opacity var(--transition);
+        transition: var(--transition);
 
         &:hover {
             opacity: 0.6;

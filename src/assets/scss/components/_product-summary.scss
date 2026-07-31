@@ -259,7 +259,7 @@
         align-items: center;
         justify-content: center;
         color: var(--color-black);
-        transition: opacity var(--transition);
+        transition: var(--transition);
 
         &:hover {
             opacity: 0.6;

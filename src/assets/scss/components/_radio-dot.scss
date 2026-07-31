@@ -10,7 +10,7 @@
     border: 0.1rem solid var(--color-black);
     border-radius: 50%;
     box-sizing: border-box;
-    transition: border-color var(--transition);
+    transition:  var(--transition);
 
     &::before {
         content: "";
@@ -19,6 +19,6 @@
         border-radius: 50%;
         background: var(--color-black);
         transform: scale(0);
-        transition: transform var(--transition);
+        transition:  var(--transition);
     }
 }

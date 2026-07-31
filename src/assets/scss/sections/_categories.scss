@@ -107,7 +107,7 @@
         z-index: 0;
         opacity: 0;
         pointer-events: none;
-        transition: opacity var(--transition);
+        transition:  var(--transition);
         color: var(--blob-color);
 
         @include media.L {

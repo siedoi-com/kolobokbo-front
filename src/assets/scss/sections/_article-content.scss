@@ -261,7 +261,7 @@
                     justify-content: center;
                     width: 3.2rem;
                     height: 3.2rem;
-                    transition: opacity var(--transition);
+                    transition: var(--transition);
 
                     &:hover {
                         color: var(--color-secondary-accent);

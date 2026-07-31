@@ -16,7 +16,7 @@
 
         a {
             text-decoration: none;
-            transition: color var(--transition);
+            transition: var(--transition);
 
             &:hover {
             color: var(--color-accent);

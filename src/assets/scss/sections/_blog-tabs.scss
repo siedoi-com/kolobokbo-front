@@ -21,7 +21,7 @@
         color: var(--color-text-additional);
         font-size: var(--size_16);
         cursor: pointer;
-        transition: color var(--transition), border-color var(--transition);
+        transition: var(--transition);
 
         @include mixins.hover {
             color: var(--color-black);

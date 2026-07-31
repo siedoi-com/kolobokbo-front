@@ -19,7 +19,7 @@
         border: 0.1rem solid var(--color-advantage-border);
         background: var(--color-white);
         cursor: pointer;
-        transition: border-color var(--transition);
+        transition: var(--transition);
 
         @include mixins.hover {
             border-color: var(--color-text-additional);
@@ -69,7 +69,7 @@
         background: transparent;
         color: var(--color-text-additional);
         cursor: pointer;
-        transition: color var(--transition);
+        transition:  var(--transition);
 
         @include mixins.hover {
             color: var(--color-black);
@@ -86,7 +86,7 @@
         width: 1.2rem;
         height: 1.2rem;
         color: var(--color-text-additional);
-        transition: transform var(--transition), color var(--transition);
+        transition: var(--transition);
     }
 
     &__dropdown {
@@ -103,7 +103,7 @@
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: opacity var(--transition), visibility var(--transition);
+        transition: var(--transition);
     }
 
     &__option {
@@ -111,7 +111,7 @@
         color: var(--color-black);
         font-size: var(--size_14);
         cursor: pointer;
-        transition: background var(--transition);
+        transition: var(--transition);
     }
 
     &--open {

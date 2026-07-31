@@ -6,7 +6,7 @@
     padding: var(--size_32) var(--size_24);
     border: 0.1rem solid #D1D5DB;
     background: var(--color-white);
-    transition: border-color var(--transition);
+    transition:  var(--transition);
 
     &.is-center {
         border-color: var(--color-black);

@@ -34,7 +34,7 @@
         padding: var(--size_24) var(--size_8);
         border: 0.1rem solid var(--color-advantage-border);
         cursor: pointer;
-        transition: border-color var(--transition);
+        transition: var(--transition);
 
         @include mixins.hover {
             border-color: var(--color-text-additional);

@@ -57,7 +57,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        transition: opacity var(--transition);
+        transition: var(--transition);
 
         svg {
             pointer-events: none;
@@ -103,7 +103,7 @@
         cursor: pointer;
         margin-top: 1rem;
         flex-shrink: 0;
-        transition: opacity var(--transition);
+        transition:  var(--transition);
 
         svg {
             width: 100%;

@@ -9,7 +9,7 @@
     padding-bottom: var(--size_12);
     border: 0.1rem solid var(--color-advantage-border);
     background: var(--color-white);
-    transition: background var(--transition), border-color var(--transition);
+    transition:  var(--transition);
     cursor: pointer;
 
     @include mixins.hover {
@@ -185,7 +185,7 @@
         padding: var(--size_8) var(--size_12);
         background: var(--color-accent);
         cursor: pointer;
-        transition: background var(--transition);
+        transition: var(--transition);
 
         @include mixins.hover {
             background: var(--color-secondary-accent);

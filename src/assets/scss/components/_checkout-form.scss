@@ -118,7 +118,7 @@
         color: var(--color-black);
         font-size: var(--size_12);
         font-family: var(--font-secondary);
-        transition: border-color var(--transition);
+        transition: var(--transition);
 
         &::placeholder {
             color: var(--color-text-additional);
@@ -151,7 +151,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        transition: color var(--transition);
+        transition: var(--transition);
 
         svg {
             width: 100%;

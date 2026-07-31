@@ -19,7 +19,7 @@
         color: var(--color-black);
         font-size: var(--size_14);
         cursor: pointer;
-        transition: background var(--transition), color var(--transition), border-color var(--transition);
+        transition:  var(--transition);
 
         @include media.L {
             height: var(--size_38);

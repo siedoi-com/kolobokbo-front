@@ -42,7 +42,7 @@
         text-decoration: none;
         font-size: var(--size_16);
         font-weight: 700;
-        transition: color var(--transition);
+        transition:  var(--transition);
 
         &:hover {
             color: var(--color-secondary-accent);
@@ -64,7 +64,7 @@
         text-decoration: none;
         font-size: var(--size_14);
         font-weight: 600;
-        transition: color var(--transition);
+        transition:  var(--transition);
 
         &:hover {
             color: var(--color-secondary-accent);
@@ -144,7 +144,7 @@
         color: var(--color-white);
         text-decoration: underline;
         font-size: var(--size_12);
-        transition: color var(--transition);
+        transition:  var(--transition);
 
         &:hover {
             color: var(--color-secondary-accent);
@@ -185,7 +185,7 @@
     &__social-link {
         display: flex;
         color: var(--color-white);
-        transition: color var(--transition);
+        transition:  var(--transition);
 
         &:hover {
             color: var(--color-secondary-accent);
