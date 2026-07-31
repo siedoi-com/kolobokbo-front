@@ -11,6 +11,19 @@
     margin-top: var(--size_24);
     background: var(--color-white);
     text-decoration: none;
+    transition:  var(--transition);
+
+    &:hover {
+        background: var(--color-bg-green);
+
+        .button__underline {
+            color: var(--color-black);
+        }
+
+        .button__icon {
+            transform: translateX(1rem) rotate(180deg);
+        }
+    }
 
     @include media.L {
         flex-direction: row;
