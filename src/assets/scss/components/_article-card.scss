@@ -72,7 +72,8 @@
     &__read-time {
         display: flex;
         align-items: center;
-        gap: var(--size_6);
+        gap: var(--size_8);
+         margin-left: var(--size_8);
     }
 
     &__meta-icon {
