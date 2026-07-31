@@ -25,6 +25,7 @@
         @include media.XL {
             padding: var(--size_90) 0 var(--size_90) var(--size_80);
             gap: var(--size_48);
+            max-width: 160rem;
         }
     }
 
