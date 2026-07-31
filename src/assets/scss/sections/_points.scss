@@ -21,10 +21,7 @@
 
         @include media.L {
             flex-direction: row;
-        }
-
-        @include media.XL {
-            padding: 0 14rem;
+            justify-content: space-around;
         }
     }
 

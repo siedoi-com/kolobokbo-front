@@ -17,7 +17,7 @@
         gap: var(--size_24);
         padding: var(--size_24);
         border: 0.1rem solid var(--color-card-border);
-        background: var(--color-bg-cream);
+        background: rgba(255, 241, 204, 1);
     }
 
     @include media.XL {

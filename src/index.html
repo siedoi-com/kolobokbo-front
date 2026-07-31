@@ -39,15 +39,15 @@
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
                         <a href="/" aria-current="page">Головна</a></li>
                     <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
-                            href="/shop/">Каталог</a></li>
+                            href="/shop.html">Каталог</a></li>
                     <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
-                            href="/pro-nas/">Про нас</a></li>
+                            href="/about-us-page.html">Про нас</a></li>
                     <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
-                            href="/blog/">Блог</a></li>
+                            href="/blog.html">Блог</a></li>
                     <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
                             href="/dostavka-i-oplata/">Доставка</a></li>
                     <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
-                            href="/contacts/">Контакти</a></li>
+                            href="/contact.html">Контакти</a></li>
                 </ul>
             </nav>
             <div class="header__right-part flex-row j-end">
@@ -86,15 +86,15 @@
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
                         <a href="/" aria-current="page">Головна</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
-                            href="/shop/">Каталог</a></li>
+                            href="/shop.html">Каталог</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
-                            href="/pro-nas/">Про нас</a></li>
+                            href="/about-us-page.html">Про нас</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
-                            href="/blog/">Блог</a></li>
+                            href="/blog.html">Блог</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
                             href="/dostavka-i-oplata/">Доставка і оплата</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
-                            href="/contacts/">Контакти</a></li>
+                            href="/contact.html">Контакти</a></li>
                 </ul>
             </nav>
 
@@ -291,20 +291,23 @@
         <!-- Hero: main headline + product image -->
         <section class="hero">
             <div class="hero__left">
-                <img class="hero__decor" src="/assets/img/hero-decor-1.svg" alt="" aria-hidden="true">
+                <svg class="decor-blob" aria-hidden="true"><use href="/assets/icons/sprite.svg#blob-yellow"></use></svg>
+
                 <div class="hero__content">
                     <div class="hero__title">
-                        <h1>Перекус,<br>який дає<br><span>енергію!</span></h1>
-                        <p>Традиційні японські онігірі з натуральних <br> інгрідієнтів для твоїх щоденних перемог.</p>
+                        <h1>Перекус,<br> який дає <br><span>енергію!</span></h1>
+                        <p>Традиційні японські онігірі з натуральних інгрідієнтів для твоїх щоденних перемог.</p>
                     </div>
-                    <a href="/shop/" class="button button--primary hero__btn">Дивитись меню</a>
+                    <a href="/shop.html" class="button button--primary hero__btn">Дивитись меню</a>
                 </div>
             </div>
             <div class="hero__image">
                 <div class="hero__image-inner">
                     <img class="hero__image-pic" src="/assets/img/hero-image.jpg" alt="Онігірі">
                 </div>
-                <img class="hero__blob" src="/assets/img/hero-decor-2.svg" alt="" aria-hidden="true">
+                <svg class="hero__blob" aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#blob-hero-pink"></use>
+                </svg>
             </div>
         </section>
         <!-- Category filter buttons -->
@@ -750,7 +753,7 @@
                     <h2 class="blog__title">Корисне<br> про онігірі</h2>
                     <p class="blog__text">Ділимось знаннями, щоб ти дізнався більше про улюблений смак.</p>
 
-                    <a href="/blog/" class="button button--secondary button--spread">
+                    <a href="/blog.html" class="button button--secondary button--spread">
                         <span class="button__label">Читати блог</span>
                         <svg class="button__icon" aria-hidden="true">
                             <use href="/assets/icons/sprite.svg#arrow-plain"></use>
@@ -788,7 +791,7 @@
                                             </div>
                                         </div>
 
-                                        <a href="/blog/5-prychyn-rys/" class="button button--secondary button--card">
+                                        <a href="/article-page.html" class="button button--secondary button--card">
                                             Читати блог
                                             <svg class="button__icon" aria-hidden="true">
                                                 <use href="/assets/icons/sprite.svg#arrow-plain"></use>
@@ -824,7 +827,7 @@
                                             </div>
                                         </div>
 
-                                        <a href="/blog/onigiri-guide/" class="button button--secondary button--card">
+                                        <a href="/article-page.html" class="button button--secondary button--card">
                                             Читати блог
                                             <svg class="button__icon" aria-hidden="true">
                                                 <use href="/assets/icons/sprite.svg#arrow-plain"></use>
@@ -860,7 +863,7 @@
                                             </div>
                                         </div>
 
-                                        <a href="/blog/onigiri-guide/" class="button button--secondary button--card">
+                                        <a href="/article-page.html" class="button button--secondary button--card">
                                             Читати блог
                                             <svg class="button__icon" aria-hidden="true">
                                                 <use href="/assets/icons/sprite.svg#arrow-plain"></use>
@@ -1000,11 +1003,11 @@
                     <nav class="footer__nav" aria-label="Футер навігація">
                         <ul class="footer__menu">
                             <li><a href="/" class="footer__link">Головна</a></li>
-                            <li><a href="/shop/" class="footer__link">Каталог</a></li>
-                            <li><a href="/pro-nas/" class="footer__link">Про нас</a></li>
-                            <li><a href="/blog/" class="footer__link">Блог</a></li>
+                            <li><a href="/shop.html" class="footer__link">Каталог</a></li>
+                            <li><a href="/about-us-page.html" class="footer__link">Про нас</a></li>
+                            <li><a href="/blog.html" class="footer__link">Блог</a></li>
                             <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
-                            <li><a href="/contacts/" class="footer__link">Контакти</a></li>
+                            <li><a href="/contacts.html" class="footer__link">Контакти</a></li>
                         </ul>
                     </nav>
 
@@ -1038,7 +1041,7 @@
             <div class="footer__bottom">
                 <div class="footer__bottom-left">
                     <span class="footer__copyright">© 2026 Kolobok Bo.</span>
-                    <a href="/privacy-policy/" class="footer__legal-link">Політика конфіденційності</a>
+                    <a href="/privacy-policy.html" class="footer__legal-link">Політика конфіденційності</a>
                     <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
                 </div>
 

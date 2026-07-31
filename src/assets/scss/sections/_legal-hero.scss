@@ -1,6 +1,7 @@
 @use "../global/media";
 
 .legal-hero {
+    overflow: hidden;
     position: relative;
     background: var(--color-bg-cream);
     border-bottom: 0.1rem solid var(--color-black);
@@ -21,20 +22,6 @@
 
         @include media.XL {
             margin-bottom: var(--size_48);
-        }
-    }
-
-    &__decor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: var(--size_75);
-        height: auto;
-        pointer-events: none;
-
-        @include media.L {
-            width: var(--size_144);
         }
     }
 

@@ -1,0 +1,10 @@
+.decor-blob{
+        position: absolute;
+        color: var(--color-accent);
+        left: -32rem;
+        top: -19rem;
+        width: 46.8rem;
+        height: 35.3rem;
+        pointer-events: none;
+        z-index: 1;
+}

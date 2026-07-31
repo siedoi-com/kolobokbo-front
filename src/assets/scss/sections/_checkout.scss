@@ -16,15 +16,31 @@
         padding: var(--size_32) var(--size_80) var(--size_80);
     }
 
-    &__decor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-        width: 12.4rem;
-        height: auto;
-        pointer-events: none;
+   &__decor {
+    position: absolute;
+    z-index: 0;
+    width: 12.4rem;
+    height: auto;
+    pointer-events: none;
+
+    &--top {
+        color: var(--color-accent);
+        left: -32rem;
+        top: -19rem;
+        width: 46.8rem;
+        height: 35.3rem;
     }
+
+    &--bottom {
+        color: var( --color-secondary-accent);
+        width: 43.8rem;
+        height: 33.3rem;
+    right: -15rem;
+    bottom: -18rem;
+    transform: rotate(-13deg);
+
+    }
+}
 
     &__form-block{
         @include media.XL{
@@ -54,31 +70,26 @@
         width: 40.3rem;
         height: 1rem;
         color: var(--color-accent);
-        // margin-top: 1rem;
         margin-left: -4rem;
 
     }
 
-    &__grid {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
+   &__grid {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--size_32);
+    margin-top: var(--size_10);
+
+    @include media.XL {
+        flex-direction: row;
+        align-items: flex-start;
         gap: var(--size_32);
-        margin-top: var(--size_10);
-
-        @include media.XL {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: var(--size_32);
-            // margin-top: var(--size_32);
-
-        }
-
-        // @include media.XL {
-        //     gap: var(--size_38);
-        // }
+        max-width: 148rem; 
+        margin-inline: auto;
     }
+}
 }
 
 .order-summary {
@@ -90,7 +101,7 @@
     margin-top: var(--size_24);
 
     @include media.XL {
-        padding: var(--size_48) var(--size_24);
+        padding: var(--size_32) var(--size_24);
     }
 
     &__title {

@@ -36,23 +36,17 @@
         }
     }
 
-    &__decor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: var(--size_75);
-        height: auto;
-        pointer-events: none;
-        z-index: 0;
-
-        @include media.L {
-            width: var(--size_140);
-        }
-    }
-
     &__content {
         position: relative;
         z-index: 1;
+
+        @include media.L {
+            width: 32.5rem;
+        }
+
+        @include media.XL {
+            width: 41.7rem;
+        }
     }
 
     &__title {
@@ -126,6 +120,10 @@
             flex-grow: 1;
             width: 60rem;
         }
+
+        @include media.XL {
+            width: auto;
+        }
     }
 
     &__image-inner {
@@ -143,7 +141,7 @@
     }
 
     &__image-pic {
-        width: 48rem;
+        width: 100%;
         height: 48rem;
         object-fit: cover;
         object-position: left 0rem bottom 4rem;
@@ -151,25 +149,26 @@
 
         @include media.L {
             object-position: center;
-            width: 81rem;
+            width: 100%;
             height: 47rem;
         }
 
         @include media.XL {
             object-position: center;
-            width: 70rem;
+            width: 100%;
             height: 55rem;
         }
     }
 
     &__blob {
         position: absolute;
+        color: var(--color-secondary-accent);
         bottom: 0;
         right: 28rem;
         z-index: 1;
 
         @include media.L {
-            top: 43rem;
+            top: 40rem;
             left: 3rem;
         }
 

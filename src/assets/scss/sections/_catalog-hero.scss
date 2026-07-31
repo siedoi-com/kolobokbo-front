@@ -5,10 +5,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: var(--size_24) var(--size_16);
-    background: var(--color-bg-cream);
+    padding: var(--size_24) var(--size_16) var(--size_80);
+    background: rgba(253, 248, 243, 1);
+    border-bottom: 0.1rem solid var(--color-black);
     overflow: hidden;
-    height: 71.5rem;
 
     @include media.L {
         padding: var(--size_48);
@@ -20,39 +20,52 @@
         padding: 12rem 0 0 8rem;
     }
 
-    &__image-wrap {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        pointer-events: none;
+   &__image-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    @include media.L{
+        height: 61rem;
     }
 
-    &__image {
-        position: absolute;
-        top: 35rem;
-        left: -26rem;
-        width: 95rem;
-        max-width: none;
-        height: auto;
-        transform: translateY(-50%);
-        object-fit: contain;
+    @include media.XL{
+        height: 100%;
+    }
+}
 
-        @include media.L {
-            position: static;
-            transform: none;
-            width: 100%;
-            height: 100%;
-        }
+&__image {
+    position: absolute;
+    top: 35rem;
+    left: 50%;
+    width: 190%;
+    max-width: none;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+
+    @include media.L {
+        position: static;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        object-position: right center;
     }
 
-    &__decor {
+    @include media.XL {
         position: absolute;
+        left: auto;
+        right: 0;
         top: 0;
-        left: 0;
-        z-index: 1;
-        height: auto;
-        pointer-events: none;
+        transform: none;
+        width: auto;
+        max-width: 100%;
+        height: 100%;
+        
     }
+}
 
     .breadcrumbs {
         position: relative;

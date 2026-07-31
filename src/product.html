@@ -17,7 +17,7 @@
     <!-- Site header: burger, logo, nav, cart -->
     <header class="header bg--white rel anim w-full z5">
         <div class="header__wrapper flex-row j-between">
-            <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
             <div class="header__left-part">
                 <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
                     <svg role="presentation" class="header-burger__icon">
@@ -32,27 +32,22 @@
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
-            <!-- Desktop nav, hidden on mobile via d-none -->
+              <!-- Desktop nav, hidden on mobile via d-none -->
             <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
                 <ul class="header-menu__list">
-                    <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
-                        <a href="/">Головна</a>
-                    </li>
-                    <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
-                        <a href="/shop/" aria-current="page">Каталог</a>
-                    </li>
-                    <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
-                        <a href="/pro-nas/">Про нас</a>
-                    </li>
-                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
-                        <a href="/blog/">Блог</a>
-                    </li>
-                    <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
-                        <a href="/dostavka-i-oplata/">Доставка</a>
-                    </li>
-                    <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
-                        <a href="/contacts/">Контакти</a>
-                    </li>
+                    <li id="menu-item-244"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
+                        <a href="/" aria-current="page">Головна</a></li>
+                    <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop.html">Каталог</a></li>
+                    <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/about-us-page.html">Про нас</a></li>
+                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog.html">Блог</a></li>
+                    <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка</a></li>
+                    <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contact.html">Контакти</a></li>
                 </ul>
             </nav>
             <div class="header__right-part flex-row j-end">
@@ -87,24 +82,19 @@
 
             <nav class="mobile-menu__nav">
                 <ul id="menu-header-1" class="mobile-menu__list">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244">
-                        <a href="/">Головна</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-148">
-                        <a href="/shop/" aria-current="page">Каталог</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150">
-                        <a href="/pro-nas/">Про нас</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247">
-                        <a href="/blog/">Блог</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147">
-                        <a href="/dostavka-i-oplata/">Доставка і оплата</a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149">
-                        <a href="/contacts/">Контакти</a>
-                    </li>
+                    <li
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-117 current_page_item menu-item-244">
+                        <a href="/" aria-current="page">Головна</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop.html">Каталог</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/about-us-page.html">Про нас</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog.html">Блог</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка і оплата</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contact.html">Контакти</a></li>
                 </ul>
             </nav>
 
@@ -460,7 +450,9 @@
                                 </div>
 
                                 <div class="product-card__body">
-                                    <h3 class="product-card__title">Онігірі з куркою в японському каррі</h3>
+                                    <h3 class="product-card__title">
+                                        <a class="product-card__link" href="/product.html">Онігірі з куркою в японському каррі</a>
+                                    </h3>
                                     <p class="product-card__desc">Гострий та соковитий смак</p>
 
                                     <div class="product-card__meta">
@@ -503,7 +495,9 @@
                                 </div>
 
                                 <div class="product-card__body">
-                                    <h3 class="product-card__title">Онігірі з куркою в японському каррі</h3>
+                                    <h3 class="product-card__title">
+                                        <a class="product-card__link" href="/product.html">Онігірі з куркою в японському каррі</a>
+                                    </h3>
                                     <p class="product-card__desc">Гострий та соковитий смак</p>
 
                                     <div class="product-card__meta">
@@ -546,7 +540,9 @@
                                 </div>
 
                                 <div class="product-card__body">
-                                    <h3 class="product-card__title">Онігірі з куркою в японському каррі</h3>
+                                    <h3 class="product-card__title">
+                                        <a class="product-card__link" href="/product.html">Онігірі з куркою в японському каррі</a>
+                                    </h3>
                                     <p class="product-card__desc">Гострий та соковитий смак</p>
 
                                     <div class="product-card__meta">
@@ -589,7 +585,9 @@
                                 </div>
 
                                 <div class="product-card__body">
-                                    <h3 class="product-card__title">Онігірі з куркою в японському каррі</h3>
+                                   <h3 class="product-card__title">
+                                        <a class="product-card__link" href="/product.html">Онігірі з куркою в японському каррі</a>
+                                    </h3>
                                     <p class="product-card__desc">Гострий та соковитий смак</p>
 
                                     <div class="product-card__meta">
@@ -639,93 +637,92 @@
         </section>
     </main>
 
-    <!-- Site footer: nav, contacts, newsletter, socials -->
+        <!-- Site footer: nav, contacts, newsletter, socials -->
     <footer class="footer">
-        <div class="footer__container">
-            <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
-                <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
-                    decoding="async">
-            </a>
-
-            <div class="footer__row">
-                <nav class="footer__nav" aria-label="Футер навігація">
-                    <ul class="footer__menu">
-                        <li><a href="/" class="footer__link">Головна</a></li>
-                        <li><a href="/shop/" class="footer__link">Каталог</a></li>
-                        <li><a href="/pro-nas/" class="footer__link">Про нас</a></li>
-                        <li><a href="/blog/" class="footer__link">Блог</a></li>
-                        <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
-                        <li><a href="/contacts/" class="footer__link">Контакти</a></li>
-                    </ul>
-                </nav>
-
-                <div class="footer__contacts">
-                    <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
-                        <svg class="footer__contact-icon" aria-hidden="true">
-                            <use href="/assets/icons/sprite.svg#mail"></use>
-                        </svg>
-                        kolobokbo@gmail.com
-                    </a>
-                    <a href="tel:+380955941028" class="footer__contact-item">
-                        <svg class="footer__contact-icon" aria-hidden="true">
-                            <use href="/assets/icons/sprite.svg#phone"></use>
-                        </svg>
-                        (095) 594 10 28
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer__subscribe">
-                <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
-
-                <form class="footer__subscribe-form" action="/subscribe/" method="post">
-                    <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail"
-                        required aria-label="Ваш E-mail">
-                    <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="footer__bottom">
-            <div class="footer__bottom-left">
-                <span class="footer__copyright">© 2026 Kolobok Bo.</span>
-                <a href="/privacy-policy/" class="footer__legal-link">Політика конфіденційності</a>
-                <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
-            </div>
-
-            <div class="footer__bottom-right">
-                <div class="footer__payments">
-                    <img class="footer__payment-icon footer__payment-icon--visa" src="/assets/icons/visa.svg"
-                        alt="Visa" width="48" height="16" loading="lazy" decoding="async">
-                    <img class="footer__payment-icon footer__payment-icon--mastercard"
-                        src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy"
+            <div class="footer__container">
+                <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
+                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
                         decoding="async">
+                </a>
+
+                <div class="footer__row">
+                    <nav class="footer__nav" aria-label="Футер навігація">
+                        <ul class="footer__menu">
+                            <li><a href="/" class="footer__link">Головна</a></li>
+                            <li><a href="/shop.html" class="footer__link">Каталог</a></li>
+                            <li><a href="/about-us-page.html" class="footer__link">Про нас</a></li>
+                            <li><a href="/blog.html" class="footer__link">Блог</a></li>
+                            <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li>
+                            <li><a href="/contacts.html" class="footer__link">Контакти</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer__contacts">
+                        <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#mail"></use>
+                            </svg>
+                            kolobokbo@gmail.com
+                        </a>
+                        <a href="tel:+380955941028" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#phone"></use>
+                            </svg>
+                            (095) 594 10 28
+                        </a>
+                    </div>
                 </div>
 
-                <div class="footer__social">
-                    <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram"
-                        target="_blank" rel="noopener">
-                        <svg class="footer__social-icon" aria-hidden="true">
-                            <use href="/assets/icons/sprite.svg#instagram"></use>
-                        </svg>
-                    </a>
-                    <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook"
-                        target="_blank" rel="noopener">
-                        <svg class="footer__social-icon" aria-hidden="true">
-                            <use href="/assets/icons/sprite.svg#facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank"
-                        rel="noopener">
-                        <svg class="footer__social-icon" aria-hidden="true">
-                            <use href="/assets/icons/sprite.svg#tiktok"></use>
-                        </svg>
-                    </a>
+                <div class="footer__subscribe">
+                    <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
+
+                    <form class="footer__subscribe-form" action="/subscribe/" method="post">
+                        <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail"
+                            required aria-label="Ваш E-mail">
+                        <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </footer>
 
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <span class="footer__copyright">© 2026 Kolobok Bo.</span>
+                    <a href="/privacy-policy.html" class="footer__legal-link">Політика конфіденційності</a>
+                    <a href="/public-offer/" class="footer__legal-link">Публічна оферта</a>
+                </div>
+
+                <div class="footer__bottom-right">
+                    <div class="footer__payments">
+                        <img class="footer__payment-icon footer__payment-icon--visa" src="/assets/icons/visa.svg"
+                            alt="Visa" width="48" height="16" loading="lazy" decoding="async">
+                        <img class="footer__payment-icon footer__payment-icon--mastercard"
+                            src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank"
+                            rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     <script type="module" src="/assets/js/main.js"></script>
 </body>
 
