@@ -63,10 +63,9 @@
                 </a>
                 -->
 
-                <a href="/cart/" class="button header__cart-button">
-                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
-
-                    <svg role="presentation" class="anim">
+                <a href="/cart/" class="button header__cart-button" aria-label="Кошик, 3 товари" aria-expanded="false" aria-controls="mini-cart">
+                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active" aria-hidden="true">3</span>
+                    <svg role="presentation" class="anim" aria-hidden="true">
                         <use href="/assets/icons/sprite.svg#icon-cart"></use>
                     </svg>
                 </a>
@@ -143,7 +142,7 @@
 <div class="mini-cart-overlay" data-mini-cart-overlay></div>
  
 <!-- Mini-cart: dropdown under cart icon on desktop, full-height slide panel on mobile -->
-<div class="mini-cart" data-mini-cart>
+<div class="mini-cart" data-mini-cart id="mini-cart">
     <div class="mini-cart__inner">
         <div class="mini-cart__header">
             <div class="mini-cart__title-wrap">

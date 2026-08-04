@@ -4,6 +4,11 @@ const overlay = document.querySelector('[data-mini-cart-overlay]');
 const closeBtn = miniCart?.querySelector('.mini-cart__close');
 
 if (cartButton && miniCart) {
+    function updateCartLabel() {
+        const count = miniCart.querySelectorAll('.cart-item').length;
+        cartButton.setAttribute('aria-label', `Кошик, ${count} товари`);
+    }
+
     function openCart() {
         miniCart.classList.add('active');
         overlay?.classList.add('active');
@@ -40,4 +45,8 @@ if (cartButton && miniCart) {
     });
 
     closeBtn?.addEventListener('click', closeCart);
+
+    overlay?.addEventListener('click', closeCart);
+
+    updateCartLabel();
 }
