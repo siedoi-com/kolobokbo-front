@@ -1,5 +1,3 @@
-// import 'keen-slider/keen-slider.min.css';
-// import KeenSlider from 'keen-slider';
 import EmblaCarousel from 'embla-carousel';
 
 // ─── Shared slider controls (arrows + pagination dots) ─────────────────────
@@ -15,8 +13,10 @@ function initSliderControls(emblaNode, embla, controlsRoot = emblaNode) {
         function createDots() {
             paginationEl.innerHTML = '';
             embla.scrollSnapList().forEach((_, idx) => {
-                const dot = document.createElement('div');
+                const dot = document.createElement('button');
+                dot.type = 'button';
                 dot.classList.add('slider-controls__pagination-item');
+                dot.setAttribute('aria-label', `Слайд ${idx + 1}`);
                 dot.addEventListener('click', () => embla.scrollTo(idx));
                 paginationEl.appendChild(dot);
             });
@@ -62,11 +62,13 @@ document.querySelectorAll('.embla--about-slider').forEach(emblaNode => {
     if (nextBtn) nextBtn.addEventListener('click', () => embla.scrollNext());
 
     if (paginationEl) {
-        function createDots() {
+       function createDots() {
             paginationEl.innerHTML = '';
             embla.scrollSnapList().forEach((_, idx) => {
-                const dot = document.createElement('div');
-                dot.classList.add('ingredients__pagination-item');
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.classList.add('slider-controls__pagination-item');
+                dot.setAttribute('aria-label', `Слайд ${idx + 1}`);
                 dot.addEventListener('click', () => embla.scrollTo(idx));
                 paginationEl.appendChild(dot);
             });
@@ -85,35 +87,6 @@ document.querySelectorAll('.embla--about-slider').forEach(emblaNode => {
         embla.on('reInit', createDots);
     }
 });
-
-// document.querySelectorAll('.logos__slider').forEach(item => {
-//     const animation = {duration: 20000, easing: (t) => t}
-//
-//     const slider = new KeenSlider(item, {
-//         loop: true,
-//         slides: {perView: 3.5, spacing: 16,},
-//         breakpoints: {
-//             "(min-width: 768px)": {
-//                 slides: {perView: 4.2, spacing: 20},
-//             },
-//             "(min-width: 992px)": {
-//                 slides: {perView: 5.3, spacing: 32},
-//             },
-//             "(min-width: 1200px)": {
-//                 slides: {perView: 6, spacing: 90},
-//             },
-//         },
-//         created(s) {
-//             s.moveToIdx(5, true, animation);
-//         },
-//         updated(s) {
-//             s.moveToIdx(s.track.details.abs + 5, true, animation)
-//         },
-//         animationEnded(s) {
-//             s.moveToIdx(s.track.details.abs + 5, true, animation)
-//         },
-//     });
-// });
 
 // ─── Logos marquee ──────────────────────────────────────────────────────────
 document.querySelectorAll('.logos__marquee').forEach(marquee => {
