@@ -10,11 +10,13 @@ document.querySelectorAll('[data-accordion-item-title]').forEach(item => item.ad
             if (open_item !== parent_item_el) {
                 open_item.classList.remove('active');
                 open_item.querySelector('[data-accordion-item-panel]').style.maxHeight = null;
+                open_item.querySelector('[data-accordion-item-title]').setAttribute('aria-expanded', 'false');
             }
         });
     }
 
     parent_item_el.classList.toggle('active', !is_active);
+    item.setAttribute('aria-expanded', String(!is_active));
 
     if (!is_active) {
         const paddingBuffer = parseFloat(getComputedStyle(document.documentElement).fontSize) * 5;
