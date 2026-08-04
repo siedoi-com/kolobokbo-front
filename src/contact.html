@@ -26,11 +26,12 @@
                 </button>
             </div>
 
+           <!-- Logo: links to homepage on all pages except homepage itself -->
             <div class="header__logo-wrapper">
-                <div class="logo header__logo logo--header">
-                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
+                <a href="/" class="logo header__logo logo--header" aria-label="Колобок Бо — на головну">
+                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt="Колобок Бо"
                         fetchpriority="high" decoding="async" />
-                </div>
+                </a>
             </div>
               <!-- Desktop nav, hidden on mobile via d-none -->
             <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
@@ -77,9 +78,10 @@
                 </svg>
             </button>
 
-            <div class="mobile-menu__logo">
-                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
-            </div>
+            <!-- Logo: links to homepage on all pages except homepage itself -->
+            <a href="/" class="mobile-menu__logo" aria-label="Колобок Бо — на головну">
+                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="Колобок Бо" decoding="async" />
+            </a>
 
             <nav class="mobile-menu__nav">
                 <ul id="menu-header-1" class="mobile-menu__list">
@@ -297,8 +299,9 @@
         <!-- Site footer: nav, contacts, newsletter, socials -->
     <footer class="footer">
             <div class="footer__container">
+                <!-- Logo: links to homepage on all pages except homepage itself -->
                 <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
-                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
+                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="Колобок Бо" width="78" height="80" loading="lazy"
                         decoding="async">
                 </a>
 

@@ -26,9 +26,11 @@
                 </button>
             </div>
 
+            <!-- Logo: no link on homepage (current page), unlike other pages where it links to "/" -->
+            <!-- Other pages use: <a href="/" class="logo header__logo logo--header" aria-label="Колобок Бо — на головну"> -->
             <div class="header__logo-wrapper">
                 <div class="logo header__logo logo--header">
-                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
+                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt="Колобок Бо"
                         fetchpriority="high" decoding="async" />
                 </div>
             </div>
@@ -77,8 +79,10 @@
                 </svg>
             </button>
 
+            <!-- Logo: no link on homepage (current page), unlike other pages where it links to "/" -->
+            <!-- Other pages use: <a href="/" class="mobile-menu__logo" aria-label="Колобок Бо — на головну"> -->
             <div class="mobile-menu__logo">
-                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
+                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="Колобок Бо" decoding="async" />
             </div>
 
             <nav class="mobile-menu__nav">
@@ -996,10 +1000,12 @@
         <!-- Site footer: nav, contacts, newsletter, socials -->
     <footer class="footer">
             <div class="footer__container">
-                <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
-                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
+                <!-- Logo: no link on homepage (current page), unlike other pages where it links to "/" -->
+                <!-- Other pages use: <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну"> -->
+                <div class="footer__logo-link">
+                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="Колобок Бо" width="78" height="80" loading="lazy"
                         decoding="async">
-                </a>
+                </div>
 
                 <div class="footer__row">
                     <nav class="footer__nav" aria-label="Футер навігація">
