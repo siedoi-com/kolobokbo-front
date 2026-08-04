@@ -19,7 +19,8 @@
         <div class="header__wrapper flex-row j-between">
              <!-- Mobile only: opens .mobile-menu via data-modal-open -->
             <div class="header__left-part">
-                <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
+                <button class="button header-burger flex-center" type="button"
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
                     <svg role="presentation" class="header-burger__icon">
                         <use href="/assets/icons/sprite.svg#icon-burger"></use>
                     </svg>
@@ -71,8 +72,8 @@
             </div>
         </div>
 
-        <div class="mobile-menu">
-            <button class="mobile-menu__close">
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="mobile-menu__close" type="button" aria-label="Закрити меню">>
                 <svg class="mobile-menu__close-icon" aria-hidden="true">
                     <use href="/assets/icons/sprite.svg#close"></use>
                 </svg>

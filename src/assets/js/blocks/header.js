@@ -95,14 +95,30 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('resize', updateStickyState.bind(null, false));
 
 // ── Mobile menu toggle ────────────────────────────────────────────────────────
-document.querySelector('.header-burger')?.addEventListener('click', function () {
-    mobileMenuEl.classList.add('active');
-    document.body.classList.add('no-scroll');
-});
 
-document.querySelector('.mobile-menu__close')?.addEventListener('click', function () {
-    mobileMenuEl.classList.remove('active');
+const burgerEl = document.querySelector('.header-burger');
+const menuCloseEl = document.querySelector('.mobile-menu__close');
+
+function openMobileMenu() {
+    mobileMenuEl?.classList.add('active');
+    document.body.classList.add('no-scroll');
+    burgerEl?.setAttribute('aria-expanded', 'true');
+}
+
+function closeMobileMenu() {
+    mobileMenuEl?.classList.remove('active');
     document.body.classList.remove('no-scroll');
+    burgerEl?.setAttribute('aria-expanded', 'false');
+    burgerEl?.focus();
+}
+
+burgerEl?.addEventListener('click', openMobileMenu);
+menuCloseEl?.addEventListener('click', closeMobileMenu);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileMenuEl?.classList.contains('active')) {
+        closeMobileMenu();
+    }
 });
 
 // ── Header hide on scroll down / show on scroll up & stop ────────────────────
