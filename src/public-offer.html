@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolobok</title>
+</head>
+
+<body>
+    <!-- Free delivery banner above header -->
+    <div class="before-header rel z5 w-full">
+        <div class="promo-line promo-line--static">
+            <div class="container">безкоштовна доставка по Києву</div>
+        </div>
+    </div>
+    <!-- Site header: burger, logo, nav, cart -->
+    <header class="header bg--white rel anim w-full z5">
+        <div class="header__wrapper flex-row j-between">
+             <!-- Mobile only: opens .mobile-menu via data-modal-open -->
+            <div class="header__left-part">
+                <button class="button header-burger flex-center" type="button" data-modal-open="mobile-menu">
+                    <svg role="presentation" class="header-burger__icon">
+                        <use href="/assets/icons/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="header__logo-wrapper">
+                <div class="logo header__logo logo--header">
+                    <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image anim" alt=""
+                        fetchpriority="high" decoding="async" />
+                </div>
+            </div>
+              <!-- Desktop nav, hidden on mobile via d-none -->
+            <nav class="header__menu header-menu d-none text--size_16 c--black fw--600">
+                <ul class="header-menu__list">
+                    <li id="menu-item-244"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-244">
+                        <a href="/">Головна</a></li>
+                    <li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop.html">Каталог</a></li>
+                    <li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/about-us-page.html">Про нас</a></li>
+                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog.html">Блог</a></li>
+                    <!-- TODO: [header] temporarily removed menu item "Delivery" (href="/dostavka-i-oplata/"), restore when the page is ready -->
+                    <!-- <li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка</a></li> -->
+                    <li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="header__right-part flex-row j-end">
+                <!-- Temporarily hidden per feedback, will be back later
+                <a href="" class="button flex-center d-none header__account-icon">
+                    <svg role="presentation" class="wh-full">
+                        <use href="/assets/icons/sprite.svg#icon-user"></use>
+                    </svg>
+                </a>
+                -->
+
+                <a href="/cart/" class="button header__cart-button">
+                    <span class="cart-badge abs z1 bg--base-red c--white fw--500 active">3</span>
+
+                    <svg role="presentation" class="anim">
+                        <use href="/assets/icons/sprite.svg#icon-cart"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <button class="mobile-menu__close">
+                <svg class="mobile-menu__close-icon" aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#close"></use>
+                </svg>
+            </button>
+
+            <div class="mobile-menu__logo">
+                <img width="38" height="40" src="/assets/img/logo-1.svg" class="img--contain" alt="" decoding="async" />
+            </div>
+
+            <nav class="mobile-menu__nav">
+                <ul id="menu-header-1" class="mobile-menu__list">
+                    <li
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-244">
+                        <a href="/">Головна</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a
+                            href="/shop.html">Каталог</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a
+                            href="/about-us-page.html">Про нас</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a
+                            href="/blog.html">Блог</a></li>
+                    <!-- TODO: [mobile-menu] temporarily removed menu item "Delivery and payment" (href="/dostavka-i-oplata/"), restore when the page is ready -->
+                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a
+                            href="/dostavka-i-oplata/">Доставка і оплата</a></li> -->
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a
+                            href="/contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu__contact">
+                <a href="tel:+380955941028" class="mobile-menu__phone">
+                    <svg class="mobile-menu__phone-icon" aria-hidden="true">
+                        <use href="/assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                    (095) 594 10 28
+                </a>
+            </div>
+
+            <ul class="mobile-menu__social social-list">
+                <li class="social-list__item">
+                    <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">
+                        <svg aria-hidden="true">
+                            <use href="/assets/icons/sprite.svg#tiktok"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <!-- Offer hero: breadcrumbs + title -->
+        <section class="offer-hero">
+            <svg class="decor-blob" aria-hidden="true"><use href="/assets/icons/sprite.svg#blob-yellow"></use></svg>
+
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__crumb">
+                        <a href="/">Головна</a>
+                    </li>
+                    <li class="breadcrumbs__separator" aria-hidden="true">
+                        <svg class="breadcrumbs__icon">
+                            <use href="/assets/icons/sprite.svg#chevron"></use>
+                        </svg>
+                    </li>
+                    <li class="breadcrumbs__crumb" aria-current="page">Умови</li>
+                </ul>
+
+                <h1 class="offer-hero__title">Публічна оферта</h1>
+        </section>
+
+        <!-- Offer content: пункти публічної оферти -->
+        <section class="offer-content">
+                <!-- 1 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">1. ЗАГАЛЬНІ ПОЛОЖЕННЯ</h2>
+                    <p class="offer-content__text">1.1. Цей документ є офіційною публічною пропозицією (офертою) ФОП, якому належить веб-сайт kolobokbo.com.ua (тут і далі — «Продавець»), укласти договір купівлі-продажу товарів дистанційним способом на умовах, викладених нижче.</p>
+                    <p class="offer-content__text">1.2. Відповідно до статті 633 Цивільного кодексу України цей документ є публічним договором, і в разі прийняття викладених нижче умов (акцепту оферти) фізична особа, яка здійснює замовлення товарів на сайті (тут і далі — «Покупець»), зобов'язується виконувати умови даного договору.</p>
+                    <p class="offer-content__text">1.3. Датою прийняття (акцептом) даної оферти вважається дата оформлення Покупцем замовлення на сайті шляхом заповнення форми замовлення, підтвердження замовлення в телефонному режимі або оплати товару.</p>
+                    <p class="offer-content__text">1.4. Замовляючи товар через сайт kolobokbo.com.ua, Покупець погоджується з умовами продажу товарів, викладеними нижче.</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">2. ТЕРМІНИ ТА ВИЗНАЧЕННЯ</h2>
+                    <p class="offer-content__text">2.1. Оферта — публічна пропозиція Продавця, адресована невизначеному колу осіб, укласти з Продавцем договір купівлі-продажу товару дистанційним способом на умовах, що містяться в цій оферті.</p>
+                    <p class="offer-content__text">2.2. Акцепт — повне і безумовне прийняття Покупцем умов оферти.</p>
+                    <p class="offer-content__text">2.3. Покупець — дієздатна фізична особа, яка досягла 18 років, що отримує інформацію від Продавця, розміщує замовлення щодо купівлі товарів, представлених на сайті kolobokbo.com.ua, для цілей, не пов'язаних зі здійсненням підприємницької діяльності.</p>
+                    <p class="offer-content__text">2.4. Товар — продукція, представлена на сайті kolobokbo.com.ua, доступна для замовлення Покупцем.</p>
+                    <p class="offer-content__text">2.5. Замовлення — належно оформлений запит Покупця на купівлю та доставку товарів, обраних на сайті.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">3. ПРЕДМЕТ ДОГОВОРУ</h2>
+                    <p class="offer-content__text">3.1. Продавець зобов'язується передати у власність Покупцю товар, а Покупець зобов'язується прийняти товар і оплатити його на умовах цього договору.</p>
+                    <p class="offer-content__text">3.2. Найменування, асортимент, кількість, ціна товару визначаються на підставі даних, вказаних в замовленні Покупця, оформленому відповідно до правил цього договору.</p>
+                    <p class="offer-content__text">3.3. Право власності на товар та ризик його випадкового пошкодження чи втрати переходить до Покупця з моменту передачі товару Покупцю та підписання відповідних документів на постачання товару (видаткова накладна, квитанція та ін.) або з моменту отримання товару від служби доставки.</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">4. ОФОРМЛЕННЯ ЗАМОВЛЕННЯ</h2>
+                    <p class="offer-content__text">4.1. Замовлення товару здійснюється Покупцем через сайт kolobokbo.com.ua шляхом заповнення форми замовлення, а також за телефоном, вказаним у розділі «Контакти».</p>
+                    <p class="offer-content__text">4.2. При оформленні замовлення на сайті Покупець зобов'язується надати наступну інформацію, необхідну Продавцю для виконання замовлення: прізвище, ім'я Покупця; адреса, за якою слід доставити товар; контактний телефон.</p>
+                    <p class="offer-content__text">4.3. Продавець не несе відповідальності за зміст і достовірність інформації, наданої Покупцем при оформленні замовлення.</p>
+                    <p class="offer-content__text">4.4. Продавець має право відмовити Покупцю у прийнятті замовлення, якщо надані Покупцем дані є недостатніми, недостовірними або не дозволяють ідентифікувати Покупця чи його замовлення.</p>
+                    <p class="offer-content__text">4.5. Після оформлення замовлення Покупцю на вказаний номер телефону надходить дзвінок або повідомлення від оператора Продавця для підтвердження замовлення та узгодження часу доставки.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">5. ЦІНА ТА ОПЛАТА ТОВАРУ</h2>
+                    <p class="offer-content__text">5.1. Ціни на товари визначаються Продавцем самостійно та вказані на сайті kolobokbo.com.ua. Продавець має право в односторонньому порядку змінювати ціни на товари.</p>
+                    <p class="offer-content__text">5.2. Ціна товару вказується в гривнях та включає всі необхідні податки і збори.</p>
+                    <p class="offer-content__text">5.3. Оплата товару здійснюється Покупцем одним із наступних способів:</p>
+                    <ul class="offer-content__list">
+                        <li class="offer-content__list-item">готівкою кур'єру при отриманні замовлення;</li>
+                        <li class="offer-content__list-item">банківською картою онлайн на сайті;</li>
+                        <li class="offer-content__list-item">банківською картою кур'єру при отриманні замовлення.</li>
+                    </ul>
+                    <p class="offer-content__text">5.4. Вартість доставки визначається окремо та повідомляється Покупцю під час оформлення чи підтвердження замовлення, якщо інше не вказано на сайті.</p>
+                </div>
+
+                <!-- 6 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">6. ДОСТАВКА ТОВАРУ</h2>
+                    <p class="offer-content__text">6.1. Доставка товару здійснюється Продавцем за адресою, вказаною Покупцем при оформленні замовлення, в межах міста Києва та області, якщо інше не погоджено сторонами додатково.</p>
+                    <p class="offer-content__text">6.2. Строки доставки узгоджуються з Покупцем індивідуально під час підтвердження замовлення та залежать від наявності товару на складі та завантаженості служби доставки.</p>
+                    <p class="offer-content__text">6.3. При отриманні замовлення Покупець зобов'язаний перевірити зовнішній вигляд і комплектність товару в присутності кур'єра.</p>
+                    <p class="offer-content__text">6.4. У разі відсутності Покупця за вказаною адресою в узгоджений час доставки Продавець має право призначити повторну доставку на інший узгоджений час або скасувати замовлення.</p>
+                </div>
+
+                <!-- 7 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">7. ПРАВА ТА ОБОВ'ЯЗКИ СТОРІН</h2>
+                    <p class="offer-content__text">7.1. Продавець зобов'язується: передати Покупцю товар відповідно до умов замовлення; забезпечити належну якість товару; попередити Покупця про можливі затримки виконання замовлення.</p>
+                    <p class="offer-content__text">7.2. Продавець має право: змінювати умови цього договору та ціни на товари в односторонньому порядку без попереднього узгодження з Покупцем, розміщуючи зміни на сайті; відмовити в оформленні замовлення у випадках, передбачених цим договором.</p>
+                    <p class="offer-content__text">7.3. Покупець зобов'язується: своєчасно оплатити та отримати замовлення на умовах цього договору; надати достовірну інформацію, необхідну для виконання замовлення.</p>
+                    <p class="offer-content__text">7.4. Покупець має право: оформити замовлення на сайті; вимагати від Продавця виконання умов цього договору; відмовитися від замовленого товару в порядку, передбаченому чинним законодавством України та розділом 8 цього договору.</p>
+                </div>
+
+                <!-- 8 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">8. ПОВЕРНЕННЯ ТОВАРУ</h2>
+                    <p class="offer-content__text">8.1. Повернення товару належної якості здійснюється відповідно до Закону України «Про захист прав споживачів» протягом 14 днів з моменту отримання товару, за умови збереження товарного вигляду, споживчих властивостей, упаковки та документів, що підтверджують придбання.</p>
+                    <p class="offer-content__text">8.2. Продукти харчування належної якості поверненню та обміну не підлягають, окрім випадків, передбачених чинним законодавством України.</p>
+                    <p class="offer-content__text">8.3. У разі виявлення недоліків товару Покупець має право звернутися до Продавця за контактами, вказаними в розділі 11 цього договору, для вирішення питання щодо заміни товару, повернення коштів або усунення недоліків.</p>
+                </div>
+
+                <!-- 9 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">9. ВІДПОВІДАЛЬНІСТЬ СТОРІН</h2>
+                    <p class="offer-content__text">9.1. Сторони несуть відповідальність за невиконання або неналежне виконання умов цього договору в порядку, передбаченому цим договором та чинним законодавством України.</p>
+                    <p class="offer-content__text">9.2. Продавець не несе відповідальності за шкоду, заподіяну Покупцю внаслідок неналежного використання товарів, придбаних на сайті kolobokbo.com.ua.</p>
+                    <p class="offer-content__text">9.3. Сторони звільняються від відповідальності за часткове або повне невиконання зобов'язань за цим договором, якщо це невиконання стало наслідком обставин непереборної сили (форс-мажору).</p>
+                </div>
+
+                <!-- 10 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">10. ТЕРМІН ДІЇ ТА ЗМІНА УМОВ ОФЕРТИ</h2>
+                    <p class="offer-content__text">10.1. Оферта набуває чинності з моменту розміщення на сайті kolobokbo.com.ua і діє до моменту відкликання оферти Продавцем.</p>
+                    <p class="offer-content__text">10.2. Продавець залишає за собою право вносити зміни в умови оферти та/або відкликати оферту в будь-який момент без попереднього повідомлення Покупця. Актуальна редакція оферти розміщена на сайті.</p>
+                    <p class="offer-content__text">10.3. Договір вважається укладеним з моменту акцепту оферти Покупцем і діє до повного виконання сторонами своїх зобов'язань.</p>
+                </div>
+
+                <!-- 11 -->
+                <div class="offer-content__section">
+                    <h2 class="offer-content__section-title">11. КОНТАКТНІ ДАНІ ПРОДАВЦЯ</h2>
+                    <p class="offer-content__text">11.1. З усіх питань, пов'язаних із замовленням, оплатою, доставкою та поверненням товару, Покупець може звернутися за контактами: <a href="mailto:kolobokbo@gmail.com" class="offer-content__link">kolobokbo@gmail.com</a>, тел. <a href="tel:+380955941028" class="offer-content__link">(095) 594 10 28</a>.</p>
+                </div>
+
+        </section>
+
+    </main>
+        <!-- Site footer: nav, contacts, newsletter, socials -->
+    <footer class="footer">
+            <div class="footer__container">
+                <a href="/" class="footer__logo-link" aria-label="Колобок Бо — на головну">
+                    <img class="footer__logo" src="/assets/img/logo-1.svg" alt="" width="78" height="80" loading="lazy"
+                        decoding="async">
+                </a>
+
+                <div class="footer__row">
+                    <nav class="footer__nav" aria-label="Футер навігація">
+                        <ul class="footer__menu">
+                            <li><a href="/" class="footer__link">Головна</a></li>
+                            <li><a href="/shop.html" class="footer__link">Каталог</a></li>
+                            <li><a href="/about-us-page.html" class="footer__link">Про нас</a></li>
+                            <li><a href="/blog.html" class="footer__link">Блог</a></li>
+                            <!-- TODO: [footer] temporarily removed menu item "Delivery" (href="/dostavka-i-oplata/"), restore when the page is ready -->
+                            <!-- <li><a href="/dostavka-i-oplata/" class="footer__link">Доставка</a></li> -->
+                            <li><a href="/contact.html" class="footer__link">Контакти</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer__contacts">
+                        <a href="mailto:kolobokbo@gmail.com" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#mail"></use>
+                            </svg>
+                            kolobokbo@gmail.com
+                        </a>
+                        <a href="tel:+380955941028" class="footer__contact-item">
+                            <svg class="footer__contact-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#phone"></use>
+                            </svg>
+                            (095) 594 10 28
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__subscribe">
+                    <h2 class="footer__subscribe-title">Отримуйте першими новини і пропозиції!</h2>
+
+                    <form class="footer__subscribe-form" action="/subscribe/" method="post">
+                        <input type="email" name="email" class="footer__subscribe-input" placeholder="Ваш E-mail"
+                            required aria-label="Ваш E-mail">
+                        <button type="submit" class="button button--primary footer__subscribe-btn">Підписатися</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <span class="footer__copyright">© 2026 Kolobok Bo.</span>
+                    <a href="/privacy-policy.html" class="footer__legal-link">Політика конфіденційності</a>
+                    <a href="/public-offer.html" class="footer__legal-link">Публічна оферта</a>
+                </div>
+
+                <div class="footer__bottom-right">
+                    <div class="footer__payments">
+                        <img class="footer__payment-icon footer__payment-icon--visa" src="/assets/icons/visa.svg"
+                            alt="Visa" width="48" height="16" loading="lazy" decoding="async">
+                        <img class="footer__payment-icon footer__payment-icon--mastercard"
+                            src="/assets/icons/mastercard.svg" alt="Mastercard" width="32" height="20" loading="lazy"
+                            decoding="async">
+                    </div>
+
+                    <div class="footer__social">
+                        <a href="https://instagram.com/" class="footer__social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/" class="footer__social-link" aria-label="Facebook"
+                            target="_blank" rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="https://tiktok.com/" class="footer__social-link" aria-label="TikTok" target="_blank"
+                            rel="noopener">
+                            <svg class="footer__social-icon" aria-hidden="true">
+                                <use href="/assets/icons/sprite.svg#tiktok"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+
+</html>

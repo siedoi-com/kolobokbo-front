@@ -1,0 +1,61 @@
+@use "../global/media";
+
+.offer-hero {
+    overflow: hidden;
+    position: relative;
+    background: var(--color-bg-cream);
+    border-bottom: 0.1rem solid var(--color-black);
+    padding: var(--size_64) var(--size_16);
+
+    @include media.L {
+        padding: var(--size_64) var(--size_48) var(--size_96);
+    }
+
+    @include media.XL {
+        padding: var(--size_96) var(--size_80) var(--size_120);
+    }
+
+    .breadcrumbs {
+        position: relative;
+        z-index: 1;
+        margin-bottom: var(--size_24);
+
+        @include media.XL {
+            margin-bottom: var(--size_48);
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        color: var(--color-black);
+        font-size: var(--size_32);
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+
+        @include media.L {
+            font-size: var(--size_56);
+        }
+
+        @include media.XL {
+            font-size: var(--size_72);
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: -4rem;
+        right: -4rem;
+        width: 20rem;
+        height: 20rem;
+        color: var(--color-yellow);
+        pointer-events: none;
+
+        @include media.XL {
+            width: 32rem;
+            height: 32rem;
+        }
+    }
+}
