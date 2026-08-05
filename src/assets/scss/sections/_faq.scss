@@ -68,14 +68,13 @@
 
         &--left {
             z-index: 1;
-            bottom: 15.5rem;
+            top: 26.5rem;
             left: -15rem;
             width: 31.2rem;
             height: 39.4rem;
             color: var(--color-secondary-accent);
 
             @include media.L {
-                bottom: 8.5rem;
                 width: 46.2rem;
                 height: 40.4rem;
             }
