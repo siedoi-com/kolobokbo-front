@@ -1,0 +1,61 @@
+<!-- Skip link: first focusable element, jumps past chrome to <main id="main-content"> -->
+<a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+
+<!-- Site header bar only: burger, logo, nav, cart. Mobile overlay → partials/mobile-menu.html -->
+<header class="header rel w-full z5">
+    <!-- Mobile only: opens #mobile-menu -->
+    <div class="header__left-part">
+        <button class="button header-burger flex-center" type="button"
+            aria-expanded="false" aria-controls="mobile-menu" aria-label="Відкрити меню">
+            <svg role="presentation" class="header-burger__icon">
+                <use href="/assets/icons/sprite.svg#icon-burger"></use>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Logo always links home (one convention everywhere; simpler to port to WP) -->
+    <a href="/" class="logo header__logo logo--header" aria-label="Колобок Бо — на головну">
+        <img width="56" height="56" src="/assets/img/logo-1.svg" class="contain-image" alt="Колобок Бо"
+            fetchpriority="high" decoding="async" />
+    </a>
+
+    <!-- Desktop nav; hidden below L via .header-menu { display: none } -->
+    <nav class="header__menu header-menu">
+        <ul class="header-menu__list">
+            <li class="menu-item{{#if (eq nav "home")}} current-menu-item{{/if}}">
+                <a href="/"{{#if (eq nav "home")}} aria-current="page"{{/if}}>Головна</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "shop")}} current-menu-item{{/if}}">
+                <a href="/shop.html"{{#if (eq nav "shop")}} aria-current="page"{{/if}}>Каталог</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "about")}} current-menu-item{{/if}}">
+                <a href="/about-us-page.html"{{#if (eq nav "about")}} aria-current="page"{{/if}}>Про нас</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "blog")}} current-menu-item{{/if}}">
+                <a href="/blog.html"{{#if (eq nav "blog")}} aria-current="page"{{/if}}>Блог</a>
+            </li>
+            <!-- TODO: [header] temporarily removed menu item "Delivery" (href="/dostavka-i-oplata/"), restore when the page is ready -->
+            <!-- <li class="menu-item"><a href="/dostavka-i-oplata/">Доставка</a></li> -->
+            <li class="menu-item{{#if (eq nav "contact")}} current-menu-item{{/if}}">
+                <a href="/contact.html"{{#if (eq nav "contact")}} aria-current="page"{{/if}}>Контакти</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header__right-part">
+        <!-- Temporarily hidden per feedback, will be back later
+        <a href="" class="button flex-center d-none header__account-icon">
+            <svg role="presentation" class="wh-full">
+                <use href="/assets/icons/sprite.svg#icon-user"></use>
+            </svg>
+        </a>
+        -->
+
+        <!-- mini-cart.js preventDefault()s this click; href is the no-JS fallback -->
+        <a href="/checkout-page.html" class="button header__cart-button" aria-label="Кошик, 3 товари" aria-expanded="false" aria-controls="mini-cart">
+            <span class="cart-badge abs z1 active" aria-hidden="true">3</span>
+            <svg role="presentation" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#icon-cart"></use>
+            </svg>
+        </a>
+    </div>
+</header>

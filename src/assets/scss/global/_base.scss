@@ -25,10 +25,6 @@ body {
     font-size: 1.4rem;
     background-color: var(--color-white);
     color: var(--color-black);
-
-    &.lock {
-        overflow: hidden;
-    }
 }
 
 a {
@@ -89,8 +85,8 @@ img {
     position: absolute;
     top: -100%;
     left: 0;
-    background: var(--color__accent-main);
-    color: #fff;
+    background: var(--color-accent);
+    color: var(--color-black);
     padding: var(--size_8);
     z-index: 100;
 

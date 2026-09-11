@@ -9,6 +9,10 @@ function isPastThreshold() {
     return window.scrollY >= window.innerHeight * (STICKY_VH / 100);
 }
 
+function isMobileMenuOpen() {
+    return mobileMenuEl?.classList.contains('active');
+}
+
 function updateHeaderTop() {
     if (!headerEl) return;
     const bh = beforeHeaderEl ? beforeHeaderEl.offsetHeight : 0;
@@ -22,21 +26,20 @@ function showHeader() {
 }
 
 function hideHeaderInstant() {
-    // Прибрати transition щоб не було flash-анімації
+    // Drop transition so sticky-enter does not flash
     if (headerEl)       headerEl.style.transition       = 'none';
     if (beforeHeaderEl) beforeHeaderEl.style.transition = 'none';
 
     headerEl?.classList.add('header--hidden');
     beforeHeaderEl?.classList.add('before-header--hidden');
 
-    // Один rAF щоб браузер застосував стан без анімації, потім повернути transition
     requestAnimationFrame(function () {
         if (headerEl)       headerEl.style.removeProperty('transition');
         if (beforeHeaderEl) beforeHeaderEl.style.removeProperty('transition');
     });
 }
 
-// ── Body padding placeholder (компенсує вихід з потоку) ──────────────────────
+// ── Body padding placeholder (keeps layout when chrome leaves document flow) ─
 function setPlaceholderHeight(enable) {
     if (!headerEl) return;
     if (enable) {
@@ -51,12 +54,13 @@ function setPlaceholderHeight(enable) {
 let wasFixed = false;
 
 function updateStickyState(scrollingDown) {
+    if (isMobileMenuOpen()) return;
+
     const fixed              = isPastThreshold();
     const justBecameFixed    = fixed && !wasFixed;
     const justBecameRelative = !fixed && wasFixed;
 
     if (justBecameFixed) {
-        // Зафіксувати висоту ДО того як елементи вийдуть з потоку
         setPlaceholderHeight(true);
     }
 
@@ -92,7 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
     updateStickyState(false);
 });
 
-window.addEventListener('resize', updateStickyState.bind(null, false));
+window.addEventListener('resize', function () {
+    if (isMobileMenuOpen()) return;
+    updateStickyState(false);
+});
 
 // ── Mobile menu toggle ────────────────────────────────────────────────────────
 
@@ -100,6 +107,8 @@ const burgerEl = document.querySelector('.header-burger');
 const menuCloseEl = document.querySelector('.mobile-menu__close');
 
 function openMobileMenu() {
+    // Keep chrome visible while the overlay is open
+    showHeader();
     mobileMenuEl?.classList.add('active');
     document.body.classList.add('no-scroll');
     burgerEl?.setAttribute('aria-expanded', 'true');
@@ -109,24 +118,28 @@ function closeMobileMenu() {
     mobileMenuEl?.classList.remove('active');
     document.body.classList.remove('no-scroll');
     burgerEl?.setAttribute('aria-expanded', 'false');
-    burgerEl?.focus();
+    burgerEl?.focus({ preventScroll: true });
 }
 
 burgerEl?.addEventListener('click', openMobileMenu);
 menuCloseEl?.addEventListener('click', closeMobileMenu);
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && mobileMenuEl?.classList.contains('active')) {
+    if (e.key === 'Escape' && isMobileMenuOpen()) {
         closeMobileMenu();
     }
 });
 
-// ── Header hide on scroll down / show on scroll up & stop ────────────────────
+// ── Header hide on scroll down / show on scroll up ────────────────────────────
 let lastScrollY = window.scrollY;
 let ticking     = false;
-let stopTimer   = null;
 
 function updateHeaderVisibility() {
+    if (isMobileMenuOpen()) {
+        ticking = false;
+        return;
+    }
+
     const currentY      = window.scrollY;
     const scrollingDown = currentY > lastScrollY;
 
@@ -146,11 +159,7 @@ function updateHeaderVisibility() {
 }
 
 window.addEventListener('scroll', function () {
-    clearTimeout(stopTimer);
-    stopTimer = setTimeout(function () {
-        showHeader();
-        updateStickyState(false);
-    }, 200);
+    if (isMobileMenuOpen()) return;
 
     if (!ticking) {
         requestAnimationFrame(updateHeaderVisibility);

@@ -1,0 +1,67 @@
+<!-- Full-screen mobile nav overlay (sibling of .header — keeps position:fixed free of header transform) -->
+<div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" type="button" aria-label="Закрити меню">
+        <svg class="mobile-menu__close-icon" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#close"></use>
+        </svg>
+    </button>
+
+    <a href="/" class="mobile-menu__logo" aria-label="Колобок Бо — на головну">
+        <img width="38" height="40" src="/assets/img/logo-1.svg" class="contain-image" alt="Колобок Бо" decoding="async" />
+    </a>
+
+    <nav class="mobile-menu__nav">
+        <ul id="menu-header-1" class="mobile-menu__list">
+            <li class="menu-item{{#if (eq nav "home")}} current-menu-item{{/if}}">
+                <a href="/"{{#if (eq nav "home")}} aria-current="page"{{/if}}>Головна</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "shop")}} current-menu-item{{/if}}">
+                <a href="/shop.html"{{#if (eq nav "shop")}} aria-current="page"{{/if}}>Каталог</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "about")}} current-menu-item{{/if}}">
+                <a href="/about-us-page.html"{{#if (eq nav "about")}} aria-current="page"{{/if}}>Про нас</a>
+            </li>
+            <li class="menu-item{{#if (eq nav "blog")}} current-menu-item{{/if}}">
+                <a href="/blog.html"{{#if (eq nav "blog")}} aria-current="page"{{/if}}>Блог</a>
+            </li>
+            <!-- TODO: [mobile-menu] temporarily removed menu item "Delivery and payment" (href="/dostavka-i-oplata/"), restore when the page is ready -->
+            <!-- <li class="menu-item"><a href="/dostavka-i-oplata/">Доставка і оплата</a></li> -->
+            <li class="menu-item{{#if (eq nav "contact")}} current-menu-item{{/if}}">
+                <a href="/contact.html"{{#if (eq nav "contact")}} aria-current="page"{{/if}}>Контакти</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu__contact">
+        <a href="tel:+380955941028" class="mobile-menu__phone">
+            <svg class="mobile-menu__phone-icon" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#phone"></use>
+            </svg>
+            (095) 594 10 28
+        </a>
+    </div>
+
+    <ul class="mobile-menu__social social-list">
+        <li class="social-list__item">
+            <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#instagram"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="https://facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#facebook"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a href="https://tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener">
+                <svg aria-hidden="true">
+                    <use href="/assets/icons/sprite.svg#tiktok"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>

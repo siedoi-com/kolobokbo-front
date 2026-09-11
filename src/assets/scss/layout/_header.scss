@@ -2,31 +2,33 @@
 @use "../global/mixins";
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: var(--size_8);
+    background: var(--color-white);
     transform: translateY(0);
+    // Only animate hide/show props — not `all` (was fighting sticky top/layout)
     transition: transform .35s ease-in-out, opacity .35s ease-in-out;
 
     // activates after scrolling past 90vh
     &.is-fixed {
         position: fixed;
         left: 0;
-        background: var(--color-white);
+        right: 0;
+        width: 100%;
     }
 
     &--hidden {
         transform: translateY(calc(-100% - var(--before-h, 0px)));
         opacity: 0;
+        pointer-events: none;
     }
 
     @include media.L {
+        align-items: unset;
         border-block-end: .1rem solid var(--color-black);
         padding: 0;
-    }
-
-    &__wrapper {
-        @include media.L {
-            align-items: unset;
-        }
     }
 
     &__burger {
@@ -46,6 +48,9 @@
     }
 
     &__right-part {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         flex-basis: 20%;
 
         @include media.L {
@@ -60,8 +65,13 @@
         }
     }
 
-    &__logo-wrapper {
+    // Logo link carries chrome padding/border (former wrapper).
+    // Keep .logo size on the <img> — padding on a fixed box collapses the image (border-box).
+    &__logo {
         @include media.L {
+            width: auto;
+            height: auto;
+            align-self: stretch;
             padding: var(--size_16) var(--size_36);
             border-inline-end: .1rem solid var(--color-black);
 
@@ -75,6 +85,13 @@
         @include media.XL {
             padding-inline: var(--size_64);
         }
+
+        img {
+            width: 5.4rem;
+            height: 5.6rem;
+            flex-shrink: 0;
+            transition: transform .4s ease-in-out;
+        }
     }
 
     &__cart-button {
@@ -84,6 +101,7 @@
         svg {
             width: var(--size_28);
             height: var(--size_34);
+            transition: color .3s ease-in-out;
         }
 
         @include media.L {

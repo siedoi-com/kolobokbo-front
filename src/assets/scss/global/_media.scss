@@ -1,4 +1,6 @@
 // Breakpoints
+// Design/QA only targets base (mobile, 420) / L (tablet, 1024) / XL (desktop, 1440).
+// S, M, XXL exist for future use — do not add new breakpoints without design sign-off.
 @mixin S() {
     @media screen and (min-width: 420px) {
         @content;
