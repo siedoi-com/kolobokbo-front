@@ -92,7 +92,7 @@
     &__dropdown {
         position: absolute;
         top: calc(100% + var(--size_8));
-        left: 0;
+        inset-inline-start: 0;
         z-index: 5;
         width: 100%;
         max-height: 10.2rem;

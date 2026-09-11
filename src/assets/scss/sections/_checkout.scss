@@ -25,7 +25,7 @@
 
     &--top {
         color: var(--color-accent);
-        left: -32rem;
+        inset-inline-start: -32rem;
         top: -19rem;
         width: 46.8rem;
         height: 35.3rem;
@@ -35,7 +35,7 @@
         color: var( --color-secondary-accent);
         width: 43.8rem;
         height: 33.3rem;
-    right: -15rem;
+    inset-inline-end: -15rem;
     bottom: -18rem;
     transform: rotate(-13deg);
 
@@ -70,7 +70,7 @@
         width: 40.3rem;
         height: 1rem;
         color: var(--color-accent);
-        margin-left: -4rem;
+        margin-inline-start: -4rem;
 
     }
 
@@ -127,7 +127,7 @@
 
     &__title-decor {
         position: absolute;
-        right: 11rem;
+        inset-inline-end: 11rem;
         bottom: 0rem;
         width: 2.6rem;
         height: 2.8rem;
@@ -136,7 +136,7 @@
         pointer-events: none;
 
         @include media.L {
-            right: 58rem;
+            inset-inline-end: 58rem;
         }
     }
 
@@ -155,7 +155,7 @@
 
         .cart-item {
             min-width: 0;
-            padding-left: 0;
+            padding-inline-start: 0;
             padding-top: var(--size_20);
             gap: var(--size_8);
             @include media.L{

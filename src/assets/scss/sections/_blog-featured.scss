@@ -65,7 +65,7 @@
 
         .article-badge {
             top: 1rem;
-            left: 1.5rem;
+            inset-inline-start: 1.5rem;
         }
 
         @include media.L {
@@ -168,7 +168,7 @@
         display: inline-block;
         width: 0.8rem;
         height: 0.8rem;
-        margin-left: var(--size_12);
+        margin-inline-start: var(--size_12);
         background: var(--color-black);
         vertical-align: middle;
     }

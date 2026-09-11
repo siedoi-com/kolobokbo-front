@@ -133,11 +133,11 @@
 
         @include media.L {
             height: 100%;
-            margin-left: 2rem;
+            margin-inline-start: 2rem;
         }
 
         @include media.XL {
-            margin-left: 25rem;
+            margin-inline-start: 25rem;
         }
     }
 
@@ -165,17 +165,17 @@
         position: absolute;
         color: var(--color-secondary-accent);
         bottom: 0;
-        right: 28rem;
+        inset-inline-end: 28rem;
         z-index: 1;
 
         @include media.L {
             top: 40rem;
-            left: 3rem;
+            inset-inline-start: 3rem;
         }
 
         @include media.XL {
             top: 44rem;
-            left: 15rem;
+            inset-inline-start: 15rem;
         }
     }
 }

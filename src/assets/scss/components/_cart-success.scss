@@ -20,7 +20,7 @@
 .cart-success {
     position: fixed;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     height: 100%;
     width: 100%;
     background: var(--color-white);
@@ -73,7 +73,7 @@
         @include media.L {
             position: absolute;
             top: var(--size_18);
-            right: var(--size_20);
+            inset-inline-end: var(--size_20);
             z-index: 2;
         }
     }
@@ -94,7 +94,7 @@
             object-fit: contain;
             align-self: flex-end;
             flex-shrink: 0;
-            margin-left: -5rem;
+            margin-inline-start: -5rem;
             margin-bottom: 4rem;
         }
     }
@@ -108,7 +108,7 @@
 
         @include media.L {
             flex: 1 0 0;
-            margin-left: calc(var(--size_32) * -1.8);
+            margin-inline-start: calc(var(--size_32) * -1.8);
         }
     }
 
@@ -185,7 +185,7 @@
         font-weight: 600;
 
         @include media.L {
-            margin-left: 10rem;
+            margin-inline-start: 10rem;
         }
     }
 
@@ -237,14 +237,14 @@
 
         &--yellow {
             top: -14rem;
-            left: -17rem;
+            inset-inline-start: -17rem;
             width: 34.5rem;
             height: 24.5rem;
             color: var(--color-accent);
 
             @include media.L {
                 top: -17rem;
-                left: -22rem;
+                inset-inline-start: -22rem;
                 width: 41.5rem;
                 height: 30.5rem;
             }
@@ -252,14 +252,14 @@
 
         &--green {
             bottom: -2rem;
-            left: -6rem;
+            inset-inline-start: -6rem;
             width: 16.5rem;
             height: 12.6rem;
             color: var(--color-blob-vegan);
 
             @include media.L {
                 bottom: -6rem;
-                left: -7rem;
+                inset-inline-start: -7rem;
                 width: 23.5rem;
                 height: 17.6rem;
             }
@@ -267,14 +267,14 @@
 
         &--pink {
             bottom: 21rem;
-            right: -14rem;
+            inset-inline-end: -14rem;
             width: 20.1rem;
             height: 15.3rem;
             color: var(--color-secondary-accent);
 
             @include media.L {
                 bottom: -19rem;
-                right: -16rem;
+                inset-inline-end: -16rem;
                 width: 31.1rem;
                 height: 27.3rem;
             }

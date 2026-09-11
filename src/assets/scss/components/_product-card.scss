@@ -36,7 +36,7 @@
     &__badge {
         position: absolute;
         top: var(--size_14);
-        right: var(--size_8);
+        inset-inline-end: var(--size_8);
         z-index: 2;
     }
 

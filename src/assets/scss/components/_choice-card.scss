@@ -97,7 +97,7 @@
 
     &__price-underline {
         position: absolute;
-        left: 0;
+        inset-inline-start: 0;
         bottom: -0.4rem;
         width: 7.7rem;
         height: 0.4rem;

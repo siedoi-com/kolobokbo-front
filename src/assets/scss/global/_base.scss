@@ -84,14 +84,14 @@ img {
 .skip-link {
     position: absolute;
     top: -100%;
-    left: 0;
+    inset-inline-start: 0;
     background: var(--color-accent);
     color: var(--color-black);
     padding: var(--size_8);
     z-index: 100;
 
     &:focus {
-        left: 1rem;
+        inset-inline-start: 1rem;
         /* Position it on the top-left */
         top: 1rem;
         width: auto;

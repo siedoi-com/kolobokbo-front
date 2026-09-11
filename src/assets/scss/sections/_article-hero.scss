@@ -87,7 +87,7 @@
         display: inline-block;
         width: 0.8rem;
         height: 0.8rem;
-        margin-left: var(--size_12);
+        margin-inline-start: var(--size_12);
         background: var(--color-black);
         vertical-align: middle;
     }
@@ -130,7 +130,7 @@
     &__pic {
         position: absolute;
         top: 57%;
-        left: 50%;
+        inset-inline-start: 50%;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -138,12 +138,12 @@
 
         @include media.L {
             top: 57%;
-            left: 62%;
+            inset-inline-start: 62%;
         }
 
         @include media.XL{
             top: 50%;
-            left: 50%;
+            inset-inline-start: 50%;
         }
     }
 
@@ -156,7 +156,7 @@
 
         @include media.XL {
             display: block;
-            left: -9rem;
+            inset-inline-start: -9rem;
             bottom: 3rem;
             width: 8rem;
             height: 9rem;
@@ -167,7 +167,7 @@
     &__highlight {
         position: absolute;
         top: 7.5rem;
-        left: 5rem;
+        inset-inline-start: 5rem;
         z-index: 1;
         width: 7.8rem;
         height: 12.9rem;
@@ -177,14 +177,14 @@
 
         @include media.L {
             top: 5.5rem;
-            left: -1rem;
+            inset-inline-start: -1rem;
             width: 25.4rem;
             height: 26.9rem;
         }
 
         @include media.XL {
             top: 4.5rem;
-            left: 1rem;
+            inset-inline-start: 1rem;
         }
     }
 }

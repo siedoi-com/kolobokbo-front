@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     top: 4rem;
-    left: 2.5rem;
+    inset-inline-start: 2.5rem;
     padding: var(--size_8) var(--size_10);
     border-radius: var(--size_24);
     background: var(--color-article-badge-bg, #FFB800);

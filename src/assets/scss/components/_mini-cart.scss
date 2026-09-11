@@ -21,7 +21,7 @@
 .mini-cart {
     position: fixed;
     top: 0;
-    right: 0;
+    inset-inline-end: 0;
     height: 100%;
     width: 100%;
     background: var(--color-white);
@@ -42,7 +42,7 @@
     @include media.L {
         position: fixed;
         top: 0;
-        right: 0;
+        inset-inline-end: 0;
         height: 91.3rem;
         width: 66rem;
         max-width: 66rem;
@@ -78,7 +78,7 @@
         color: var(--color-black);
         background: transparent;
         border: none;
-        margin-right: 0.8rem;
+        margin-inline-end: 0.8rem;
         cursor: pointer;
         flex-shrink: 0;
     }

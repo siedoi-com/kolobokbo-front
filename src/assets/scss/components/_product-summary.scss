@@ -230,7 +230,7 @@
     margin-top: var(--size_8);
 
     @include media.L {
-        padding-right: 5rem;
+        padding-inline-end: 5rem;
     }
 
     @include media.XL {

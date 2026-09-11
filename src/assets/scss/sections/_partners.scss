@@ -70,21 +70,21 @@
     &__heart {
         position: absolute;
         top: calc(0rem - 0.5rem);
-        right: calc(0rem - var(--size_110));
+        inset-inline-end: calc(0rem - var(--size_110));
         width: var(--size_5);
         height: var(--size_5);
         transform: rotate(2deg);
 
         @include media.L {
             top: calc(0rem - 1rem);
-            right: calc(0rem - var(--size_20));
+            inset-inline-end: calc(0rem - var(--size_20));
             width: var(--size_7);
             height: var(--size_7);
         }
 
         @include media.XL {
             top: calc(0rem - 2.3rem);
-            right: 6.3rem;
+            inset-inline-end: 6.3rem;
             width: var(--size_7);
             height: var(--size_7);
             transform: scaleX(-1) rotate(-27.79deg);
@@ -150,7 +150,7 @@
 
     &__right {
         position: absolute;
-        right: 0;
+        inset-inline-end: 0;
         bottom: var(--size_60);
         width: 18.4rem;
         height: 18.2rem;
@@ -163,7 +163,7 @@
 
         @include media.XL {
             bottom: 0;
-            right: 2.5rem;
+            inset-inline-end: 2.5rem;
             width: 19rem;
             height: 19rem;
         }

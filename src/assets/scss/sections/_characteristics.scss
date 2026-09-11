@@ -12,7 +12,7 @@
 
         &--top {
             top: 0.8rem;
-            left: -8rem;
+            inset-inline-start: -8rem;
             width: 18.4rem;
             height: 23.9rem;
             transform: rotate(15.3deg);
@@ -20,19 +20,19 @@
 
             @include media.L {
                 top: 14rem;
-                left: -12rem;
+                inset-inline-start: -12rem;
                 width: 22.4rem;
                 height: 30.9rem;
             }
 
             @include media.XL {
                 top: 15rem;
-                left: -9rem;
+                inset-inline-start: -9rem;
             }
         }
 
         &--bottom {
-            right: -8rem;
+            inset-inline-end: -8rem;
             bottom: -12rem;
             width: 21.7rem;
             height: 17.1rem;
@@ -40,7 +40,7 @@
             color: var(--color-accent);
 
             @include media.L {
-                right: -18rem;
+                inset-inline-end: -18rem;
                 bottom: -25rem;
                 width: 34.7rem;
                 height: 35.1rem;
@@ -48,7 +48,7 @@
             }
 
             @include media.XL {
-                right: -18rem;
+                inset-inline-end: -18rem;
                 bottom: -20rem;
             }
         }
@@ -147,7 +147,7 @@
     &__value {
         color: var(--color-black);
         font-size: var(--size_12);
-        text-align: right;
+        text-align: end;
 
         @include media.L {
             font-size: var(--size_14);
@@ -200,7 +200,7 @@
     &__badge-shape {
         position: absolute;
         top: 50%;
-        left: 50%;
+        inset-inline-start: 50%;
         transform: translate(-50%, -50%);
         z-index: 0;
         width: 7.6rem;
@@ -260,14 +260,14 @@
     &__badge-spark {
         position: absolute;
         top: 2rem;
-        right: 2.5rem;
+        inset-inline-end: 2.5rem;
         width: 4rem;
         height: 4rem;
         color: var(--color-black);
 
         @include media.L {
             top: 4rem;
-            right: 4.5rem;
+            inset-inline-end: 4.5rem;
             width: 6rem;
             height: 6rem;
         }

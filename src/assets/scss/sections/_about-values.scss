@@ -74,7 +74,7 @@
     &__blob {
         position: absolute;
         top: 50%;
-        left: 50%;
+        inset-inline-start: 50%;
         transform: translate(-50%, -50%);
 
         &--green {
@@ -119,14 +119,14 @@
             width: 3.7rem;
             height: 4rem;
             top: 9rem;
-            right: -3rem;
+            inset-inline-end: -3rem;
             transform: rotate(170deg);
 
             @include media.L {
                 width: 3.1rem;
                 height: 3.4rem;
                 top: 9rem;
-                right: -2rem;
+                inset-inline-end: -2rem;
                 transform: rotate(170deg);
             }
         }
@@ -135,14 +135,14 @@
             width: 2.9rem;
             height: 3.2rem;
             top: 9rem;
-            left: -3rem;
+            inset-inline-start: -3rem;
             transform: rotate(295deg);
 
             @include media.L {
                 width: 3.4rem;
                 height: 3.7rem;
                 top: 1rem;
-                left: 10rem;
+                inset-inline-start: 10rem;
                 transform: rotate(460deg);
             }
         }
@@ -151,14 +151,14 @@
             width: 3.3rem;
             height: 3.6rem;
             top: 1rem;
-            right: -4rem;
+            inset-inline-end: -4rem;
             transform: rotate(100deg);
 
             @include media.L {
                 width: 3.1rem;
                 height: 3.4rem;
                 top: -1rem;
-                right: 10rem;
+                inset-inline-end: 10rem;
                 transform: rotate(-10deg);
             }
         }
@@ -167,14 +167,14 @@
             width: 2.6rem;
             height: 2.9rem;
             top: 9rem;
-            left: 0rem;
+            inset-inline-start: 0rem;
             transform: rotate(261deg);
 
             @include media.L {
                 width: 3.3rem;
                 height: 3.6rem;
                 top: 9rem;
-                left: 12rem;
+                inset-inline-start: 12rem;
                 transform: rotate(166deg);
             }
         }

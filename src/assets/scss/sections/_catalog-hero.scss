@@ -38,7 +38,7 @@
 &__image {
     position: absolute;
     top: 35rem;
-    left: 50%;
+    inset-inline-start: 50%;
     width: 190%;
     max-width: none;
     height: auto;
@@ -47,7 +47,7 @@
 
     @include media.L {
         position: static;
-        left: auto;
+        inset-inline-start: auto;
         transform: none;
         width: 100%;
         height: 100%;
@@ -56,8 +56,8 @@
 
     @include media.XL {
         position: absolute;
-        left: auto;
-        right: 0;
+        inset-inline-start: auto;
+        inset-inline-end: 0;
         top: 0;
         transform: none;
         width: auto;
@@ -136,7 +136,7 @@
         display: none;
         position: absolute;
         top: -4rem;
-        right: -8rem;
+        inset-inline-end: -8rem;
         width: 6.5rem;
         height: 7.1rem;
         transform: rotate(100deg);
@@ -149,7 +149,7 @@
 
         @include media.XL {
             top: -3rem;
-            right: -8rem;
+            inset-inline-end: -8rem;
             width: 7.5rem;
             height: 8.1rem;
         }

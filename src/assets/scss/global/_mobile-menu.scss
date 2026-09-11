@@ -17,7 +17,7 @@
         position: absolute;
         z-index: -1;
         top: 3rem;
-        left: 3.55rem;
+        inset-inline-start: 3.55rem;
         width: 4rem;
         height: 4rem;
         margin: -2rem 0 0 -2rem;
@@ -68,7 +68,7 @@
     &__close {
         position: absolute;
         top: 4rem;
-        right: 2rem;
+        inset-inline-end: 2rem;
         background: transparent;
         border: none;
         padding: 0;

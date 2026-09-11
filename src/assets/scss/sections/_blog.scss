@@ -104,11 +104,11 @@
         @include media.L {
             flex: 1 1 0;
             width: auto;
-            margin-left: 4.1rem;
+            margin-inline-start: 4.1rem;
         }
 
         @include media.XL {
-            margin-left: 1.5rem;
+            margin-inline-start: 1.5rem;
         }
     }
 
@@ -130,18 +130,18 @@
             display: flex;
 
             @include media.L {
-                margin-left: 0.1rem;
+                margin-inline-start: 0.1rem;
             }
 
             @include media.XL {
-                margin-left: 0.7rem;
+                margin-inline-start: 0.7rem;
             }
         }
     }
 
     .article-card {
         flex: 0 0 100%;
-        margin-left: var(--size_16);
+        margin-inline-start: var(--size_16);
 
         @include media.L {
             flex: 0 0 calc((100% - var(--size_24)) / 1.33);
@@ -168,7 +168,7 @@
         @include media.L {
             position: absolute;
             top: 4rem;
-            left: 2rem;
+            inset-inline-start: 2rem;
             padding: 0.8rem 1.2rem;
             border-radius: var(--size_24);
             background: #FFB800;
@@ -180,7 +180,7 @@
         }
 
         @include media.XL {
-            left: 3rem;
+            inset-inline-start: 3rem;
         }
     }
 

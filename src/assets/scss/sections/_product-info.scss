@@ -130,7 +130,7 @@
     &__item-underline {
         position: absolute;
         bottom: calc(0rem - var(--size_8));
-        left: 0;
+        inset-inline-start: 0;
         width: 100%;
         height: var(--size_8);
         color: var(--color-black);
@@ -181,12 +181,12 @@
 
         @include media.L {
             width: 53.4rem;
-            margin-left: 10rem;
+            margin-inline-start: 10rem;
         }
 
         @include media.XL {
             width: 55rem;
-            margin-left: 8rem;
+            margin-inline-start: 8rem;
         }
     }
 
@@ -199,14 +199,14 @@
 
         @include media.L {
             top: 3.5rem;
-            left: 12rem;
+            inset-inline-start: 12rem;
             width: 51.3rem;
             height: 50.4rem;
         }
 
         @include media.XL {
             top: 6rem;
-            left: 10rem;
+            inset-inline-start: 10rem;
             width: 51.3rem;
             height: 50.4rem;
         }
@@ -220,41 +220,41 @@
 
         &--lines {
             top: 0.9rem;
-            left: 0.7rem;
+            inset-inline-start: 0.7rem;
             width: 6rem;
             height: 6rem;
 
             @include media.L {
                 top: -4.5rem;
-                left: 8rem;
+                inset-inline-start: 8rem;
                 width: 6.45rem;
                 height: 13.95rem;
             }
 
             @include media.XL {
                 top: -2.5rem;
-                left: 5rem;
+                inset-inline-start: 5rem;
                 width: 6.45rem;
                 height: 13.95rem;
             }
         }
 
         &--highlight {
-            right: -0.6rem;
+            inset-inline-end: -0.6rem;
             bottom: -2rem;
             width: 11rem;
             height: 12.4rem;
 
             @include media.L {
                 top: 42rem;
-                left: 47rem;
+                inset-inline-start: 47rem;
                 width: 24.7rem;
                 height: 24.7rem;
             }
 
             @include media.XL {
                 top: 44rem;
-                left: 44rem;
+                inset-inline-start: 44rem;
                 width: 26rem;
                 height: 24.7rem;
             }
@@ -274,7 +274,7 @@
             order: 3;
             flex: 1 0 0;
             align-items: flex-end;
-            text-align: right;
+            text-align: end;
         }
     }
 }

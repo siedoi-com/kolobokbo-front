@@ -100,7 +100,7 @@
         flex: 0 0 19.3rem;
         min-height: 0;
         height: 10.2rem;
-        margin-left: var(--size_16);
+        margin-inline-start: var(--size_16);
 
         @include media.L {
             flex: 0 0 22.5rem;

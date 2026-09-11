@@ -20,7 +20,7 @@
     &__decor {
         position: absolute;
         top: 0;
-        left: 0;
+        inset-inline-start: 0;
         z-index: 2;
         width: 12rem;
         height: auto;
@@ -112,7 +112,7 @@
         @include media.L {
             display: block;
             top: -4rem;
-            right: -8.5rem;
+            inset-inline-end: -8.5rem;
             z-index: 1;
             width: 6.5rem;
             height: 6.7rem;
@@ -121,7 +121,7 @@
 
         @include media.XL {
             top: -4rem;
-            right: -11.5rem;
+            inset-inline-end: -11.5rem;
             width: 7.5rem;
             height: 7.7rem;
         }

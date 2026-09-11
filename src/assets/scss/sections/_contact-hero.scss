@@ -18,7 +18,7 @@
         width: 23.5rem;
         height: 23.5rem;
         top: 21rem;
-        left: -17rem;
+        inset-inline-start: -17rem;
         color: var(--color-blob-vegan);
         pointer-events: none;
 
@@ -26,7 +26,7 @@
             width: 43.8rem;
             height: 33.3rem;
             top: 24rem;
-            left: -27rem;
+            inset-inline-start: -27rem;
         }
 
         @include media.XL {
@@ -85,7 +85,7 @@
         color: var(--color-black);
         pointer-events: none;
         top: 24rem;
-        left: 0;
+        inset-inline-start: 0;
         z-index: 1;
         width: 2.8rem;
         height: 3.2rem;
@@ -93,7 +93,7 @@
 
         @include media.L {
             top: 23rem;
-            left: 2rem;
+            inset-inline-start: 2rem;
             z-index: 1;
             width: 5.4rem;
             height: 6rem;

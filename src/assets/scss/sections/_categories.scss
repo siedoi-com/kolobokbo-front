@@ -102,7 +102,7 @@
     &__blob {
         position: absolute;
         top: 10%;
-        left: 70%;
+        inset-inline-start: 70%;
         transform: translateX(-50%);
         width: 7.3rem;
         height: 7.2rem;
@@ -114,13 +114,13 @@
 
         @include media.L {
             top: 50%;
-            left: 65%;
+            inset-inline-start: 65%;
             transform: translate(-50%, -60%);
         }
 
         @include media.XL {
             top: 50%;
-            left: 55%;
+            inset-inline-start: 55%;
             transform: translate(-50%, -60%);
         }
     }

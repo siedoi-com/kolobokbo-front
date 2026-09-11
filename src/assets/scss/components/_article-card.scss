@@ -64,7 +64,7 @@
         display: inline-block;
         width: 0.8rem;
         height: 0.8rem;
-        margin-left: var(--size_12);
+        margin-inline-start: var(--size_12);
         background: var(--color-black);
         vertical-align: middle;
     }
@@ -73,7 +73,7 @@
         display: flex;
         align-items: center;
         gap: var(--size_8);
-         margin-left: var(--size_8);
+         margin-inline-start: var(--size_8);
     }
 
     &__meta-icon {

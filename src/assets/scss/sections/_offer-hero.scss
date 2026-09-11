@@ -47,7 +47,7 @@
     &__decor {
         position: absolute;
         top: -4rem;
-        right: -4rem;
+        inset-inline-end: -4rem;
         width: 20rem;
         height: 20rem;
         color: var(--color-yellow);

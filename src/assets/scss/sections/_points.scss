@@ -41,7 +41,7 @@
 
             &:not(:first-child) {
                 margin-top: 0;
-                margin-left: var(--size_28);
+                margin-inline-start: var(--size_28);
             }
         }
 
@@ -49,7 +49,7 @@
             padding: var(--size_16);
 
             &:not(:first-child) {
-                margin-left: var(--size_60);
+                margin-inline-start: var(--size_60);
             }
         }
     }
