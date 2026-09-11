@@ -42,14 +42,14 @@
         flex-direction: column;
         align-items: center;
         gap: var(--size_32);
-        margin-top: var(--size_15);
+        margin-top: var(--size_32);
         width: 100%;
 
         @include media.L {
             flex-direction: row;
             align-items: center;
             gap: var(--size_48);
-            margin-top: var(--size_26);
+            margin-top: var(--size_32);
         }
 
         @include media.XL {

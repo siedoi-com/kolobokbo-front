@@ -81,6 +81,8 @@
         background: transparent;
         cursor: pointer;
         position: relative;
+        text-decoration: none;
+        color: inherit;
 
         @include media.L {
             width: 100%;

@@ -113,10 +113,11 @@
     }
 
     &__image {
-        width: 100%;
-        position: relative;
+        display: none;
 
         @include media.L {
+            display: block;
+            position: relative;
             flex-grow: 1;
             width: 60rem;
         }
