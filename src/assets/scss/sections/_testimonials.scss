@@ -11,15 +11,14 @@
         flex-direction: column;
         align-items: flex-start;
         gap: var(--size_14);
-        padding: var(--size_42) 0 var(--size_45) var(--size_16);
-        width: 100%;
+        padding-block: var(--size_42) var(--size_45);
 
         @include media.L {
-            padding: var(--size_38) var(--size_48) var(--size_56);
+            padding-block: var(--size_38) var(--size_56);
         }
 
         @include media.XL {
-            padding: var(--size_55) var(--size_80) var(--size_60);
+            padding-block: var(--size_55) var(--size_60);
         }
     }
 

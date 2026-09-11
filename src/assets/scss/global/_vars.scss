@@ -1,6 +1,12 @@
+@use "media";
+
 :root {
   // Fonts
   --font-secondary: 'Onest', sans-serif;
+
+  // Layout / shared horizontal gutter (see components/_container.scss)
+  --layout-gutter: var(--size_16);
+  --layout-max: 144rem;
 
   // Colors
   --color-black: #222;
@@ -115,4 +121,15 @@
   --size_144: 14.4rem;
   --size_150: 15rem;
   --size_200: 20rem;
+}
+
+// Shared horizontal gutter: base → L (tablet) → XL (desktop)
+:root {
+  @include media.L {
+    --layout-gutter: var(--size_48);
+  }
+
+  @include media.XL {
+    --layout-gutter: var(--size_80);
+  }
 }

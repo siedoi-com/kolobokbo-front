@@ -1,25 +1,24 @@
 @use "../global/media";
 
 .categories {
-    padding: var(--size_42) 0 var(--size_32) var(--size_16);
+    // Clip at section edges; list breakout scrolls through the gutters
     background: var(--color-white);
     overflow: hidden;
-
-    @include media.L {
-        padding: var(--size_60) var(--size_48) var(--size_45);
-    }
-
-    @include media.XL {
-        padding: var(--size_55) var(--size_80) var(--size_40);
-    }
 
     &__container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: visible;
+        padding-block: var(--size_42) var(--size_32);
 
         @include media.L {
             width: 100%;
+            padding-block: var(--size_60) var(--size_45);
+        }
+
+        @include media.XL {
+            padding-block: var(--size_55) var(--size_40);
         }
     }
 
@@ -44,18 +43,67 @@
     &__list {
         display: flex;
         align-items: center;
-        gap: 5rem;
+        gap: var(--size_32);
         list-style: none;
         overflow-x: auto;
         scrollbar-width: none;
         width: 100%;
+        -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
             display: none;
         }
 
+        @include media.L {
+            gap: 5rem;
+        }
+
         @include media.XL {
             margin-top: 2.5rem;
+        }
+    }
+
+    // Homepage: breakout scrollport + trailing peek fade (mobile)
+    &__scroller {
+        align-self: stretch;
+        position: relative;
+        width: calc(100% + 2 * var(--layout-gutter));
+        max-width: none;
+        margin-inline: calc(-1 * var(--layout-gutter));
+
+        @include media.L {
+            width: 100%;
+            margin-inline: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset-block: 0;
+            inset-inline-end: 0;
+            width: var(--size_48);
+            pointer-events: none;
+            z-index: 1;
+            background: linear-gradient(
+                to right,
+                rgb(255 255 255 / 0%),
+                var(--color-white) 85%
+            );
+
+            @include media.L {
+                content: none;
+            }
+        }
+
+        .categories__list {
+            padding-inline-start: var(--layout-gutter);
+            // Room so the last chip can clear the fade when scrolled to the end
+            padding-inline-end: var(--size_48);
+            box-sizing: border-box;
+
+            @include media.L {
+                padding-inline: 0;
+            }
         }
     }
 
@@ -171,7 +219,7 @@
             font-size: var(--size_20);
         }
     }
-//  Page Catalog
+//  Page Catalog — own gutters (not shared .container yet)
     &--catalog {
         padding: 7rem 0 6rem 6rem;
 
@@ -181,6 +229,10 @@
 
         @include media.XL {
             padding: var(--size_22) var(--size_86);
+        }
+
+        .categories__container {
+            padding-block: 0;
         }
     }
 }

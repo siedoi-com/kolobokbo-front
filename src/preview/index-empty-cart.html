@@ -72,9 +72,10 @@
         </section>
         <!-- Category filter buttons -->
         <section class="categories">
-            <div class="categories__container">
+            <div class="container categories__container">
                 <h2 class="categories__title">Обери свій смак</h2>
-                <ul class="categories__list">
+                <div class="categories__scroller">
+                    <ul class="categories__list">
                     <li class="categories__item">
                         <a class="categories__btn categories__btn--all" href="/shop.html" data-category="all">
                             <svg class="categories__blob" aria-hidden="true">
@@ -130,7 +131,8 @@
                             <span class="categories__label">Веган</span>
                         </a>
                     </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- Scrolling promo line -->
@@ -145,13 +147,14 @@
         </div>
         <!-- Product card -->
         <section class="product">
-            <div class="product__left">
-                <div class="product__image-wrap">
-                    <img class="product__image" src="/assets/img/product-chicken.png" alt="Онігірі з куркою" width="600"
-                        height="600" loading="lazy" decoding="async">
+            <div class="container product__container">
+                <div class="product__left">
+                    <div class="product__image-wrap">
+                        <img class="product__image" src="/assets/img/product-chicken.png" alt="Онігірі з куркою" width="600"
+                            height="600" loading="lazy" decoding="async">
+                    </div>
                 </div>
-            </div>
-            <div class="product__right">
+                <div class="product__right">
                 <div class="product__info">
                     <div class="product__title-wrap">
                         <div class="product__badge">
@@ -237,6 +240,7 @@
                         <button class="product__btn button button--primary" type="button">Додати до кошика</button>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <!-- Partner store logos -->

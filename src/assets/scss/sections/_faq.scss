@@ -13,15 +13,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: var(--size_48) var(--size_16) var(--size_42);
-        width: 100%;
+        padding-block: var(--size_48) var(--size_42);
 
         @include media.L {
-            padding: var(--size_64) var(--size_48);
-        }
-
-        @include media.XL {
-            padding: var(--size_64) var(--size_80);
+            padding-block: var(--size_64);
         }
     }
 
@@ -51,15 +46,7 @@
         gap: var(--size_8);
         list-style: none;
         margin-top: 4.5rem;
-        padding: 0 var(--size_16);
-
-        @include media.L {
-            padding: 0 var(--size_48);
-        }
-
-        @include media.XL {
-            padding: 0 var(--size_80);
-        }
+        width: 100%;
     }
 
     &__decor {

@@ -10,22 +10,22 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 4.2rem;
-        padding: var(--size_55) 0 var(--size_52) var(--size_16);
+        padding-block: var(--size_55) var(--size_52);
         align-self: stretch;
-        width: 100%;
         min-width: 0;
+        // Wider than the shared --layout-max cap: this section's slider needs the extra room
+        max-width: 160rem;
 
         @include media.L {
             flex-direction: row;
             align-items: center;
             gap: var(--size_24);
-            padding: var(--size_60) 0 var(--size_64) var(--size_48);
+            padding-block: var(--size_60) var(--size_64);
         }
 
         @include media.XL {
-            padding: var(--size_90) 0 var(--size_90) var(--size_80);
+            padding-block: var(--size_90);
             gap: var(--size_48);
-            max-width: 160rem;
         }
     }
 

@@ -7,16 +7,14 @@
     overflow: hidden;
 
     &__container {
-        padding: var(--size_45) var(--size_16);
-        width: 100%;
+        padding-block: var(--size_45);
 
         @include media.L {
-            padding: 5rem var(--size_48);
+            padding-block: 5rem;
         }
 
         @include media.XL {
-            padding: 5.6rem 8rem 6.8rem;
-            max-width: 144rem;
+            padding-block: 5.6rem 6.8rem;
         }
     }
 

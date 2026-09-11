@@ -1,11 +1,12 @@
-@use "../global/media";
-
 .container {
+    width: 100%;
+    max-width: var(--layout-max);
     margin-inline: auto;
-    width: 92.4vw;
+    padding-inline: var(--layout-gutter);
 
-    @include media.L {
-        width: 88.9vw;
+    // Sliders/cards that must flush to the viewport's trailing edge
+    &--bleed-end {
+        padding-inline-end: 0;
     }
 }
 // End inner
