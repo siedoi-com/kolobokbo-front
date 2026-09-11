@@ -130,9 +130,11 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// ── Header hide on scroll down / show on scroll up ────────────────────────────
+// ── Header hide on scroll down / show on scroll up or stop ────────────────────
 let lastScrollY = window.scrollY;
 let ticking     = false;
+let stopTimer   = null;
+const SCROLL_STOP_MS = 180;
 
 function updateHeaderVisibility() {
     if (isMobileMenuOpen()) {
@@ -160,6 +162,15 @@ function updateHeaderVisibility() {
 
 window.addEventListener('scroll', function () {
     if (isMobileMenuOpen()) return;
+
+    clearTimeout(stopTimer);
+    stopTimer = setTimeout(function () {
+        if (isMobileMenuOpen()) return;
+        // Reveal chrome when the user pauses scrolling (not only on scroll-up)
+        if (isPastThreshold()) {
+            showHeader();
+        }
+    }, SCROLL_STOP_MS);
 
     if (!ticking) {
         requestAnimationFrame(updateHeaderVisibility);
